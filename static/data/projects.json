@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "title": "Project One",
+      "description": "A web application that allows users to track their fitness activities and goals.",
+      "link": "https://example.com/project-one",
+      "image": "https://picsum.photos/400/300",
+      "technologies": ["Svelte", "Node.js", "MongoDB"],
+      "date": "2023-01-15"
+    },
+    {
+      "title": "Project Two",
+      "description": "An e-commerce platform with real-time product recommendations and inventory management.",
+      "link": "https://example.com/project-two",
+      "image": "https://picsum.photos/400/301",
+      "technologies": ["React", "Express", "PostgreSQL"],
+      "date": "2022-11-20"
+    },
+    {
+      "title": "Project Three",
+      "description": "A mobile app for managing personal finances with budget tracking and expense categorization.",
+      "link": "https://example.com/project-three",
+      "image": "https://picsum.photos/400/302",
+      "technologies": ["Flutter", "Firebase"],
+      "date": "2023-03-10"
+    },
+    {
+      "title": "Project Four",
+      "description": "A machine learning project that predicts house prices based on various features.",
+      "link": "https://example.com/project-four",
+      "image": "https://picsum.photos/401/300",
+      "technologies": ["Python", "TensorFlow"],
+      "date": "2023-06-05"
+    },
+    {
+      "title": "Project Five",
+      "description": "A blog platform with a content management system and SEO optimization features.",
+      "link": "https://example.com/project-five",
+      "image": "https://picsum.photos/402/300",
+      "technologies": ["Gatsby", "GraphQL"],
+      "date": "2022-08-30"
+    }
+  ]
+}

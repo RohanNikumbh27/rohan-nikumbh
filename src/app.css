@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+	--primary-color: #000;
+	/* --primary-color: #E60000; */
+	--secondary-color: #FAFAFA;
+	--white-color: #FFFFFF;
+}
+
+@keyframes smoothTransition {
+	from {
+		opacity: 0%;
+		transform: translateY(20px) scale(0.8);
+	}
+	to{
+		opacity: 100%;
+		transform: translateY(0px) scale(1);
+	}
+}
+* {
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+	font-family: serif;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+}
+
+header,
+footer {
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	padding: 1rem;
+	text-align: center;
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 2rem 0;
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+}
+
+.card {
+	background-color: var(--white-color);
+	padding: 1rem;
+	margin: 1rem 0;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+}
+
+
