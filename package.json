@@ -2,7 +2,7 @@
 	"name": "portfolio-sveltekit",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite --host 0.0.0.0",
 		"build": "vite build",
 		"preview": "vite preview"
 	},

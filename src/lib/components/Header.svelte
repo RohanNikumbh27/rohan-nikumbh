@@ -75,7 +75,7 @@
         
       </div>
       <button class="" on:click={handleSeachBarButton}>
-        <!-- hamburger for small devices -->
+        <!-- for small devices -->
         {#if !showNavbarSmall}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-black md:hidden sm:inline-block">
           <path fillRule="evenodd" d="M3 9a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9Zm0 6.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
@@ -88,14 +88,14 @@
 
 
 
-        <!-- search for medium devices -->
+        <!-- for medium devices -->
         {#if !showSearchComp}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-black md:inline-block sm:hidden hidden">
             <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
             <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463Z" clip-rule="evenodd" />
           </svg>
         {:else}
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-black md:inline-block sm:hidden hidden">
                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
               </svg>
 
@@ -114,7 +114,7 @@
 
               {#each NavOptionsArr as NavOption, i}
                 <a
-                  class="px-2 py-1 block md:inline-block m-4 text-gray-900 transition-all duration-200 font-bold hover:text-gray-500"
+                  class="px-2 py-1 block md:inline-block m-4 text-3xl  text-gray-900 transition-all duration-200 font-bold hover:text-gray-500"
                   href={NavOption.ref}>{NavOption.label}</a
                 >
               {/each}

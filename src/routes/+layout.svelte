@@ -4,14 +4,13 @@
     import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<Header />
+<div class="min-h-svh">
 
-<!-- div for header -->
-<div class="h-20">
-
-</div>
-
-<main>
+    <Header />
+    
+    <!-- div space behind header -->
+    <div class="h-20 ">
+    </div>
     <slot />
-</main>
-<Footer />
+    <Footer />
+</div>

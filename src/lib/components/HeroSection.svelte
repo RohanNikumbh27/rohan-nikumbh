@@ -4,8 +4,8 @@
 </script>
 
 
-<div class=" min-h-32 px-5 grid grid-col-4 gap-4 flex-wrap md:grid-flow-col">
-    <div class="grid md:col-span-1 col-span-4 ">
+<div class=" min-h-32 grid grid-col-4 gap-4 flex-wrap md:grid-flow-col">
+    <div class="grid md:col-span-1 col-span-4 mt-0 pt-0">
         <div class="flex justify-center items-center flex-col">
             <img src={Rohan_image} alt="Img" class=" rounded-2xl">
         </div>
