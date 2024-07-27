@@ -1,6 +1,5 @@
 <script>
   import SearchComp from "./SearchComp.svelte";
-  import Search from "$lib/images/svgs/search.svg";
 
   let NavOptionsArr = [
                   {
@@ -114,6 +113,9 @@
 
               {#each NavOptionsArr as NavOption, i}
                 <a
+                  on:click={() => setTimeout(() => {
+                    toggleNavBar()
+                  }, 30)}
                   class="px-2 py-1 block md:inline-block m-4 text-3xl  text-gray-900 transition-all duration-200 font-bold hover:text-gray-500"
                   href={NavOption.ref}>{NavOption.label}</a
                 >
