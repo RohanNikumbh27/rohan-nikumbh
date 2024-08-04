@@ -2,7 +2,7 @@
 <script>
 
   export let project;
-  import ProjectDetails from "./ProjectDetails.svelte";
+  // import ProjectDetails from "./ProjectDetails.svelte";
 </script>
 
 <!-- <div class="da relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50"> -->

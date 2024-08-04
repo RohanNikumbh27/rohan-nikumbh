@@ -1,5 +1,6 @@
 <script>
   import SearchComp from "./SearchComp.svelte";
+  
 
   let NavOptionsArr = [
                   {
@@ -46,7 +47,7 @@
     toggleNavBar();
     
   }
-  $:console.log("showNavbarSmall", showNavbarSmall)
+  // $:console.log("showNavbarSmall", showNavbarSmall)
 </script>
 
 <header
@@ -103,7 +104,7 @@
       </button>
     </div>
     <div class="px-3 transition-all sm:hidden hidden {showSearchComp ? 'md:block' : 'md:hidden'}">
-      <SearchComp {toggleShowSearchComp} />
+      <SearchComp />
     </div>
 
     <!-- Navbar for small divices -->

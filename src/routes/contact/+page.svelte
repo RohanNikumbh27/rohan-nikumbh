@@ -1,6 +1,11 @@
 
 
-
+<script>
+  import {enhance} from "$app/forms"
+  export let data;
+  $:console.log(data.revArr)
+  $:reviewsArr = data.revArr
+</script>
 
 
 <div class="container">
@@ -53,37 +58,40 @@
           </div>
         </div>
         <div>
-          <form>
-            <input
+          <form method="POST" use:enhance|>
+            <!-- <input
               type="checkbox"
               id=""
               class="hidden"
               style="display:none"
               name="botcheck"
-            />
+            /> -->
             <div class="mb-5">
               <input
                 type="text"
                 placeholder="Full Name"
                 class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none  bg-slate-300 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
                 name="name"
+                required
               />
             </div>
             <div class="mb-5">
               <label for="email_address" class="sr-only">Email Address</label>
               <input
                 id="email_address"
-                type="email"
+                type="text"
                 placeholder="Email Address"
                 class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-slate-900 rounded-md outline-none dark:placeholder:text-slate-900 bg-slate-300 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
                 name="email"
+
               />
             </div>
             <div class="mb-3">
               <textarea
                 placeholder="Your Message"
                 class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-slate-900 dark:placeholder:text-slate-900 bg-slate-300 rounded-md outline-none h-36 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                name="message"
+                name="description"
+                required
               >
               </textarea>
             </div>
@@ -95,6 +103,19 @@
           </form>
         </div>
       </div>
+    </div>
+    <div class=" mt-5 md:grid md:grid-cols-3 gap-3">
+      {#each reviewsArr as review, i}
+      <div class=" mt-3 bg-black text-white p-4 rounded-xl">
+        <h1 class="text-white pb-2 overflow-scroll">{review.name}</h1>
+        <div class=" p-2 bg-zinc-900 rounded-xl overflow-scroll">
+          {review.description}
+        </div>
+
+
+      </div>
+      {/each}
+      
     </div>
   </div>
   

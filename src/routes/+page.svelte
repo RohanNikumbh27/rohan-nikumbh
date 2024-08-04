@@ -3,9 +3,8 @@
   import SearchComp from "../lib/components/SearchComp.svelte";
   import Button from "$lib/components/form/Button.svelte";
   import HeroSection from "$lib/components/HeroSection.svelte";
-  import Socials from "$lib/components/Home/Socials.svelte"
+  import Socials from "$lib/components/Home/Socials.svelte";
 </script>
-
 
 
 <div class="container">
