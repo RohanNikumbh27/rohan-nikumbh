@@ -1,6 +1,6 @@
 <script>
     let SearchQ = ""
-    $:console.log("SearchQ", SearchQ)
+    // $:console.log("SearchQ", SearchQ)
 </script>
 
 <form>

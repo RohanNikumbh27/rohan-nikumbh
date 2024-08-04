@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import Rohan_image from "$lib/images/Rohan_Nikumbh.jpg"
     import Button from "$lib/components/form/Button.svelte"
 
@@ -35,4 +35,4 @@
 
 <div class="max-w-[600px]">
     
-  </div>
+  </div> -->
