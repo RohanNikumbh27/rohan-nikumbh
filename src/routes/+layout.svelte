@@ -9,7 +9,7 @@
 	// });
     // let size = spring(10);
 
-import PointerCircle from "$lib/components/Pointer.svelte"
+// import PointerCircle from "$lib/components/Pointer.svelte"
 </script>
 <!-- <PointerCircle/> -->
 
