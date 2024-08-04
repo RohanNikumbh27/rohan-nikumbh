@@ -107,8 +107,8 @@
     <div class=" mt-5 md:grid md:grid-cols-3 gap-3">
       {#each reviewsArr as review, i}
       <div class=" mt-3 bg-black text-white p-4 rounded-xl">
-        <h1 class="text-white pb-2">{review.name}</h1>
-        <div class=" p-2 bg-zinc-900 rounded-xl">
+        <h1 class="text-white pb-2 overflow-scroll">{review.name}</h1>
+        <div class=" p-2 bg-zinc-900 rounded-xl overflow-scroll">
           {review.description}
         </div>
 
