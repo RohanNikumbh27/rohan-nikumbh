@@ -20,9 +20,20 @@
 		transform: translateY(0px) scale(1);
 	}
 }
+
+@keyframes fadeTransition {
+	from {
+		opacity: 0%;
+	}
+	to{
+		opacity: 100%;
+	}
+}
+
 * {
-	animation: smoothTransition;
-	animation-duration: 0.2s;
+	transition:fadeTransition all 1s ease-out;
+	animation: fadeTransition alternate ;
+	animation-duration: 0.3s;
 	font-family: serif;
 }
 
