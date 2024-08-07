@@ -7,7 +7,7 @@
 </script>
 
 
-<div class="container">
+<div class="container ">
   <HeroSection />
   <Socials/>
 </div>
