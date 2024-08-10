@@ -10,6 +10,8 @@
     // let size = spring(10);
 
 // import PointerCircle from "$lib/components/Pointer.svelte"
+console.log("%c" + " Don't try to copy the code, this overall code is written by, ", "font-size: 20px; ;border-radius: 10px; border: 1px solid black; background: red; color: white; font")
+console.log("%c" + ' Rohan Nikumbh ', "font-size: 40px; ;border-radius: 10px; border: 1px solid black; background: black; color: #4400ff")
 </script>
 <!-- <PointerCircle/> -->
 

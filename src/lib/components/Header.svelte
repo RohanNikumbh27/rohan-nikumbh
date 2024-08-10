@@ -124,7 +124,7 @@
                 >
               {/each}
               </div>
-            <SearchComp {toggleShowSearchComp} />
+            <SearchComp />
           </div>
 
     </div>
