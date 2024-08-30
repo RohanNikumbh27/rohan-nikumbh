@@ -1,5 +1,5 @@
 <script>
-  export let data;
+  // export let data;
   // console.log("data", data.data)
 </script>
 <div class="h-svh flex items-center justify-center font-serif font-bold flex-col">
