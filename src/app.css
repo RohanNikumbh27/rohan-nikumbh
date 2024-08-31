@@ -82,6 +82,7 @@ footer {
 	animation-duration: 0.2s;
 }
 
+
 .container {
 	width: 85%;
 	margin: 0 auto;
@@ -100,3 +101,27 @@ footer {
 }
 
 
+
+
+
+/* width */
+::-webkit-scrollbar {
+	width: 7px;
+	background: transparent; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border-radius: 30px;
+	background: #097; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }

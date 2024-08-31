@@ -9,7 +9,9 @@
     <div class="grid md:col-span-1 col-span-4 mt-0 pt-0">
         <div class="flex justify-center items-center flex-col">
             <img src={Rohan_image} alt="Img" class=" rounded-2xl">
-            <h1 class=" text-xl mt-3 text-slate-500">Rohan Nikumbh</h1>
+            <!-- <h1 class=" text-xl mt-3 text-slate-500">Rohan Nikumbh</h1> -->
+            <h1 class=" mt-3 font-bold font-custom max-w-sm bg-gradient-to-br from-gray-600 via-teal-600 to-gray-500 bg-clip-text text-center text-4xl text-transparent ">Rohan Nikumbh</h1>
+
         </div>
     </div>
     
@@ -19,12 +21,12 @@
     >
       Transforming Ideas into Seamless Experiences 🚀 - Currently Frontend Developer Intern @ Timechain Labs
     </div>
-    <p class="text-secondary-2 text-md text-justify font-[350] mt-5">
+    <p class="mt-8 max-w-lg text-center text-xl leading-relaxed text-gray-800 ">
       I am Rohan Nikumbh, your tech partner in website development, weaving
       together Frontend and MERN stack proficiency for exceptional digital
       transformations of your project visions.
     </p>
-    <div class="flex gap-1 text-sm mt-7 md:-ml-20">
+    <div class="flex gap-2 text-sm mt-7 md:-ml-20">
       <Button href="/contact" title="Let's Work Together"/>
 
       <Button href="/resume" title="Resume"/>
@@ -36,3 +38,11 @@
 <div class="max-w-[600px]">
     
   </div>
+
+
+
+  <style>
+    .font-custom {
+      font-family:math, serif
+    }
+  </style>
