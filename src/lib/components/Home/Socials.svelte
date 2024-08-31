@@ -1,5 +1,5 @@
 <div
-  class="mt-10 rounded-xl w-full h-auto py-8 flex items-center justify-center gap-2 flex-wrap"
+  class="mt-10 rounded-xl w-full h-auto py-8 flex items-center justify-center gap-2 flex-wrap "
 >
 
 <!-- mail -->
