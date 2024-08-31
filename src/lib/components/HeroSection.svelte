@@ -19,11 +19,11 @@
       <div
       class="text-[1.9rem] leading-[39px] sm:text-[2.1rem] sm:leading-[44px] text-secondary-1 font-semibold"
     >
-      Transforming Ideas into Seamless Experiences 🚀 - Currently Frontend Developer Intern @ Timechain Labs
+      Transforming Ideas into Seamless Experiences 🚀 - Currently Software Developer Intern @ Timechain Labs
     </div>
     <p class="mt-8 max-w-lg text-center text-xl leading-relaxed text-gray-800 ">
       I am Rohan Nikumbh, your tech partner in website development, weaving
-      together Frontend and MERN stack proficiency for exceptional digital
+      together Svelte, Next.js, React.js and MERN stack proficiency for exceptional digital
       transformations of your project visions.
     </p>
     <div class="flex gap-2 text-sm mt-7 md:-ml-20">
