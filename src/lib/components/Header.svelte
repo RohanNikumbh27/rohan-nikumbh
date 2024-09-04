@@ -19,8 +19,8 @@
                   //   ref: "/projects"
                   // },
                   {
-                    label: "About",
-                    ref: "/about"
+                    label: "Timeline",
+                    ref: "/timeline"
                   },
                   {
                     label: "Skills",
