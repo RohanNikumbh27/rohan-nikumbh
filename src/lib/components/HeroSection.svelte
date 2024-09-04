@@ -42,7 +42,7 @@
 
 
   <style>
-    .font-custom {
+    .fonta {
       font-family:math, serif
     }
   </style>
