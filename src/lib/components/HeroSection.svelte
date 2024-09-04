@@ -10,8 +10,7 @@
         <div class="flex justify-center items-center flex-col">
             <img src={Rohan_image} alt="Img" class=" rounded-2xl">
             <!-- <h1 class=" text-xl mt-3 text-slate-500">Rohan Nikumbh</h1> -->
-            <h1 class=" mt-3 font-bold font-custom max-w-sm bg-gradient-to-br from-gray-600 via-teal-600 to-gray-500 bg-clip-text text-center text-4xl text-transparent ">Rohan Nikumbh</h1>
-
+            <h1 class=" mt-3 font-[600] font-metropolis max-w-sm bg-gradient-to-br from-gray-600 via-teal-600 to-gray-500 bg-clip-text text-center text-4xl text-transparent ">Rohan Nikumbh</h1>
         </div>
     </div>
     
@@ -36,13 +35,5 @@
 
 
 <div class="max-w-[600px]">
-    
-  </div>
+ </div>
 
-
-
-  <style>
-    .fonta {
-      font-family:math, serif
-    }
-  </style>

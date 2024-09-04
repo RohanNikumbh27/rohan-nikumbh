@@ -118,10 +118,20 @@ footer {
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	border-radius: 30px;
-	background: #097; 
+	background: #555; 
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-	background: #555; 
+	background: #444
+  }
+
+
+
+  ::selection {
+	border-radius: 30px;
+	color: white;
+	font-weight: bold !important;
+	background-color: black;
+	text-shadow:0 0 5px teal
   }

@@ -20,6 +20,8 @@
       reqStatus = "sent"
     }, 2000);
   }
+
+  
 </script>
 
 
@@ -136,7 +138,7 @@
   
 
   <!-- request reviews access container -->
-  <div class=" container rounded-[16px] !w-[362px]  h-[212px] bg-[#171717] flex flex-col items-center justify-evenly">
+  <!-- <div class=" container rounded-[16px] !w-[362px]  h-[212px] bg-[#171717] flex flex-col items-center justify-evenly">
     <h1 class="text-[#D9D9D9] text-[20px]">Want to see all reviews ?</h1>
     <button 
       disabled={disableReqSend} 
@@ -173,7 +175,7 @@
         </div>
      
     </button>
-  </div>
+  </div> -->
   <div class="h-10 w-full"></div>
   
   <style>
