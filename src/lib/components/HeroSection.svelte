@@ -37,11 +37,3 @@
 <div class="max-w-[600px]">
     
   </div>
-
-
-
-  <style>
-    .font-custom {
-      font-family:Metropoli
-    }
-  </style>
