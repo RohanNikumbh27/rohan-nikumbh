@@ -35,5 +35,5 @@
 
 
 <div class="max-w-[600px]">
-    
-  </div>
+ </div>
+
