@@ -70,7 +70,7 @@
       <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
         {#each NavOptionsArr as NavOption, i}
         <a
-          class="px-2 pt-1 transition-all duration-200 font-bold  rounded-2xl {pathName === NavOption.ref ? "text-black ": "text-zinc-500"}"
+          class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {pathName === NavOption.ref ? "text-black ": "text-zinc-500"}"
           href={NavOption.ref}>{NavOption.label}</a
           >
         {/each}
@@ -119,7 +119,7 @@
                   on:click={() => setTimeout(() => {
                     toggleNavBar()
                   }, 30)}
-                  class="px-2 py-1 block md:inline-block m-4 text-3xl  transition-all duration-200 font-bold rounded-2xl {pathName === NavOption.ref ? "text-emerald-600 border-emerald-400": "text-gray-600"}"
+                  class="px-2 py-1 block md:inline-block m-4 text-3xl   transition-all duration-200 font-[500]  rounded-2xl {pathName === NavOption.ref ? "bg-gradient-to-bl from-green-300 to-green-800 bg-clip-text text-transparent  transition-all": "text-gray-600"}"
                   href={NavOption.ref}>{NavOption.label}</a
                 >
               {/each}

@@ -43,7 +43,16 @@
 	
 }
 
+.transition-c {
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+}
+
 .smoothClick:focus{
+	animation: smoothClick alternate;
+	animation-duration: 0.7s;
+}
+.hover-anim:hover{
 	animation: smoothClick alternate;
 	animation-duration: 0.7s;
 }
@@ -59,6 +68,8 @@
 	/* animation-duration: 0.3s; */
 	font-family: "Mona Sans","MonaSansFallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -135,3 +146,63 @@ footer {
 	background-color: black;
 	text-shadow:0 0 5px teal
   }
+
+
+  .shadow-box {
+	box-shadow: 10px 10px 100px solid black;
+  }
+
+
+  .text {
+	color: #9D9D9D;
+	font-weight: 600;
+  }
+  
+  .heading {
+	color: #9D9D9D;
+	font-weight: 700;
+  }
+  
+  .dark-bg {
+	background-color: #222;
+  }
+
+
+  .flexcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+
+
+.glow-box {
+	color:rgb(237, 237, 151);
+	box-shadow: 
+	0 0 7px #fff,
+	0 0 10px #fff,
+	0 0 31px #fff,
+	0 0 55px rgb(255, 226, 4),
+	0 0 91px rgb(255, 226, 4),
+	0 0 100px rgb(255, 226, 4),
+	0 0 122px rgb(255, 226, 4),
+	0 0 140px rgb(255, 226, 4);
+}
+
+.glow-text {
+	color:rgb(237, 237, 151);
+	text-shadow: 
+	0 0 7px #fff,
+	0 0 10px #fff,
+	0 0 31px #fff,
+	0 0 55px rgb(255, 226, 4),
+	0 0 91px rgb(255, 226, 4),
+	0 0 100px rgb(255, 226, 4),
+	0 0 122px rgb(255, 226, 4),
+	0 0 140px rgb(255, 226, 4);
+}
+
+
+.bluelink {
+	color: rgb(0, 128, 255);
+}
