@@ -4,10 +4,25 @@
   import Button from "$lib/components/form/Button.svelte";
   import HeroSection from "$lib/components/HeroSection.svelte";
   import Socials from "$lib/components/Home/Socials.svelte";
+
+  // import Dropdown from '$lib/components/form/Dropdown.svelte';
+
+
+// let options = [
+//   { label: 'Option 1', value: 'opt1' },
+//   { label: 'Option 2', value: 'opt2' },
+//   { label: 'Option 3', value: 'opt3' }
+// ];
 </script>
 
 
-<div class="container ">
+
+<!-- <div class="px-10">
+  <Dropdown options={options} labelKey="label" valueKey="value"/>
+</div> -->
+
+
+<div class="container">
   <HeroSection />
 </div>
 <div class="mb-4">

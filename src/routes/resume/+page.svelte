@@ -3,8 +3,7 @@
   import { userCurrency } from "$lib/store/userStore"
   import toast, { Toaster } from "svelte-french-toast";
   let resumeLink =
-    "https://easyplacements.s3.ap-south-1.amazonaws.com/VIIT/VI-TPO/Student_Documents/22220070/k6jor1mfippdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240831T143204Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIASPWL33DPTXQ67ONG%2F20240831%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=98a38e80ee8b72926461bca5d793b62040aaba79f89c820caf84b3468826ac18";
-
+    "https://easyplacements.s3.ap-south-1.amazonaws.com/VIIT/VI-TPO/Student_Documents/22220070/vc8pdbrt64pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241020T170734Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIASPWL33DPWNHGBZ7S%2F20241020%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=119da33bf8078a4d8a191107589d0a640243ad981fc9c84636630e0a4668e382"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
   let reqStatus = "notSent";
   let disableReqSend = false;

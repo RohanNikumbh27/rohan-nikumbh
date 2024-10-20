@@ -19,7 +19,6 @@
 
 <div class="flex items-center justify-center md:mt-10">
     <h1 class="mx-auto font-bold text-2xl text-slate-700">My Projects</h1>
-
 </div>
 
 <div class="h-5"></div>
