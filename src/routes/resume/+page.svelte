@@ -15,43 +15,43 @@
   }
 
 
-  const getUsersCurrentAddress = async (latitude, longitude) => {
-    try {
-        const apiKey = "a5c44d8678ef43d098a989a5c4fe8ead";
-        let query = `${latitude},${longitude}`
-        const apiUrl = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${query}`;
+  // const getUsersCurrentAddress = async (latitude, longitude) => {
+  //   try {
+  //       const apiKey = "a5c44d8678ef43d098a989a5c4fe8ead";
+  //       let query = `${latitude},${longitude}`
+  //       const apiUrl = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${query}`;
 
 
-        const res = await fetch(apiUrl);
-        const data = await res.json()
-        let currency = data?.results[0]?.annotations?.currency;
+  //       const res = await fetch(apiUrl);
+  //       const data = await res.json()
+  //       let currency = data?.results[0]?.annotations?.currency;
 
-        currencyObj.name = currency.name;
-        currencyObj.symbol = currency.symbol;
-        currencyObj.iso_code = currency.iso_code;
+  //       currencyObj.name = currency.name;
+  //       currencyObj.symbol = currency.symbol;
+  //       currencyObj.iso_code = currency.iso_code;
 
-        userCurrency.set(currencyObj);
-        return currency;
+  //       userCurrency.set(currencyObj);
+  //       return currency;
         
-    } catch (error) {
-        console.log(error);
-    }
+  //   } catch (error) {
+  //       console.log(error);
+  //   }
     
 
-  };
+  // };
 
   const sendReqFn = async () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-            if($userCurrency.name == ""){
-                let { latitude, longitude } = position?.coords;
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //           if($userCurrency.name == ""){
+  //               let { latitude, longitude } = position?.coords;
                 reqStatus = "sending";
 
-                const promise = getUsersCurrentAddress(latitude, longitude);
-                promise.then((val)=>{
-                    // console.log("new userCurrency", val);
-                    console.log("new userCurrency", $userCurrency)
+  //               const promise = getUsersCurrentAddress(latitude, longitude);
+  //               promise.then((val)=>{
+  //                   // console.log("new userCurrency", val);
+  //                   console.log("new userCurrency", $userCurrency)
 
 
 
@@ -63,14 +63,14 @@
 
 
 
-                })
-            }else{
-                console.log("prev userCurrency", $userCurrency)
-            }
-        },
-        (err) => console.log(err)
-      );
-    }
+  //               })
+  //           }else{
+  //               console.log("prev userCurrency", $userCurrency)
+  //           }
+  //       },
+  //       (err) => console.log(err)
+  //     );
+  //   }
   };
 
   let name = "";
@@ -88,13 +88,13 @@
       toast.error("Please Enter a valid name !", position);
       return;
     }
-    setTimeout(() => {
+    // setTimeout(() => {
       saveState = "saving";
-    }, 1000);
+    // }, 1000);
     setTimeout(() => {
       saveState = "saved";
       toast.success("Feedback submmited successfully", position);
-    }, 2000);
+    }, 1000);
   };
 </script>
 
