@@ -96,11 +96,12 @@
                 <h1 class="m-2 mx-5 text-2xl background-clip ">{skill.name}</h1>       
               </div> -->
 
-              <div class="md:min-w-[30%] min-w-[40%] bg-gradient-to-tr from-indigo-600 via-pink-600 to-purple-600 h-[100px] cursor-pointer hover:scale-[1.05] transition-all  min-h-[100px] m-4 rounded-2xl text-white flex font-sans  items-center justify-center hover:p-1">
+              <!-- <div class="md:min-w-[30%] min-w-[40%] bg-gradient-to-tr from-indigo-600 via-pink-600 to-purple-600 h-[100px] cursor-pointer hover:scale-[1.05] transition-all  min-h-[100px] m-4 rounded-2xl text-white flex font-sans  items-center justify-center hover:p-1">
                 <div class="w-full py-2 px-3 h-full rounded-xl bg-zinc-200  flex items-center justify-center">
-                <p class="text-2xl  font-[400] text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 italic">{skill.name}</p>
+                  <p class="text-2xl  font-[400] text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 italic">{skill.name}</p>
                 </div>
-                </div>
+              </div> -->
+              <div class="py-2 px-4 m-2 hover:scale-105 transition-all cursor-pointer  bg-[#030712] rounded-md text-white">{skill.name}</div>
             {/each}
           </div>
       </div>
