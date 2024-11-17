@@ -27,7 +27,7 @@
 
 
 <div class="container">
-    <div class=" bg-zinc-200 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
+    <div class=" bg-zinc-100 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
         <h2 class="text-4xl font-bold text-zinc-900">Contact</h2>
         <p

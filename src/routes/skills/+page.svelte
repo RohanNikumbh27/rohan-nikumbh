@@ -88,7 +88,7 @@
 
   <div class=" min-h-svh">
       {#each skills as section, i}
-      <div class="bg-zinc-900/10 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
+      <div class="bg-zinc-100 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
         <img src="/border-design.svg" alt="border-design" class="absolute h-[150px] right-0 bottom-0 z-[3]"/>
         <h1 class="pt-5 px-5 text-3xl bg-gradient-to-bl hover:from-red-600 hover:to-red-700 bg-clip-text text-transparent from-zinc-300 to-zinc-800 transition-all">{section.category}</h1>
         <div class="flex justify-center items-center flex-wrap py-5 px-5">

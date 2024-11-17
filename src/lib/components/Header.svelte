@@ -106,7 +106,7 @@
       </button>
     </div>
     <div class="px-3 transition-all sm:hidden hidden {showSearchComp ? 'md:block' : 'md:hidden'}">
-      <SearchComp />
+      <SearchComp toggle={()=> showSearchComp = !false}/>
     </div>
 
     <!-- Navbar for small divices -->
