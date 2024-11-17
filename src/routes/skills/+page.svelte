@@ -84,27 +84,20 @@
 </script>
 
 
-<section class="my-8 space-y-12 min-h-svh  w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c">
+<section class="my-0 md:my-8 space-y-12 min-h-svh  w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c">
 
   <div class=" min-h-svh">
       {#each skills as section, i}
-      <div class="bg-zinc-100 min-h-[200px] my-3 rounded-3xl text-center">
-        <h1 class="px-2 pt-5 text-3xl  bg-gradient-to-bl hover:from-purple-300 hover:to-blue-800 bg-clip-text text-transparent from-zinc-300 to-zinc-800 transition-all ">{section.category}</h1>
-          <div class=" flex justify-center items-center flex-wrap py-5 ">
+      <div class="bg-zinc-100 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
+        <img src="/border-design.svg" alt="border-design" class="absolute h-[150px] right-0 bottom-0 z-[3]"/>
+        <h1 class="pt-5 px-5 text-3xl bg-gradient-to-bl hover:from-red-600 hover:to-red-700 bg-clip-text text-transparent from-zinc-300 to-zinc-800 transition-all">{section.category}</h1>
+        <div class="flex justify-center items-center flex-wrap py-5 px-5">
             {#each section.skills as skill, i}
-              <!-- <div class="">
-                <h1 class="m-2 mx-5 text-2xl background-clip ">{skill.name}</h1>       
-              </div> -->
-
-              <!-- <div class="md:min-w-[30%] min-w-[40%] bg-gradient-to-tr from-indigo-600 via-pink-600 to-purple-600 h-[100px] cursor-pointer hover:scale-[1.05] transition-all  min-h-[100px] m-4 rounded-2xl text-white flex font-sans  items-center justify-center hover:p-1">
-                <div class="w-full py-2 px-3 h-full rounded-xl bg-zinc-200  flex items-center justify-center">
-                  <p class="text-2xl  font-[400] text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 italic">{skill.name}</p>
-                </div>
-              </div> -->
-              <div class="py-2 px-4 m-2 hover:scale-105 transition-all cursor-pointer  bg-[#030712] rounded-md text-white">{skill.name}</div>
+            <div class="py-2 px-5 m-2 z-10 w-full md:w-auto  hover:scale-[1.03] transition-all cursor-pointer bg-[#030712] rounded-2xl text-white">{skill.name}</div>
             {/each}
-          </div>
-      </div>
+        </div>
+    </div>
+    
       {/each}
   </div>
   
