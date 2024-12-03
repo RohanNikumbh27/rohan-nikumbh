@@ -1,20 +1,8 @@
 <script>
-    export const toggle = () => console.log("Toggle")
-    let SearchQ = ""
-    // let results = [
-    //     "slhfsf",
-    //     "sample result 1",
-    //     "sample result 2",
-    //     "another result",
-    //     "yet another search result",
-    //     "slhfsf",
-    //     "search term",
-    //     "search example",
-    //     "relevant result",
-    //     "slhfsf",
-    //     "example search",
-    //     "more results",
-    // ];
+    export const toggle = () => console.log("Toggle");
+  import { SearchQ } from "$lib/store/userStore.js"
+
+    // $:console.log(SearchQ)
 
     let results = [
         {label:"home", link:"/"},
@@ -27,7 +15,7 @@
 
     // Filter the results based on the search query
     $: filteredResults = results.filter(result =>
-        result.label.toLowerCase().includes(SearchQ.toLowerCase())
+        result.label.toLowerCase().includes($SearchQ.toLowerCase())
     );
 </script>
 
@@ -39,7 +27,7 @@
             name="q"
             class="px-6 py-2 w-full rounded-md flex-1 outline-none bg-white text-black dark:bg-gray-50 dark:text-black"
             required
-            bind:value={SearchQ}
+            bind:value={$SearchQ}
         />
         <button
             type="submit"
@@ -54,9 +42,9 @@
     </div>
 
     <!-- Search Results Section -->
-    {#if SearchQ}
+    {#if $SearchQ}
         <div class="text-black text-left font-[500] mb-5">
-            Showing {filteredResults.length} result{filteredResults.length === 1 ? '' : 's'} for "{SearchQ}"
+            Showing {filteredResults.length} result{filteredResults.length === 1 ? '' : 's'} for "{$SearchQ}"
         </div>
         <div class="bg-white w-full text-left rounded-2xl p-5 mb-10 shadow-lg max-h-[350px] overflow-auto">
             {#if filteredResults.length > 0}

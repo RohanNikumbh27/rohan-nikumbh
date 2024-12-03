@@ -5,3 +5,8 @@ export const userCurrency = writable({
     symbol: "",
     iso_code: "",
   }); 
+
+
+
+
+export let SearchQ = writable("");
