@@ -5,7 +5,7 @@
 <!-- mail -->
 <a
 href="mailto:rohannikumbh2793@gmail.com"
-class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-gray-200"
+class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-primary"
 >
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ class="p-2 rounded-lg flex items-center  justify-center transition-all duration-
 <!-- linkedin -->
   <a
     href="https://www.linkedin.com/in/rohan-nikumbh-989aa4244/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in"
-    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-gray-200"
+    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-primary"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ class="p-2 rounded-lg flex items-center  justify-center transition-all duration-
 <!-- whatsapp -->
 <a
 href="https://wa.me/9766576487"
-class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-gray-200"
+class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-primary"
 >
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ class="p-2 rounded-lg flex items-center  justify-center transition-all duration-
 <!-- X Twitter -->
   <a
     href="https://x.com/NikumbhRoh385?t=eN7tgDqDn-ltskTRXdj2vg&s=09"
-    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-gray-200"
+    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-primary"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ class="p-2 rounded-lg flex items-center  justify-center transition-all duration-
 <!-- youtube -->
   <a
     href="https://www.youtube.com/channel/UCTa_SdCrLdmis9zCc9BJN_w"
-    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-gray-200"
+    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500 hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-primary"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ class="p-2 rounded-lg flex items-center  justify-center transition-all duration-
   <!-- Insta -->
   <a
     href="https://www.instagram.com/rohannikumbh/"
-    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500  hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-gray-200"
+    class="p-2 rounded-lg flex items-center  justify-center transition-all duration-500  hover:border-gray-100 hover:border border border-transparent bg-gray-100 hover:bg-primary"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -9,7 +9,7 @@
     <img
       src={Rohan_image}
       alt="Img"
-      class="rounded-2xl border-4 cursor-pointer hover:shadow-[0_35px_60px_-15px_rgba(255,0,0,0.6)] shadow-2xl transition-all hover:scale-105 h-[500px] mt-3 object-cover"
+      class="rounded-2xl border-4 cursor-pointer hover:shadow-[0_35px_60px_-15px_rgba(255,0,0,0.5)] shadow-2xl  border-red-600  transition-all hover:scale-105 h-[500px] mt-3 object-cover"
     />
   </div>
 
