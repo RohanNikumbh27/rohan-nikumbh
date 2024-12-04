@@ -2,8 +2,7 @@
   import Button from "$lib/components/form/Button.svelte";
   import { userCurrency } from "$lib/store/userStore"
   import toast, { Toaster } from "svelte-french-toast";
-  let resumeLink =
-    "https://easyplacements.s3.ap-south-1.amazonaws.com/VIIT/VI-TPO/Student_Documents/22220070/vc8pdbrt64pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241020T170734Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIASPWL33DPWNHGBZ7S%2F20241020%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=119da33bf8078a4d8a191107589d0a640243ad981fc9c84636630e0a4668e382"
+  let resumeLink = "https://drive.google.com/file/d/14ZERfVAFdYRxAyox7wQHorNyYzQhPsgp/view"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
   let reqStatus = "notSent";
   let disableReqSend = false;
@@ -41,36 +40,13 @@
   // };
 
   const sendReqFn = async () => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       (position) => {
-  //           if($userCurrency.name == ""){
-  //               let { latitude, longitude } = position?.coords;
-                reqStatus = "sending";
+    reqStatus = "sending";
 
-  //               const promise = getUsersCurrentAddress(latitude, longitude);
-  //               promise.then((val)=>{
-  //                   // console.log("new userCurrency", val);
-  //                   console.log("new userCurrency", $userCurrency)
-
-
-
-                    setTimeout(() => {
-                        disableReqSend = true;
-                        reqStatus = "sent"
-                        toast.success("Request sent successfully", position)
-                    }, 2000);
-
-
-
-  //               })
-  //           }else{
-  //               console.log("prev userCurrency", $userCurrency)
-  //           }
-  //       },
-  //       (err) => console.log(err)
-  //     );
-  //   }
+    setTimeout(() => {
+        disableReqSend = true;
+        reqStatus = "sent"
+        toast.success("Request sent successfully", position)
+    }, 2000);
   };
 
   let name = "";
@@ -120,7 +96,7 @@
         >
           <svg
             aria-hidden="true"
-            class="w-14 h-14 text-black animate-spin fill-white"
+            class="w-14 h-14 text-black animate-spin fill-primary"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -144,19 +120,19 @@
           <textarea
             bind:value={feedbackMsg}
             required
-            class="w-full smoothClick grayd h-full flexc text-center pt-[12px] rounded-[20px] min-h-[100px]"
+            class="w-full smoothClick grayd h-full flexc text-center pt-[12px] px-10 rounded-[20px] min-h-[100px]"
             placeholder="Give some feedback on resume..."
           ></textarea>
           <div class="w-full !pt-3 h-[40%] flexc gap-3 flex-row">
             <input
               bind:value={name}
               required
-              class="h-full w-full smoothClick flexc grayd rounded-[20px] pl-4"
+              class="h-full w-full smoothClick pl-10 flexc grayd rounded-[20px] pl-4"
               placeholder="Enter Your name"
             />
             <button
               on:click={saveFun}
-              class="h-full w-[30%] flexc smoothClick bg-[#D9D9D9] text-[#000] font-medium !rounded-[20px] text-xl"
+              class="h-full w-[30%] flexc smoothClick bg-[#D9D9D9] text-[#000] font-medium !rounded-[20px] text-xl px-2"
               >Save</button
             >
           </div>
@@ -200,7 +176,7 @@
           {:else if reqStatus == "sending"}
             <svg
               aria-hidden="true"
-              class="w-6 h-6 text-gray-200 animate-spin dark:text-gray-600 fill-black"
+              class="w-6 h-6 text-primary-dark animate-spin  fill-primary"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
