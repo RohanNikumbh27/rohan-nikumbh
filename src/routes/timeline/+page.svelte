@@ -13,6 +13,9 @@
     <ProgressComp pos="left" title="B.Tech in Information Technology" desc="VIIT, Pune" date="June 22 - June 25"/>
     <ProgressComp pos="right" title="Diploma Engineer Trainee" desc="ARaymond India Pvt. Ltd." date="Aug 2022 - Nov 2022"/> 
     <ProgressComp pos="left" title="Diploma in E&TC" desc="Government Polytechnic Nashik" date="Aug 2019 - July 2022"/> 
+    <ProgressComp pos="right" title="6th to 10th" desc="S.G.S Highschool, Pachora" date="July 2014 - July 2019"/> 
+    <!-- <ProgressComp pos="left" title="5th" desc="Ladkubai Vidya Mandir, Bhadgaon" date="Jul 2013 - July 2014"/> 
+    <ProgressComp pos="right" title="1st to 4th" desc="BalVikas Vidya Mandir, Bhadgaon" date="Jul 2009 - July 2013"/>  -->
   </div> 
 </div>
 
