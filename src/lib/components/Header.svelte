@@ -67,7 +67,7 @@ import {blur, fade, fly, scale} from "svelte/transition";
   class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md  bg-[#221f1f2f] py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500 {expanded ? 'h-full md:h-[250px] md:max-h-auto ' : 'h-[55px] md:h-[80px]'}"
 >
   <div class="px-4 ">
-    <div class="flex items-center justify-between ">
+    <div class="flex items-center justify-between">
       <div class="flex shrink-0">
         <a aria-current="page" class="flex items-center" href="/">
 
