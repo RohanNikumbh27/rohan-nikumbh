@@ -70,11 +70,11 @@
         </div>
         <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
           {#each NavOptionsArr as NavOption, i}
-          <a
-          transition:blur={{duration: 300, delay:100}}
-            class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {pathName === NavOption.ref ? "text-primary ": "text-zinc-500"}"
-            href={NavOption.ref}>{NavOption.label}</a
-            >
+            <a
+                transition:blur={{duration: 300, delay:100}}
+                class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {pathName === NavOption.ref ? "text-primary ": "text-zinc-500"}"
+                href={NavOption.ref}>{NavOption.label}
+            </a>
           {/each}
           
           </div>
@@ -102,9 +102,9 @@
 
 
 <div class="block md:hidden">
-  <header class="h-auto fixed top-0 w-full block z-[40] rounded-3xl p-2 bg-transparent">
+  <header class="h-auto fixed top-0 w-full block z-[40] rounded-3xl p-2 bg-transparent ">
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <div class="h-[70px] rounded-3xl bg-primary-dark bg-opacity-85 backdrop-blur-2xl flex items-center px-5 justify-between">
+    <div class="h-[60px] rounded-3xl bg-primary-dark bg-opacity-85 backdrop-blur-2xl flex items-center px-5 justify-between">
         <img src="\sparcle.svg" alt="sparcle" class=" text-primary  h-6 w-6">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <img src="\hamburger.svg" alt="hamburger" class="h- w-7 inline-block md:hidden" on:click={()=>showNavbarSmall = !showNavbarSmall}>
@@ -126,13 +126,13 @@
     <div class="h-full my-auto pt-20">
         {#each NavOptionsArr as NavOption, i}
             <a
-            transition:blur={{duration: 300, delay:100}}
-            on:click={() => setTimeout(() => {
+                transition:blur={{duration: 300, delay:100}}
+                on:click={() => setTimeout(() => {
                 toggleNavBar()
             }, 30)}
-            class="px-2 py-1  block md:inline-block m-4 text-3xl transition-all duration-200  rounded-2xl {pathName === NavOption.ref ? "text-primary  transition-all": "text-[#342121b4]"}"
-            href={NavOption.ref}>{NavOption.label}</a
-            >
+                class="px-2 py-1  block md:inline-block m-4 text-3xl transition-all duration-200  rounded-2xl {pathName === NavOption.ref ? "text-primary  transition-all": "text-[#342121b4]"}"
+                href={NavOption.ref}>{NavOption.label}
+            </a>
         {/each}
     </div>
   </div>
