@@ -15,7 +15,7 @@
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <div class="flex md:contents flex-row-reverse " on:mouseenter={()=>hovered=true} on:mouseout={()=>hovered=false}>
         <div
-            class="relative  p-7 my-6 text-zinc-300 bg-rad rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
+            class="relative  p-7 my-6 text-zinc-300 bg-rad rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto shadow-2xl hover:shadow-2xl hover:shadow-primary transition-all">
             <span class=" text-sm text-zinc-300  whitespace-nowrap">{date}</span>
             <h3 class="text-lg font-semibold lg:text-xl">{title}</h3>
             <p class="mt-2 leading-6 text-zinc-400">{desc}</p>
@@ -33,7 +33,7 @@
                 </div>
               </div>
             {:else} -->
-              <div class=" transition-all absolute w-6 h-6 -mt-3 bg-white border-4 border-zinc-800 rounded-full top-1/2"></div>
+              <div class=" transition-all absolute w-6 h-6 -mt-3 bg-white border-4 border-primary rounded-full top-1/2"></div>
             <!-- {/if} -->
               </div>
     </div>
@@ -58,11 +58,11 @@
                 </div>
               </div>
             {:else} -->
-              <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-zinc-800 rounded-full top-1/2"></div>
+              <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-primary rounded-full top-1/2"></div>
             <!-- {/if} -->
         </div>
-        <div class="relative p-7 my-6 text-zinc-300 bg-rad rounded-xl col-start-6 col-end-10 mr-auto">
-            <span class=" text-sm text-zinc-300  whitespace-nowrap">{date}</span>
+        <div class="relative p-7 my-6 text-zinc-300 bg-rad rounded-xl col-start-6 col-end-10 mr-auto shadow-2xl hover:shadow-2xl hover:shadow-primary transition-all">
+            <span class=" text-sm text-zinc-300  whitespace-nowrap ">{date}</span>
             <h3 class="text-lg font-semibold lg:text-xl">{title}</h3>
             <p class="mt-2 leading-6 text-zinc-400">{desc}</p>
         </div>

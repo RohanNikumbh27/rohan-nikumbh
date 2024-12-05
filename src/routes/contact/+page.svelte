@@ -29,9 +29,9 @@
 <div class="container">
     <div class=" bg-zinc-100 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-        <h2 class="text-4xl font-bold text-zinc-900">Contact</h2>
+        <h2 class="text-4xl font-bold text-primary-dark">Contact</h2>
         <p
-          class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-900"
+          class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500"
         >
           Want to contact us? Choose an option below and well be happy to show you
           how we can transform companys web experience.
@@ -42,7 +42,7 @@
       >
         <div>
           <h2 class="text-lg font-bold text-zinc-900">Contact Us</h2>
-          <p class="max-w-sm mt-4 mb-4 text-zinc-900">
+          <p class="max-w-sm mt-4 mb-4 text-zinc-600">
             Have something to say? We are here to help. Fill up the form or send
             email or call phone.
           </p>

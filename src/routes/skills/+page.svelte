@@ -90,10 +90,10 @@
       {#each skills as section, i}
       <div class="bg-zinc-100 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
         <img src="/border-design.svg" alt="border-design" class="absolute h-[150px] right-0 bottom-0 z-[3]"/>
-        <h1 class="pt-5 px-5 text-3xl bg-gradient-to-bl hover:from-red-600 hover:to-red-700 bg-clip-text text-transparent from-zinc-300 to-zinc-800 transition-all">{section.category}</h1>
+        <h1 class="pt-5 px-5 text-3xl bg-gradient-to-br from-primary to-primary bg-clip-text text-transparent  transition-all">{section.category}</h1>
         <div class="flex justify-center items-center flex-wrap py-5 px-5">
             {#each section.skills as skill, i}
-            <div class="py-2 px-5 m-2 z-10 w-full md:w-auto  hover:scale-[1.03] transition-all cursor-pointer bg-[#030712] rounded-2xl text-white">{skill.name}</div>
+                <div class="py-2 px-5 m-2 z-10 w-full md:w-auto  hover:scale-[1.03] transition-all cursor-pointer bg-primary-dark rounded-2xl text-[#ffffff]">{skill.name}</div>
             {/each}
         </div>
     </div>
