@@ -6,7 +6,8 @@
       "link": "https://example.com/project-one",
       "image": "/ExpenseTracker.png",
       "technologies": ["Next Js", "Node.js", "MongoDB"],
-      "date": "2023-01-15"
+      "date": "2023-01-15",
+      "route": "/work/personal-expense-tracker"
     },
     {
       "title": "Project Two",
