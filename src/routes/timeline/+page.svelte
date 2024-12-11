@@ -6,7 +6,7 @@
 
 
 
-<div class=" p-4">
+<div class=" p-4 transition-c">
   <div class="flex flex-col grid-cols-9 p-2 mx-auto md:grid">
     <ProgressComp pos="left" title="Software Engineer Intern" desc="@Timechain labs" date="June 24 - Oct 2024"/>
     <ProgressComp pos="right" title="Web Developer Intern" desc="CodSoft" date="1 Aug 2023 - 31 Aug 2023"/> 
