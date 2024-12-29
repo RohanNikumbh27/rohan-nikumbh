@@ -20,8 +20,8 @@ import {fade, fly} from "svelte/transition";
     );
 </script>
 
-<form on:submit|preventDefault={() => {}}>
-    <div class="mx-auto my-8 relative bg-white dark:bg-gray-50 min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2 shadow-2xl focus-within:border-gray-300">
+<form on:submit|preventDefault={() => {}} >
+    <div class="mx-auto my-8 relative bg-white dark:bg-gray-50 min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2 shadow-2xl">
         <input
             id="search-bar"
             placeholder="Search for something..."
@@ -47,13 +47,13 @@ import {fade, fly} from "svelte/transition";
         <div class="text-black text-left font-[500] mb-5">
             Showing {filteredResults.length} result{filteredResults.length === 1 ? '' : 's'} for "{$SearchQ}"
         </div>
-        <div class="bg-white w-full text-left rounded-2xl p-5 mb-10 shadow-lg max-h-[350px] overflow-auto">
+        <div class="bg-[#1414147e] w-full text-left rounded-2xl p-5 mb-10 shadow-lg max-h-[350px] overflow-auto">
             {#if filteredResults.length > 0}
                 {#each filteredResults as result, i}
                 <a href={result.link} class="px-1" on:click={toggle}>
                     <div class="flex gap-3 items-center  cursor-pointer hover:translate-x-1 transition-all">
                         <img src="/right-arrow.svg" alt="arrow" class="h-4 " />
-                        <span class="text-sm text-black">{result.label}</span>
+                        <span class="text-md text-white">{result.label}</span>
                     </div>
                 </a>
                 {/each}
