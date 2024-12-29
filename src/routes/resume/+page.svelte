@@ -74,6 +74,10 @@
   };
 </script>
 
+<center>
+  <h2 class="pt-4 primary-heading">Resume</h2>
+</center>
+
 <div
   class="relative -top-[50px] h-svh flex items-center justify-evenly font-serif font-bold flex-col gap-1"
 >

@@ -107,15 +107,15 @@
     <div class="h-[60px] rounded-3xl bg-primary-dark bg-opacity-85 backdrop-blur-2xl flex items-center px-5 justify-between">
         <img src="\sparcle.svg" alt="sparcle" class=" text-primary  h-6 w-6">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <img src="\hamburger.svg" alt="hamburger" class="h- w-7 inline-block md:hidden" on:click={()=>showNavbarSmall = !showNavbarSmall}>
+        <img src="\hamburger.svg" alt="hamburger" class=" cursor-pointer w-7 inline-block md:hidden" on:click={()=>showNavbarSmall = !showNavbarSmall}>
     </div>
   </header>
 </div>
 
   {#if showNavbarSmall}
-  <div class=" fixed h-[100vh] block w-[100vw] bg-primary-dark text-primary  !z-[500] p-2" in:fly={{duration:300, x:"-400%"}} out:fly={{duration:800, x:"-130%", delay:80}} ></div>
-  <div class=" fixed h-[100vh] block w-[94vw] bg-primary text-primary  !z-[600] p-2" in:fly={{duration:600, x:"-400%"}} out:fly={{duration:800, x:"-160%", delay:40}}></div>
-  <div class=" fixed h-[100vh] block w-[88vw] bg-white text-primary  !z-[700] p-2 mr-10" in:fly={{duration:900, x:"-400%"}} out:fly={{duration:800, x:"-200%"}}>
+  <div class=" fixed h-[100vh] block w-[100vw] bg-primary-dark text-primary  !z-[500] p-2" in:fly={{duration:300, x:"-400%"}} out:fly={{duration:2000, x:"-400%", delay:200}} ></div>
+  <div class=" fixed h-[100vh] block w-[94vw] bg-primary text-primary  !z-[600] p-2" in:fly={{duration:800, x:"-400%"}} out:fly={{duration:1700, x:"-450%", delay:45}}></div>
+  <div class=" fixed h-[100vh] block w-[88vw] bg-white shadow-2xl shadow-zinc-700 text-primary  !z-[700] p-2 mr-10" in:fly={{duration:800, x:"-400%", delay:200}} out:fly={{duration:1000, x:"-400%"}}>
     <div class="h-[70px] rounded-3xl  bg-opacity-85 backdrop-blur-2xl flex items-center px-5 justify-between" >
         <img src="\rohan-portfolio.svg" alt="sparcle" class=" text-primary pt-7">
         <button on:click={()=>showNavbarSmall = !showNavbarSmall}>

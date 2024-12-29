@@ -20,10 +20,6 @@
     });
 </script>
 
-<div class="flex items-center justify-center md:mt-10">
-    <h1 class="mx-auto font-semibold text-2xl text-slate-700">My Projects</h1>
-</div>
-
 <div class="h-5"></div>
 
 <div class="container grid gap-10 md:grid-cols-3 sm:grid-cols-1">
@@ -35,6 +31,9 @@
 
     
 </div>
+<center>
+    <h2 class=" primary-heading">Work</h2>
+  </center>
 <div class="flex items-center justify-center md:m-10">
     <h1 class="mx-auto font-semibold text-2xl text-slate-700">Under Development</h1>
 </div>

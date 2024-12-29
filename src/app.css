@@ -43,6 +43,26 @@
 	
 }
 
+.primary-heading {
+	font-size: 2.25rem;
+
+
+}
+
+.primary-heading::before {
+    content: '\200B'; /* Zero-width space */
+    display: inline-block;
+    width: 5px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-color: red; /* Red color for the line */
+    margin-right: 10px; /* Space between the line and the text */
+    vertical-align: middle; /* Align the line with the text */
+	border-radius: 100px;
+	margin-bottom: 5px;
+}
+
+
+
 .transition-c {
 	animation: smoothTransition;
 	animation-duration: 0.2s;
@@ -56,6 +76,7 @@
 	animation: smoothClick alternate;
 	animation-duration: 0.7s;
 }
+
 .fadeanimate{
 	/* transition:fadeTransition all 1s ease-out alternate; */
 	animation: fadeTransition alternate ;
