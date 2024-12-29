@@ -86,9 +86,9 @@
 
 <section class="my-0 md:my-8 space-y-12 min-h-svh  w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c">
   <center>
-    <h2 class=" primary-heading">Skills</h2>
+    <h2 class=" primary-heading  my-1">Skills</h2>
   </center>
-  <div class=" min-h-svh">
+  <div class=" min-h-svh !mt-0">
       {#each skills as section, i}
       <div class="bg-zinc-100 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
         <img src="/border-design.svg" alt="border-design" class="absolute h-[150px] right-0 bottom-0 z-[3]"/>

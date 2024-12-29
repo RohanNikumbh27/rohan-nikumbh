@@ -15,10 +15,10 @@
                       label: "Home",
                       ref: "/"
                     },
-                    {
-                      label: "Work",
-                      ref: "/work"
-                    },
+                    // {
+                    //   label: "Work",
+                    //   ref: "/work"
+                    // },
                     // {
                     //   label: "Projects",
                     //   ref: "/projects"
@@ -125,14 +125,14 @@
 
     <div class="h-full my-auto pt-20">
         {#each NavOptionsArr as NavOption, i}
-            <a
-                transition:blur={{duration: 300, delay:100}}
-                on:click={() => setTimeout(() => {
-                toggleNavBar()
-            }, 30)}
-                class="px-2 py-1  block md:inline-block m-4 text-3xl transition-all duration-200  rounded-2xl {pathName === NavOption.ref ? "text-primary  transition-all": "text-[#342121b4]"}"
-                href={NavOption.ref}>{NavOption.label}
-            </a>
+          <a
+            transition:blur={{duration: 300, delay:100}}
+            on:click={() => setTimeout(() => {
+            toggleNavBar()
+          }, 30)}
+            class="px-2 py-1  block md:inline-block m-4 text-3xl transition-all duration-200 rounded-2xl {pathName === NavOption.ref ? "!text-primary": "text-[#342121b4]"}"
+            href={NavOption.ref}>{NavOption.label}
+          </a>
         {/each}
     </div>
   </div>

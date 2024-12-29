@@ -10,11 +10,11 @@
       "route": "/work/personal-expense-tracker"
     },
     {
-      "title": "Project Two",
-      "description": "An e-commerce platform with real-time product recommendations and inventory management.",
-      "link": "https://example.com/project-two",
-      "image": "/rohan_favicon.jpeg",
-      "technologies": ["React", "Express", "PostgreSQL"],
+      "title": "Neucron",
+      "description": "Blockchain based digital asset management platform..",
+      "link": "neucron.io",
+      "image": "/neucron.png",
+      "technologies": ["Svelte", "Sveltekit", "tailwind", "Javascript"],
       "date": "2022-11-20"
     },
     {

@@ -52,13 +52,13 @@
 .primary-heading::before {
     content: '\200B'; /* Zero-width space */
     display: inline-block;
-    width: 5px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 4px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
     background-color: red; /* Red color for the line */
     margin-right: 10px; /* Space between the line and the text */
     vertical-align: middle; /* Align the line with the text */
 	border-radius: 100px;
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 }
 
 
