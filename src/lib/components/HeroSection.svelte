@@ -38,9 +38,9 @@ import {fade} from "svelte/transition";
 
 <div class="h-[270px] sm:h-[270px] md:h-[100px] md:block"></div>
 
-<div class="h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch">
+<div class="h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch ">
   <!-- Image Carousel -->
-  <div class="mt-0 pt-0 sm:w-[100%] md:w-[40%] flex items-center justify-center h-full md:h-auto flex-col rounded-2xl relative">
+  <div class="mt-0  transition-all pt-0 sm:w-[100%] md:w-[40%] flex items-center justify-center h-full md:h-auto flex-col rounded-2xl relative">
     <!-- Carousel Images -->
     {#each images as image, i}
       <img
@@ -56,7 +56,7 @@ import {fade} from "svelte/transition";
     <!-- Carousel Navigation Buttons -->
     <button
       on:click={prevImage}
-      class="absolute left-4 text-white bg-black/30 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
+      class="absolute  left-4 text-white bg-black/50 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
     >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
       <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
@@ -66,7 +66,7 @@ import {fade} from "svelte/transition";
     </button>
     <button
       on:click={nextImage}
-      class="absolute right-4 text-white bg-black/30 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
+      class="absolute right-4 text-white bg-black/50 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
     >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
       <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
@@ -95,10 +95,10 @@ import {fade} from "svelte/transition";
   <img
     src="/red_graphic.png"
     alt="Red Graphic"
-    class="absolute left-0 top-[-70px] md:top-0 opacity-90 -z-[1000] transition-all duration-1000 ease-in-out md:h-[1000px] sm:h-auto"
+    class="absolute left-0 sm:left-0 md:left-5 top-[-70px] md:top-0 opacity-100 -z-[1000] transition-all duration-1000 ease-in-out md:h-[1000px] sm:h-[100vh] "
     style="
       transform: translateY({scrollPosition}px);
-      filter: hue-rotate(10deg) saturate(5%);
+      filter: hue-rotate(70deg) saturate(5%);
     "
   />
 

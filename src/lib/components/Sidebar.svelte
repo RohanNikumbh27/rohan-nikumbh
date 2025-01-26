@@ -104,7 +104,7 @@
 <div class="block md:hidden">
   <header class="h-auto fixed top-0 w-full block z-[40] rounded-3xl p-2 bg-transparent ">
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <div class="h-[60px] rounded-3xl bg-primary-dark bg-opacity-70 backdrop-blur-md flex items-center px-5 justify-between">
+    <div class="h-[60px] rounded-3xl bg-primary-dark bg-opacity-85 backdrop-blur-[10px] flex items-center px-5 justify-between">
         <img src="\sparcle.svg" alt="sparcle" class=" text-primary  h-6 w-6">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <img src="\hamburger.svg" alt="hamburger" class=" cursor-pointer w-7 inline-block md:hidden" on:click={()=>showNavbarSmall = !showNavbarSmall}>
