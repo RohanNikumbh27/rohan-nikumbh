@@ -227,3 +227,32 @@ footer {
 .bluelink {
 	color: rgb(0, 128, 255);
 }
+
+
+@keyframes gradient-shuffle {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Apply styles for the text */
+  .gradient-text {
+    font-weight: bold; /* Make the text bold (optional) */
+    background: linear-gradient(
+      to right,
+      #2fff7b, /* light green */
+      #00a93e, /* medium green */
+      #00ff5e /* dark green */
+    );
+    background-size: 200% 200%; /* Allow the gradient to shift */
+    background-clip: text; /* Apply the gradient to the text only */
+    -webkit-background-clip: text; /* Safari compatibility */
+    color: transparent; /* Make the background visible within the text */
+    animation: gradient-shuffle 3s ease-in-out infinite; /* Apply the animation */
+  }

@@ -51,14 +51,13 @@
   
 </script>
 
-<div class="h-10 w-full"></div>
+<center>
+  <h2 class="primary-heading pt-5 pb-3 ">Contact</h2>
+</center>
 
 <div class="container">
     <div class=" bg-zinc-100 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center">
-        <center>
-          <h2 class=" primary-heading">Contact</h2>
-        </center>
         <p
           class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500"
         >
