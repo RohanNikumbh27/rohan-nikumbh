@@ -36,7 +36,7 @@
   <img
     src="/red_graphic.png"
     alt="Red Graphic"
-    class="absolute left-0 top-[-50px] md:top-0 opacity-20 -z-[1000] transition-transform duration-1000 ease-in-out md:h-[1000px] sm:h-auto"
+    class="absolute left-0 top-[-50px] md:top-0 opacity-20 -z-[1000] transition-all duration-1000 ease-in-out md:h-[1000px] sm:h-auto"
     style="transform: translateY({scrollPosition}px)"
   />
 

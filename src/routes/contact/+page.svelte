@@ -1,35 +1,61 @@
 
-
 <script>
   import {enhance} from "$app/forms"
   import Button from "$lib/components/form/Button.svelte"
   export let data;
   import '../../app.css'
-  $:console.log(data.revArr)
-  $:reviewsArr = data.revArr
+ 
 
-  // let reqStatus = "sending";
-  let reqStatus = "notSent";
-  let disableReqSend = false;
-  function sendReqFn() {
-    setTimeout(() => {
-      reqStatus = "sending";
-      
-    }, 60);
-    disableReqSend = true;
-    setTimeout(() => {
-      reqStatus = "sent"
-    }, 2000);
+
+  let formErrors = {
+    name: '',
+    email: '',
+    description: '',
+  };
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
+    // Clear previous errors
+    formErrors = { name: '', email: '', description: '' };
+
+    const formData = new FormData(event.target);
+    const name = formData.get('name')?.trim();
+    const email = formData.get('email')?.trim();
+    const description = formData.get('description')?.trim();
+
+    // Validate fields
+    let isValid = true;
+
+    if (!name) {
+      formErrors.name = 'Name is required!';
+      isValid = false;
+    }
+    if (!email) {
+      formErrors.email = 'Email Address is required!';
+      isValid = false;
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+      formErrors.email = 'Enter a valid Email Address!';
+      isValid = false;
+    }
+    if (!description) {
+      formErrors.description = 'Message is required!';
+      isValid = false;
+    }
+
+    // If the form is valid, submit it
+    if (isValid) {
+      event.target.submit();
+    }
   }
-
   
 </script>
 
+<div class="h-10 w-full"></div>
 
 <div class="container">
     <div class=" bg-zinc-100 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center">
-        <!-- <h2 class="text-4xl font-bold text-primary-dark">Contact</h2> -->
         <center>
           <h2 class=" primary-heading">Contact</h2>
         </center>
@@ -79,188 +105,55 @@
           </div>
         </div>
         <div>
-          <form method="POST" use:enhance|>
-            <!-- <input
-              type="checkbox"
-              id=""
-              class="hidden"
-              style="display:none"
-              name="botcheck"
-            /> -->
-            <div class="mb-5">
-              <input
-                type="text"
-                placeholder="Full Name"
-                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none  bg-zinc-300 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                name="name"
-                required
-              />
-            </div>
-            <div class="mb-5">
-              <label for="email_address" class="sr-only">Email Address</label>
-              <input
-                id="email_address"
-                type="text"
-                placeholder="Email Address"
-                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-zinc-900 rounded-md outline-none dark:placeholder:text-zinc-900 bg-zinc-300 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                name="email"
-
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                placeholder="Your Message"
-                class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-zinc-900 dark:placeholder:text-zinc-900 bg-zinc-300 rounded-md outline-none h-36 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                name="description"
-                required
-              >
-              </textarea>
-            </div>
-            <button onclick="">
-              <Button title="Submit" />
-            </button>
-            
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class=" mt-5 md:grid md:grid-cols-3 gap-3">
-      {#each reviewsArr as review, i}
-      <div class=" mt-3 bg-black text-white p-4 rounded-xl">
-        <h1 class="text-white pb-2 overflow-scroll">{review.name}</h1>
-        <div class=" p-2 bg-zinc-900 rounded-xl overflow-scroll">
-          {review.description}
-        </div>
-      </div>
-      {/each}
-    </div>
+          
+<form method="POST" on:submit={handleFormSubmit}>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Name"
+      class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
+      name="name"
+    />
+    {#if formErrors.name}
+      <div class="text-red-500 text-sm mt-1">{formErrors.name}</div>
+    {/if}
   </div>
+
+  <div class="mb-5">
+    <input
+      id="email_address"
+      type="text"
+      placeholder="Email Address"
+      class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
+      name="email"
+    />
+    {#if formErrors.email}
+      <div class="text-red-500 text-sm mt-1">{formErrors.email}</div>
+    {/if}
+  </div>
+
+  <div class="mb-3">
+    <textarea
+      placeholder="Type your message here!"
+      class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
+      name="description"
+    ></textarea>
+    {#if formErrors.description}
+      <div class="text-red-500 text-sm mt-1">{formErrors.description}</div>
+    {/if}
+  </div>
+
+  <button type="submit">
+    <Button title="Submit" />
+  </button>
+</form>
+        </div>
+      </div>
+    </div>
+    <div class=" mt-10 "></div>
+  </div>
+   
+
   
-<!-- 
-
-  <div class="h-10 w-full"></div>
   
-  <style>
-      * {
-          font-weight:400;
-          font-family: inter;
-      }
-  </style>
 
-
-
-
-<script>
-  import { enhance } from "$app/forms";
-  import Button from "$lib/components/form/Button.svelte";
-  export let data;
-  import "../../app.css";
-
-  $: console.log(data.revArr);
-  $: reviewsArr = data.revArr;
-
-  let reqStatus = "notSent";
-  let disableReqSend = false;
-
-  function sendReqFn() {
-    setTimeout(() => {
-      reqStatus = "sending";
-    }, 60);
-    disableReqSend = true;
-    setTimeout(() => {
-      reqStatus = "sent";
-    }, 2000);
-  }
-</script>
-
-<div class="container">
-  <div class="bg-zinc-100 rounded-2xl md:px-10 px-5 sm:px-5" id="contact">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center">
-      <center>
-        <h2 class="primary-heading">Contact</h2>
-      </center>
-      <p class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500">
-        Want to contact us? Choose an option below and we'll be happy to show you how we can transform your company's web experience.
-      </p>
-    </div>
-    <div
-      class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16"
-    >
-      <div>
-        <h2 class="text-lg font-bold text-zinc-900">Contact Us</h2>
-        <p class="max-w-sm mt-4 mb-4 text-zinc-600">
-          Have something to say? We are here to help. Fill out the form or send an email or call us.
-        </p>
-        <div class="flex items-center mt-8 space-x-2 text-dark-600 text-zinc-900">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd" d="m11.54 22.351...Z" clip-rule="evenodd" />
-          </svg>
-          <span>Pune</span>
-        </div>
-        <div class="flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-black">
-            <path d="M1.5 8.67...Z" />
-          </svg>
-          <a href="mailto:rohannikumbh2793@gmail.com">rohannikumbh2793@gmail.com</a>
-        </div>
-        <div class="flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd" d="M1.5 4.5...Z" clip-rule="evenodd" />
-          </svg>
-          <a href="tel:9284492299">+91 9284492299</a>
-        </div>
-      </div>
-      <div>
-        <form method="POST" use:enhance>
-          <div class="mb-5">
-            <input
-              type="text"
-              placeholder="Full Name"
-              class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none bg-zinc-300 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100"
-              name="name"
-              required
-            />
-          </div>
-          <div class="mb-5">
-            <input
-              id="email_address"
-              type="email"
-              placeholder="Email Address"
-              class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-zinc-900 rounded-md outline-none bg-zinc-300 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100"
-              name="email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <textarea
-              placeholder="Your Message"
-              class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-zinc-900 bg-zinc-300 rounded-md outline-none h-36 focus:ring-1 border-gray-300 focus:border-gray-600 ring-gray-100"
-              name="description"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" disabled={disableReqSend}>
-            <Button title="Submit" />
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="mt-5 md:grid md:grid-cols-3 gap-3">
-    {#each reviewsArr as review}
-    <div class="mt-3 bg-black text-white p-4 rounded-xl">
-      <h1 class="text-white pb-2 overflow-scroll">{review.name}</h1>
-      <div class="p-2 bg-zinc-900 rounded-xl overflow-scroll">
-        {review.description}
-      </div>
-    </div>
-    {/each}
-  </div>
-</div>
-
-<style>
-  * {
-    font-weight: 400;
-    font-family: inter;
-  }
-</style> -->
