@@ -81,7 +81,7 @@
 <div
   class="relative -top-[50px] h-svh flex items-center justify-evenly font-serif font-bold flex-col gap-1"
 >
-  <Button title="View Resume" href={resumeLink} />
+  <Button title="View Resume" href={resumeLink} target="_blank"/>
   <div class="flex gap-3 sm:gap-4 md:gap-10 flex-col sm:flex-col md:flex-row">
     {#if saveState == "saved"}
       <div class="w-[100%]">
