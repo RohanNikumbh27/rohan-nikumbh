@@ -1,9 +1,23 @@
 <script>
-  import Rohan_image from "$lib/images/Rohan_Nikumbh.jpg";
   import Button from "$lib/components/form/Button.svelte";
   import { onMount } from "svelte";
+import {fade} from "svelte/transition";
 
   let scrollPosition = 0;
+  let currentIndex = 0;
+  let images = [
+    "/Rohan_Nikumbh.jpg",
+    "/Rohan_Nikumbh1.jpg",
+    "/Rohan_Nikumbh2.jpg",
+  ];
+
+  const nextImage = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+  };
+
+  const prevImage = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+  };
 
   onMount(() => {
     const handleScroll = () => {
@@ -11,40 +25,91 @@
       scrollPosition = window.scrollY * 0.2; // Lower value for smoother/slower movement
     };
 
+    // Auto-slide every 3 seconds
+    const interval = setInterval(nextImage, 3000);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      clearInterval(interval); // Clear interval on unmount
       window.removeEventListener("scroll", handleScroll);
     };
   });
 </script>
 
-<div class="h-10 hidden md:block"></div>
+<div class="h-[270px] sm:h-[270px] md:h-[100px] md:block"></div>
 
-<!-- <div class="h-80 w-80 -left-0 -bottom-0 rounded-full !-z-[200] absolute blur-[200px] hover:blur-[200px] bg-red-500"></div> -->
+<div class="h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch">
+  <!-- Image Carousel -->
+  <div class="mt-0 pt-0 sm:w-[100%] md:w-[40%] flex items-center justify-center h-full md:h-auto flex-col rounded-2xl relative">
+    <!-- Carousel Images -->
+    {#each images as image, i}
+      <img
+        src={image}
+        alt="Img"
+        class="absolute !transition-all rounded-2xl border-2 cursor-pointer hover:shadow-[0_35px_60px_-15px_rgba(255,0,0,0.5)] shadow-2xl  shadow-[#00000074] border-gray-600  duration-500 transform object-cover h-[500px] w-[300px]"
+        class:hidden={i !== currentIndex}
+        in:fade
+        out:fade
+      />
+    {/each}
 
-<div class="min-h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch">
-  <!-- Rohan's Image -->
-  <div class="mt-0 pt-0 sm:w-[100%] md:w-[40%] items-center justify-center flex h-full md:h-auto flex-col rounded-2xl">
-    <img
-      src={Rohan_image}
-      alt="Img"
-      class="rounded-2xl border-2 cursor-pointer hover:shadow-[0_35px_60px_-15px_rgba(255,0,0,0.5)] shadow-2xl shadow-[#00000074] border-red-600 transition-all hover:scale-105 h-[500px] mt-3 object-cover"
-    />
+    <!-- Carousel Navigation Buttons -->
+    <button
+      on:click={prevImage}
+      class="absolute left-4 text-white bg-black/30 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+      <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+    </svg>
+        
+    
+    </button>
+    <button
+      on:click={nextImage}
+      class="absolute right-4 text-white bg-black/30 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+      <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+    </svg>
+    
+    
+    
+    
+    </button>
+
+    <!-- Dots Navigation -->
+    <div class="flex justify-center mt-[430px]  absolute bg-[#ffffff2c] backdrop-blur-md px-2 py-2 rounded-2xl">
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
+      {#each images as _, i}
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <span
+          class="w-3 h-3 mx-1 rounded-full cursor-pointer transition-all"
+          class:bg-primary={i === currentIndex}
+          class:bg-primary-dark={i !== currentIndex}
+          on:click={() => (currentIndex = i)}
+        ></span>
+      {/each}
+    </div>
   </div>
 
   <img
     src="/red_graphic.png"
     alt="Red Graphic"
-    class="absolute left-0 top-[-50px] md:top-0 opacity-20 -z-[1000] transition-all duration-1000 ease-in-out md:h-[1000px] sm:h-auto"
-    style="transform: translateY({scrollPosition}px)"
+    class="absolute left-0 top-[-70px] md:top-0 opacity-90 -z-[1000] transition-all duration-1000 ease-in-out md:h-[1000px] sm:h-auto"
+    style="
+      transform: translateY({scrollPosition}px);
+      filter: hue-rotate(10deg) saturate(5%);
+    "
   />
+
+<div class="h-[270px] sm:h-[230px] md:h-[100px] md:block"></div>
 
 
   <!-- Text Content -->
   <div class="items-center flex h-full md:h-auto flex-col justify-between rounded-2xl md:w-[60%]">
     <div class="font-[500] text-center text-3xl leading-relaxed text-zinc-700">
-      Transforming Ideas into Seamless Experiences 🚀 - Currently Software Developer Intern @TimechainLabs
+      Transforming Ideas into Seamless Experiences 🚀 - Currently Software Engineer Intern 
+<span class="gradient-text">@Syngenta</span>
     </div>
     <p class="text-center text-xl leading-relaxed text-zinc-500">
       I am Rohan Nikumbh, your tech partner in website development, weaving
