@@ -153,7 +153,7 @@
         on:click={sendReqFn}
         class="bg-[#D9D9D9] {disableReqSend ? "cursor-text":"cursor-pointer"} smoothClick transition-all text-[#000] text-[20px] rounded-[16px] px-4 py-1 flex gap-1 items-center justify-center"
       >
-        <div class="fadeanimate">
+        <div class="fadeanimate cursor-pointer">
           {#if reqStatus == "notSent"}
             <h1 class="fadeanimate">Request Access</h1>
           {:else if reqStatus == "sending"}

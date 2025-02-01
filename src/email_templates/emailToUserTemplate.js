@@ -100,12 +100,12 @@ export const emailToUserTemplate = () => {
         <div class="footer">
             <p>This is an automated email. In case of any query, please contact <a href="mailto:rohannikumbh2793@gmail.com">rohannikumbh2793@gmail.com</a>.</p>
             <div class="social-icons">
-                <a href="mailto:rohannikumbh2793@gmail.com"><img src="https://rohan-nikumbh.vercel.app/socials/gmailIcon.svg" alt="Gmail"></a>
-                <a href="https://www.linkedin.com/in/rohan-nikumbh-989aa4244/"><img src="https://rohan-nikumbh.vercel.app/socials/linkedinIcon.svg" alt="LinkedIn"></a>
-                <a href="https://wa.me/9766576487"><img src="https://rohan-nikumbh.vercel.app/socials/whatsappIcon.svg" alt="WhatsApp"></a>
-                <a href="https://x.com/NikumbhRoh385?t=eN7tgDqDn-ltskTRXdj2vg&s=09"><img src="https://rohan-nikumbh.vercel.app/socials/xIcon.svg" alt="Twitter"></a>
-                <a href="https://www.youtube.com/channel/UCTa_SdCrLdmis9zCc9BJN_w"><img src="https://rohan-nikumbh.vercel.app/socials/youtubeIcon.svg" alt="YouTube"></a>
-                <a href="https://www.instagram.com/rohannikumbh/"><img src="https://rohan-nikumbh.vercel.app/socials/instaIcon.svg" alt="Instagram"></a>
+                <a href="mailto:rohannikumbh2793@gmail.com"><img src="https://rohan-nikumbh.vercel.app/socials/gmailIcon.png" alt="Gmail"></a>
+                <a href="https://www.linkedin.com/in/rohan-nikumbh-989aa4244/"><img src="https://rohan-nikumbh.vercel.app/socials/linkedinIcon.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/9766576487"><img src="https://rohan-nikumbh.vercel.app/socials/whatsappIcon.png" alt="WhatsApp"></a>
+                <a href="https://x.com/NikumbhRoh385?t=eN7tgDqDn-ltskTRXdj2vg&s=09"><img src="https://rohan-nikumbh.vercel.app/socials/xIcon.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/channel/UCTa_SdCrLdmis9zCc9BJN_w"><img src="https://rohan-nikumbh.vercel.app/socials/youtubeIcon.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/rohannikumbh/"><img src="https://rohan-nikumbh.vercel.app/socials/instaIcon.png" alt="Instagram"></a>
             </div>
         </div>
     </div>
