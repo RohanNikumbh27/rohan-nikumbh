@@ -1,6 +1,6 @@
 <script>
   import Button from "$lib/components/form/Button.svelte";
-  import { userCurrency } from "$lib/store/userStore"
+  import {enhance, applyAction} from "$app/forms";
   import toast, { Toaster } from "svelte-french-toast";
   let resumeLink = "https://drive.google.com/file/d/14ZERfVAFdYRxAyox7wQHorNyYzQhPsgp/view"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
@@ -52,26 +52,9 @@
   let name = "";
   let feedbackMsg = "";
   let saveState = "notStarted";
-  const saveFun = () => {
-    if (feedbackMsg == "") {
-      toast.error(
-        "Please Enter a valid Feedback then press on Save!",
-        position
-      );
-      return;
-    }
-    if (name == "") {
-      toast.error("Please Enter a valid name !", position);
-      return;
-    }
-    // setTimeout(() => {
-      saveState = "saving";
-    // }, 1000);
-    setTimeout(() => {
-      saveState = "saved";
-      toast.success("Feedback submmited successfully", position);
-    }, 1000);
-  };
+
+  
+    
 </script>
 
 <center>
@@ -117,31 +100,50 @@
         </div>
       </div>
     {:else}
+    
+    <form 
+      method="POST" 
+      use:enhance={({ formElement, formData, action, cancel }) => {
+        console.log("formData", formData)
+        saveState = "saving";
+        return async ({ result }) => {
+          if (result.type === 'success') {
+            saveState = "saved";
+            toast.success("Feedback sent to Rohan Nikumbh", position)
+
+          } else {
+            saveState = "notStarted";
+            await applyAction(result);
+          }
+        };
+      }}
+    >
+      
       <div class="w-[100%]">
         <div
           class=" container rounded-[16px] !bg-[#171717] !min-w-[362px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <textarea
             bind:value={feedbackMsg}
-            required
+            name="feedbackMsg"
             class="w-full smoothClick grayd h-full flexc text-center pt-[12px] px-10 rounded-[20px] min-h-[100px]"
             placeholder="Give some feedback on resume..."
           ></textarea>
           <div class="w-full !pt-3 h-[40%] flexc gap-3 flex-row">
             <input
               bind:value={name}
-              required
-              class="h-full w-full smoothClick pl-10 flexc grayd rounded-[20px] pl-4"
+              name="name"
+              class="h-full w-full smoothClick flexc grayd rounded-[20px] pl-4"
               placeholder="Enter Your name"
             />
             <button
-              on:click={saveFun}
               class="h-full w-[30%] flexc smoothClick bg-[#D9D9D9] text-[#000] font-medium !rounded-[20px] text-xl px-2"
               >Save</button
             >
           </div>
         </div>
       </div>
+    </form>
     {/if}
 
     <div

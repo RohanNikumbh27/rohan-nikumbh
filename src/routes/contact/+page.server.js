@@ -1,5 +1,5 @@
 import {GOOGLE_EMAIL} from "$env/static/private";
-import transporter from "$lib/emailSetup.server.js";
+import transporter from "$lib/emailSetup.js";
 import {fail} from "@sveltejs/kit";
 import {emailToAdmin} from "../../email_templates/emailToAdmin.js";
 import {emailToUserTemplate} from "../../email_templates/emailToUserTemplate.js";
@@ -33,7 +33,7 @@ export const actions = {
             const messageForAdmin = {
                 from: email,
                 to: 'rohannikumbh2793@gmail.com',
-                subject: `${name} Contacted you from your Portfolio`,
+                subject: `${name}, Contacted you from your Portfolio`,
                 html: emailToAdmin(name, email, body),
             };
     
