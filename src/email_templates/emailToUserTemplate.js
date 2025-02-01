@@ -70,18 +70,17 @@ export const emailToUserTemplate = () => {
             gap: 10px;
             flex-wrap: wrap;
         }
-        .social-icons a {
-            padding: 10px;
-            border-radius: 8px;
-            background-color: #f1f1f1;
-            transition: 0.3s;
-        }
-        .social-icons a:hover {
+        .social-icons img:hover {
             background-color: #e50914;
         }
         .social-icons img {
             width: 24px;
             height: 24px;
+            margin-left:10px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -98,8 +97,8 @@ export const emailToUserTemplate = () => {
             </div>
         </div>
         <div class="footer">
-            <p>This is an automated email. In case of any query, please contact <a href="mailto:rohannikumbh2793@gmail.com">rohannikumbh2793@gmail.com</a>.</p>
-            <div class="social-icons">
+            <p style="font-size:9px">This is an automated email. In case of any query, please contact <a href="mailto:rohannikumbh2793@gmail.com">rohannikumbh2793@gmail.com</a>.</p>
+            <div class="social-icons" style="margin-top: 20px;display: flex;justify-content:center; align-items: center;gap: 10px;flex-wrap: wrap;">
                 <a href="mailto:rohannikumbh2793@gmail.com"><img src="https://rohan-nikumbh.vercel.app/socials/gmailIcon.png" alt="Gmail"></a>
                 <a href="https://www.linkedin.com/in/rohan-nikumbh-989aa4244/"><img src="https://rohan-nikumbh.vercel.app/socials/linkedinIcon.png" alt="LinkedIn"></a>
                 <a href="https://wa.me/9766576487"><img src="https://rohan-nikumbh.vercel.app/socials/whatsappIcon.png" alt="WhatsApp"></a>
