@@ -33,7 +33,7 @@ export const actions = {
             const messageForAdmin = {
                 from: email,
                 to: 'rohannikumbh2793@gmail.com',
-                subject: `${name} Contacted you from your Portfolio`,
+                subject: `${name}, Contacted you from your Portfolio`,
                 html: emailToAdmin(name, email, body),
             };
     
