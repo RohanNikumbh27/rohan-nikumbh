@@ -20,6 +20,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"nodemailer": "^6.10.0",
+		"nodemailer-brevo-transport": "^2.1.0",
 		"svelte-french-toast": "^1.2.0"
 	}
 }
