@@ -15,7 +15,7 @@
     email: '',
     description: '',
   };
-  var formStatus =  "submmited";
+  var formStatus =  "notSubmitted";
   $:console.log("formStatus", formStatus);
   async function handleFormSubmit(event) {
     event.preventDefault();
