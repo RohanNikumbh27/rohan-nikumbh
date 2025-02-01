@@ -22,7 +22,7 @@ export const actions = {
             from: email,
             to: 'rohannikumbh2793@gmail.com',
             subject: `${name} Contacted you from your Portfolio`,
-            html: emailToAdmin(name, email, body)
+            html: emailToAdmin(name, email, body),
         };
 
         const sendEmail = async (message) => {
