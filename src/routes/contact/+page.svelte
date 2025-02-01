@@ -165,7 +165,7 @@
   </div>
   
 
-  <button type="submit" >
+  <button type="submit">
     <Button title="Submit" />
   </button>
 </form>
@@ -198,7 +198,7 @@
     class=" container rounded-[16px] h-[250px] flex justify-center items-center flex-col gap-3 !p-6 border-none focus:ring-none"
   >
     <h1 class="text-primary-dark text-[29px] font-bold  ">
-      Thank you for Contacting :)
+      (<span class="text-primary">: </span>Thank you for your response <span class="text-primary">:</span>)
     </h1>
 </div>
 {/if}

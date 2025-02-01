@@ -94,7 +94,7 @@ export const emailToAdmin = (name, email, description) => {
             <div class="info">
                 <span class="title">Description:</span> ${description}</div>
         </div>
-        <div class="footer">
+        <div class="footer" style="font-size:9px">
             <p>Contact to user <a href="mailto:support@example.com">user@example.com</a></p>
         </div>
     </div>
