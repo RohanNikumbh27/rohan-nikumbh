@@ -1,10 +1,14 @@
 
 <script>
   import {enhance} from "$app/forms"
-  import Button from "$lib/components/form/Button.svelte"
+  import Button from "$lib/components/form/Button.svelte";
+  let brevoAPI = import.meta.env.VITE_BREVO_API;
   export let data;
   import '../../app.css'
- 
+  // import { mailPost } from '$lib/sendMail.js'
+  // import { mailForUser } from 'src/email_templates/mailForUser.js'
+  
+
 
 
   let formErrors = {
@@ -13,10 +17,8 @@
     description: '',
   };
 
-  function handleFormSubmit(event) {
+  async function handleFormSubmit(event) {
     event.preventDefault();
-
-    // Clear previous errors
     formErrors = { name: '', email: '', description: '' };
 
     const formData = new FormData(event.target);
@@ -24,30 +26,37 @@
     const email = formData.get('email')?.trim();
     const description = formData.get('description')?.trim();
 
-    // Validate fields
     let isValid = true;
+    if (!name) { formErrors.name = 'Name is required!'; isValid = false; }
+    if (!email) { formErrors.email = 'Email Address is required!'; isValid = false; }
+    else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+        formErrors.email = 'Enter a valid Email Address!';
+        isValid = false;
+    }
+    if (!description) { formErrors.description = 'Message is required!'; isValid = false; }
 
-    if (!name) {
-      formErrors.name = 'Name is required!';
-      isValid = false;
-    }
-    if (!email) {
-      formErrors.email = 'Email Address is required!';
-      isValid = false;
-    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-      formErrors.email = 'Enter a valid Email Address!';
-      isValid = false;
-    }
-    if (!description) {
-      formErrors.description = 'Message is required!';
-      isValid = false;
-    }
-
-    // If the form is valid, submit it
     if (isValid) {
-      event.target.submit();
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, description })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Email sent successfully!');
+                event.target.reset(); // Clear form after successful submission
+            } else {
+                alert('Error: ' + result.message);
+            }
+        } catch (error) {
+            console.error(error);
+            alert('An error occurred while sending the email.');
+        }
     }
-  }
+}
+
   
 </script>
 
@@ -105,7 +114,7 @@
         </div>
         <div>
           
-<form method="POST" on:submit={handleFormSubmit}>
+<form method="POST" use:enhance>
   <div class="mb-5">
     <input
       type="text"
@@ -122,7 +131,7 @@
     <input
       id="email_address"
       type="text"
-      placeholder="Email Address"
+      placeholder="Your Email Address"
       class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
       name="email"
     />
