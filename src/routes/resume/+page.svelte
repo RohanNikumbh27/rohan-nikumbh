@@ -178,6 +178,7 @@
               />
             </svg>
           {:else if reqStatus == "sending"}
+          
             <svg
               aria-hidden="true"
               class="w-6 h-6 text-primary-dark animate-spin  fill-primary"
