@@ -81,7 +81,7 @@ export const emailToAdmin = (name, email, description) => {
     <div class="container">
         <div class="header">
             <img src="https://media.licdn.com/dms/image/v2/D4D16AQHWrfpyvaPHQA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1722585273437?e=1743638400&v=beta&t=c8caqDi5TQXSxbhJgWiFOwHVdjOvIfQaqaMbRSNEpmk" alt="Header Image">
-            <img src="https://rohan-nikumbh.vercel.app/socials/Rohan_squared.png" alt="Rohan Nikumbh" class="gold-frame" style="height:90px; width:90px">
+            <img src="https://rohan-nikumbh.vercel.app/Rohan_squared.png" alt="Rohan Nikumbh" class="gold-frame" style="height:90px; width:90px">
         </div>
         <div class="content">
         <p style="padding:15px;">Someone contacted you through your portfolio...</p>

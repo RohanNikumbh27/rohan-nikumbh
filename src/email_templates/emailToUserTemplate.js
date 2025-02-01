@@ -89,7 +89,7 @@ export const emailToUserTemplate = () => {
     <div class="container">
         <div class="header">
             <img src="https://media.licdn.com/dms/image/v2/D4D16AQHWrfpyvaPHQA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1722585273437?e=1743638400&v=beta&t=c8caqDi5TQXSxbhJgWiFOwHVdjOvIfQaqaMbRSNEpmk" alt="Header Image">
-            <img src="https://rohan-nikumbh.vercel.app/socials/Rohan_squared.png" alt="Rohan Nikumbh" class="gold-frame" style="height:90px; width:90px">
+            <img src="https://rohan-nikumbh.vercel.app/Rohan_squared.png" alt="Rohan Nikumbh" class="gold-frame" style="height:90px; width:90px">
         </div>
         <div class="content">
             <h2>Thank You!</h2>
@@ -100,7 +100,7 @@ export const emailToUserTemplate = () => {
         <div class="footer">
             <p>This is an automated email. In case of any query, please contact <a href="mailto:rohannikumbh2793@gmail.com">rohannikumbh2793@gmail.com</a>.</p>
             <div class="social-icons">
-                <a href="mailto:rohannikumbh2793@gmail.com"><img src="/socials/gmailIcon.svg" alt="Gmail"></a>
+                <a href="mailto:rohannikumbh2793@gmail.com"><img src="https://rohan-nikumbh.vercel.app/socials/gmailIcon.svg" alt="Gmail"></a>
                 <a href="https://www.linkedin.com/in/rohan-nikumbh-989aa4244/"><img src="https://rohan-nikumbh.vercel.app/socials/linkedinIcon.svg" alt="LinkedIn"></a>
                 <a href="https://wa.me/9766576487"><img src="https://rohan-nikumbh.vercel.app/socials/whatsappIcon.svg" alt="WhatsApp"></a>
                 <a href="https://x.com/NikumbhRoh385?t=eN7tgDqDn-ltskTRXdj2vg&s=09"><img src="https://rohan-nikumbh.vercel.app/socials/xIcon.svg" alt="Twitter"></a>
