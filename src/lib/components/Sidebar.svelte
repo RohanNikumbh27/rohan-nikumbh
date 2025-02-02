@@ -1,7 +1,6 @@
 <script>
     import {page} from "$app/stores";
     import SearchComp from "./SearchComp.svelte";
-    $:pathName = $page.url.pathname;
     import { SearchQ } from "$lib/store/userStore.js"
   import {blur, fade, fly, scale} from "svelte/transition";
   
@@ -43,16 +42,21 @@
   
     let showSearchComp = false;
     let showNavbarSmall = false;
-    const toggleShowSearchComp = () => {
+    const toggleShowSearchComp = (e) => {
+      pathName = $page.url.pathname;
       showSearchComp = !showSearchComp;
     };
-    const toggleNavBar = () => {
+    const toggleNavBar = (e) => {
       showNavbarSmall = !showNavbarSmall;
     };
     
     const handleSeachBarButton = () => {
       toggleShowSearchComp();
+
     }
+
+    $:pathName = $page.url.pathname;
+
 
   </script>
 
@@ -127,9 +131,7 @@
         {#each NavOptionsArr as NavOption, i}
           <a
             transition:blur={{duration: 300, delay:100}}
-            on:click={() => setTimeout(() => {
-            toggleNavBar()
-          }, 30)}
+            on:click={toggleNavBar}
             class="px-2 py-1  block md:inline-block m-4 text-3xl transition-all duration-200 rounded-2xl {pathName === NavOption.ref ? "!text-primary": "text-[#342121b4]"}"
             href={NavOption.ref}>{NavOption.label}
           </a>
