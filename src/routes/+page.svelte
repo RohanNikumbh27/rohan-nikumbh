@@ -28,9 +28,7 @@
 <div class="container">
   <HeroSection />
 </div>
-<div class="mb-4">
-  <Socials/>
-</div>
+
 
 <!-- <div class="container mx-auto p-4 bg-slate-300 rounded-2xl mt-20">
   <header class="text-center mb-8 text-black rounded-2xl m-4 bg-slate-400">

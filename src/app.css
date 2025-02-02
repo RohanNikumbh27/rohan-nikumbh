@@ -104,7 +104,15 @@ body {
 
 
 
-header,
+header{
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	padding: 1rem;
+	text-align: center;
+	animation: smoothTransition;
+	animation-duration: 0.2s;
+}
+
 footer {
 	background-color: var(--primary-color);
 	color: var(--white-color);
@@ -112,6 +120,9 @@ footer {
 	text-align: center;
 	animation: smoothTransition;
 	animation-duration: 0.2s;
+    bottom: 0px;
+    width: 100%;
+
 }
 
 
