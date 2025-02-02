@@ -38,7 +38,7 @@ import {fade, fly} from "svelte/transition";
   
 </script>
 
-<div class="h-[0px] sm:h-[0px] md:h-[100px] md:block "></div>
+<div class="h-[0px] sm:h-[0px] md:h-[40px] lg:h-[40px] xl:h-[40px] 2xl:h-[40px] "></div>
 
 <div class="h-[40%] flex flex-col gap-4 md:flex-row ">
  
@@ -128,5 +128,7 @@ import {fade, fly} from "svelte/transition";
     </div>
   </div>
 </div>
+
+<div class="h-[0px] sm:h-[0px] md:h-[40px] lg:h-[40px] xl:h-[40px] 2xl:h-[40px] "></div>
 
 <!-- <div class="max-w-[600px]"></div> -->

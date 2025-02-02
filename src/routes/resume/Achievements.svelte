@@ -338,7 +338,7 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex flex-col bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex flex-col bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>
@@ -368,7 +368,7 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex flex-col bg-gradient-to-r from-green-200 via-emerald-400 to-emerald-700 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex flex-col bg-gradient-to-r from-green-200 via-emerald-400 to-emerald-700 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>

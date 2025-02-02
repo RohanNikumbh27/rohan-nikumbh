@@ -229,6 +229,8 @@ import Achievements from "./Achievements.svelte";
 
 <Achievements />
 
+<div class="h-[40px]"></div>
+
 <Toaster />
 
 <style>
