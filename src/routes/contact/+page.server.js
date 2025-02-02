@@ -8,9 +8,9 @@ export const actions = {
     default: async ({ request }) => {
         const formData = await request.formData();
 
-        const email = formData.get('email');
-        const name = formData.get('name');
-        const body = formData.get('description');
+        const email = formData.get('email').trim();
+        const name = formData.get('name').trim();
+        const body = formData.get('description').trim();
 
         if (!email && !name && !body) {
             return fail(400, {missing: true, message: 'All fields are required!' });

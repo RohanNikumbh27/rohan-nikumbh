@@ -34,14 +34,25 @@ import {fade} from "svelte/transition";
       window.removeEventListener("scroll", handleScroll);
     };
   });
+  
 </script>
 
-<div class="h-[270px] sm:h-[270px] md:h-[100px] md:block "></div>
+<div class="h-[0px] sm:h-[0px] md:h-[100px] md:block "></div>
 
-<div class="h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch ">
+<div class="h-[40%] flex flex-col gap-4 md:flex-row ">
+ 
+  <div class="min-h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch justify-center">
+    <div class="mt-0 pt-0 w-[100%] sm:w-[100%] md:w-[90%] lg:w-[70%] items-center flex h-full md:h-auto flex-col justify-between rounded-2xl">
+      <img
+        src="/Rohan_Nikumbh1.jpg"
+        alt="Img"
+        class="rounded-2xl border-0 cursor-pointer hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,5)]  shadow-[0px_0px_60px_rgba(1,1,1,0.2)]  transition-all hover:scale-105 h-[500px] mt-3 w-auto object-cover"
+      />
+    </div>
+  </div>
+
   <!-- Image Carousel -->
-  <div class="mt-0  transition-all pt-0 sm:w-[100%] md:w-[40%] flex items-center justify-center h-full md:h-auto flex-col rounded-2xl relative">
-    <!-- Carousel Images -->
+  <!-- <div class="mt-0  transition-all pt-0 sm:w-[100%] md:w-[40%] flex items-center justify-center h-full md:h-auto flex-col rounded-2xl relative">
     {#each images as image, i}
       <img
         src={image}
@@ -53,7 +64,6 @@ import {fade} from "svelte/transition";
       />
     {/each}
 
-    <!-- Carousel Navigation Buttons -->
     <button
       on:click={prevImage}
       class="absolute  left-4 text-white bg-black/50 rounded-full px-2 py-2 backdrop-blur-sm hover:bg-black transition-all"
@@ -74,11 +84,8 @@ import {fade} from "svelte/transition";
     </button>
 
 
-    <!-- Dots Navigation -->
     <div class="flex justify-center mt-[430px]  absolute bg-[#ffffff2c] backdrop-blur-md px-2 py-2 rounded-2xl">
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
       {#each images as _, i}
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <span
           class="w-3 h-3 mx-1 rounded-full cursor-pointer transition-all"
           class:bg-primary={i === currentIndex}
@@ -87,7 +94,7 @@ import {fade} from "svelte/transition";
         ></span>
       {/each}
     </div>
-  </div>
+  </div> -->
 
   <!-- <img
     src="/red_graphic.png"
@@ -99,25 +106,24 @@ import {fade} from "svelte/transition";
     "
   /> -->
 
-<div class="h-[270px] sm:h-[230px] md:h-[100px] md:block"></div>
 
 
   <!-- Text Content -->
-  <div class="items-center flex h-full md:h-auto flex-col justify-between rounded-2xl md:w-[60%]">
+  <div class="items-center flex h-full md:h-auto flex-col justify-evenly rounded-2xl md:w-[60%] py-10 sm:p-10 md:p-0 lg:p-0 xl:p-10 2xl:p-10">
     <div class="font-[500] text-center text-3xl leading-relaxed text-zinc-700">
       Transforming Ideas into Seamless Experiences 🚀 - Currently Software Engineer Intern 
-<span class="gradient-text">@Syngenta</span>
+<p class="gradient-text">@Syngenta</p>
     </div>
     <p class="text-center text-xl leading-relaxed text-zinc-500">
       I am Rohan Nikumbh, your tech partner in website development, weaving
       together <span class="bluelink">Svelte, Sveltekit, Next.js, React.js</span>, and <span class="bluelink">MERN stack</span> proficiency for exceptional digital
       transformations of your project visions.
     </p>
-    <div class="flex gap-2 text-sm font-[500] items-center w-full sm:w-full md:w-[70%] mt-5">
+    <div class="flex gap-2 text-sm font-[500] items-center w-full sm:w-full md:w-[70%] mt-5 ">
       <Button href="/contact" title="Work Together" />
       <Button href="/resume" title="Resume" />
     </div>
   </div>
 </div>
 
-<div class="max-w-[600px]"></div>
+<!-- <div class="max-w-[600px]"></div> -->

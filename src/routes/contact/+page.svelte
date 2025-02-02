@@ -10,10 +10,10 @@
 
 
 
-  let formErrors = {
+  let messageObj = {
     name: '',
     email: '',
-    description: '',
+    desc: '',
   };
   var formStatus =  "notSubmitted";
   $:console.log("formStatus", formStatus);
@@ -141,8 +141,9 @@
     <input
       type="text"
       placeholder="Name"
-      class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
+      class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="name"
+      bind:value={messageObj.name}
     />
   </div>
 
@@ -151,16 +152,18 @@
       id="email_address"
       type="text"
       placeholder="Your Email Address"
-      class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
+      class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="email"
+      bind:value={messageObj.email}
     />
   </div>
 
   <div class="mb-3">
     <textarea
       placeholder="Type your message here!"
-      class="w-full px-4 py-3 border-4 placeholder:text-zinc-400 rounded-xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-[#9525253d]"
+      class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="description"
+      bind:value={messageObj.desc}
     ></textarea>
   </div>
   

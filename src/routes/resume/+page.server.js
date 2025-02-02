@@ -9,13 +9,13 @@ export const actions = {
         const formData = await request.formData();
 
         
-        const feedbackMsg = formData.get('feedbackMsg');
-        const name = formData.get('name');
+        const feedbackMsg = formData.get('feedbackMsg').trim();
+        const name = formData.get('name').trim();
         if (!feedbackMsg) {
             return fail(400, {missing: true, message: 'Please Enter a valid Feedback then press on Save!' });
         }
         if (!name) {
-              return fail(400, {missing: true, message: 'Please Enter a valid name!' });
+              return fail(400, {missing: true, message: 'Please Enter your name!' });
           }
           //   saveState = "saving";
           // setTimeout(() => {
