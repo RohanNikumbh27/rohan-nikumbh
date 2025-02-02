@@ -257,8 +257,8 @@ footer {
     font-weight: bold; /* Make the text bold (optional) */
     background: linear-gradient(
       to right,
-      #2fff7b, /* light green */
-      #00a93e, /* medium green */
+      #232323, /* light green */
+      #b4b4b4, /* medium green */
       #00ff5e /* dark green */
     );
     background-size: 200% 200%; /* Allow the gradient to shift */
