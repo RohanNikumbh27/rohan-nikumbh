@@ -95,7 +95,7 @@
         <h1 class="pt-5 px-5 text-3xl bg-gradient-to-br from-primary to-primary bg-clip-text text-transparent  transition-all">{section.category}</h1>
         <div class="flex justify-center items-center flex-wrap py-5 px-5">
             {#each section.skills as skill, i}
-                <div class="py-2 px-5 m-2 z-10 w-full md:w-auto  hover:scale-[1.03] transition-all cursor-pointer bg-primary-dark rounded-2xl text-[#ffffff]">{skill.name}</div>
+                <div class="py-2 px-5 m-2 z-10 w-full md:w-auto cursor-pointer bg-primary-dark rounded-2xl text-[#ffffff] transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.1] md:hover:scale-[1.1] hover:shadow-2xl">{skill.name}</div>
             {/each}
         </div>
     </div>

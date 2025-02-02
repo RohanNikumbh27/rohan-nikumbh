@@ -2,10 +2,12 @@
   import Button from "$lib/components/form/Button.svelte";
   import {enhance, applyAction} from "$app/forms";
   import toast, { Toaster } from "svelte-french-toast";
+import Achievements from "./Achievements.svelte";
   let resumeLink = "https://drive.google.com/file/d/14ZERfVAFdYRxAyox7wQHorNyYzQhPsgp/view"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
   let reqStatus = "notSent";
   let disableReqSend = false;
+  export let form;
 
   $:currencyObj = {
     name: "",
@@ -57,19 +59,22 @@
     
 </script>
 
-<center>
-  <h2 class="pt-4 primary-heading">Resume</h2>
-</center>
+
+  <h2 class="py-7  primary-heading text-center">Resume</h2>
+
+  <div class="flex items-center mt-2">
+
+    <Button title="View Resume" href={resumeLink} target="_blank"/>
+  </div>
 
 <div
-  class="relative -top-[50px] h-svh flex items-center justify-evenly font-serif font-bold flex-col gap-1"
+  class="my-10 flex items-center justify-evenly font-serif font-bold flex-col gap-1 "
 >
-  <Button title="View Resume" href={resumeLink} target="_blank"/>
-  <div class="flex gap-3 sm:gap-4 md:gap-10 flex-col sm:flex-col md:flex-row">
+  <div class="flex gap-3  sm:gap-4 md:gap-10 flex-col sm:flex-col md:flex-row">
     {#if saveState == "saved"}
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] bg-[#171717] !min-w-[362px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" container rounded-[16px] bg-[#171717] !min-w-[340px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <h1 class="text-[#D9D9D9] text-[20px]">
             Thank you for giving feedback
@@ -79,7 +84,7 @@
     {:else if saveState == "saving"}
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] bg-[#171717] !min-w-[362px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" container rounded-[16px] bg-[#171717] !min-w-[340px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <svg
             aria-hidden="true"
@@ -112,16 +117,20 @@
             toast.success("Feedback sent to Rohan Nikumbh", position)
 
           } else {
+            if("result", result?.data?.missing){
+              toast.error(result?.data?.message, position)
+            }
             saveState = "notStarted";
             await applyAction(result);
           }
         };
       }}
     >
+
       
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] !bg-[#171717] !min-w-[362px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" container rounded-[16px] !bg-[#171717] !min-w-[340px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <textarea
             bind:value={feedbackMsg}
@@ -147,7 +156,7 @@
     {/if}
 
     <div
-      class=" container rounded-[16px] !min-w-[362px] h-[250px] bg-[#171717] flex flex-col items-center justify-evenly"
+      class=" container rounded-[16px] !min-w-[340px] h-[250px] bg-[#171717] flex flex-col items-center justify-evenly"
     >
       <h1 class="text-[#D9D9D9] text-[20px]">Want to see all reviews ?</h1>
       <button
@@ -216,6 +225,9 @@
     </div>
   </div>
 </div>
+
+
+<Achievements />
 
 <Toaster />
 
