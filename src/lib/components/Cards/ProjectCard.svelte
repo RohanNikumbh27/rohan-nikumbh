@@ -1,6 +1,6 @@
 <script>
     export let project;
-    import Button from "./form/Button.svelte";
+    import Button from "$lib/components/form/Button.svelte";
 </script>
 
 <div class="card inline-block rounded-2xl">

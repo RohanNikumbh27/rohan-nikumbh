@@ -35,7 +35,7 @@ import {blur, fade, fly, scale} from "svelte/transition";
                     ref: "/contact"
                   },
                   {
-                    label: "Resume",
+                    label: "Bio",
                     ref: "/resume"
                   },
                 ]

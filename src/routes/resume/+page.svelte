@@ -2,6 +2,7 @@
   import Button from "$lib/components/form/Button.svelte";
   import {enhance, applyAction} from "$app/forms";
   import toast, { Toaster } from "svelte-french-toast";
+import Achievements from "./Achievements.svelte";
   let resumeLink = "https://drive.google.com/file/d/14ZERfVAFdYRxAyox7wQHorNyYzQhPsgp/view"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
   let reqStatus = "notSent";
@@ -224,6 +225,9 @@
     </div>
   </div>
 </div>
+
+
+<Achievements />
 
 <Toaster />
 

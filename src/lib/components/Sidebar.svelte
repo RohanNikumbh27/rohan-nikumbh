@@ -36,7 +36,7 @@
                       ref: "/contact"
                     },
                     {
-                      label: "Resume",
+                      label: "Bio",
                       ref: "/resume"
                     },
                   ]
