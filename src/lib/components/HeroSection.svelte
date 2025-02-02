@@ -1,7 +1,8 @@
 <script>
   import Button from "$lib/components/form/Button.svelte";
   import { onMount } from "svelte";
-import {fade} from "svelte/transition";
+import {quintOut} from "svelte/easing";
+import {fade, fly} from "svelte/transition";
 
   let scrollPosition = 0;
   let currentIndex = 0;
@@ -44,9 +45,11 @@ import {fade} from "svelte/transition";
   <div class="min-h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch justify-center">
     <div class="mt-0 pt-0 w-[100%] sm:w-[100%] md:w-[90%] lg:w-[70%] items-center flex h-full md:h-auto flex-col justify-between rounded-2xl">
       <img
+        in:fly="{{ y: 50, duration: 500, delay: 100, easing: quintOut }}"
+        out:fade="{{ duration: 300 }}"
         src="/Rohan_Nikumbh1.jpg"
         alt="Img"
-        class="rounded-2xl border-0 cursor-pointer hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,5)]  shadow-[0px_0px_60px_rgba(1,1,1,0.2)]  transition-all hover:scale-105 h-[500px] mt-3 w-auto object-cover"
+        class="rounded-2xl border-0 cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] mt-3 w-auto object-cover"
       />
     </div>
   </div>
