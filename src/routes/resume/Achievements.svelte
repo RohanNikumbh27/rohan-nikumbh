@@ -4,13 +4,21 @@
     import { fade, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
 
-  // Sample certifications array
-//   let certifications = [
-//     { name: "Frontend Developer Specialization", by: "Meta", link: "https://coursera.org" },
-//     { name: "React Native", by: "Coursera",link: "https://coursera.org" },
-//     { name: "Full Stack Web Development", by: "FreeCodeCamp",link: "https://coursera.org" },
-//     { name: "Machine Learning", by: "Stanford Online", link: "https://coursera.org" }
-//   ];
+//   let certs = Array.from(document.querySelectorAll('.horizontal-box'))
+//     .map(box => {
+//         const nameElement = box.querySelector('.card-content a h3');
+//         const byElement = box.querySelector('.card-content .caption-text');
+//         const linkElement = box.querySelector('.card-content a');
+        
+//         return {
+//             name: nameElement ? nameElement.textContent.trim() : null,
+//             by: byElement ? byElement.textContent.trim() : null,
+//             link: linkElement ? linkElement.href : null
+//         };
+//     })
+//     .filter(cert => cert.name && cert.link);
+
+// console.log(certs);
 
   let certifications = [
     {
@@ -303,6 +311,23 @@ let courses = [
 ];
 
 
+import { onMount } from 'svelte';
+
+  let showButton = false;
+
+  onMount(() => {
+    const handleScroll = () => {
+      showButton = window.scrollY > window.innerHeight; // Show when scrolled more than 100vh
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 </script>
 
 <h2 class="py-7  primary-heading text-center">Specialization</h2>
@@ -364,3 +389,17 @@ let courses = [
       </div>
     </div>
   </section>
+
+
+  <div class="fixed bottom-3  right-3 p-4 transition-opacity duration-300 group" class:opacity-100={showButton} class:opacity-0={!showButton}>
+    <!-- Tooltip -->
+    <span class="absolute w-20 right-0 bottom-16 bg-primary-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+      Back to top
+    </span>
+  
+    <button class="bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center relative" on:click={backToTop}>
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </button>
+  </div>
