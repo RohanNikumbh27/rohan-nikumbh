@@ -10,6 +10,10 @@
 	--white-color: #FFFFFF;
 }
 
+/* body {
+	background: linear-gradient(120deg, #f0f0f0 25%, #ff000019 50%,#0000000d, #f0f0f0 75%);
+} */
+
 @keyframes smoothTransition {
 	from {
 		opacity: 0%;
