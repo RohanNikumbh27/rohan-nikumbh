@@ -154,7 +154,7 @@ footer {
 /* width */
 ::-webkit-scrollbar {
 	width: 7px;
-	background: transparent; 
+	background: black; 
 }
 
 /* Track */
@@ -165,7 +165,7 @@ footer {
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	border-radius: 30px;
-	background: #555; 
+	background: #d9000b; 
   }
   
   /* Handle on hover */

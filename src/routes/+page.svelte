@@ -1,22 +1,14 @@
 <script>
-  // Add any additional logic or state here if needed
   import SearchComp from "../lib/components/SearchComp.svelte";
   import Button from "$lib/components/form/Button.svelte";
   import HeroSection from "$lib/components/HeroSection.svelte";
   import Socials from "$lib/components/Home/Socials.svelte";
-  import { GitPullRequestArrow, AlertCircle,FilePlus2, GitFork, GitCommitHorizontal, Github, BookLock, BookDown } from 'lucide-svelte';
+  import { GitPullRequestArrow, AlertCircle, FilePlus2, GitFork, GitCommitHorizontal, Github, BookLock, BookDown } from 'lucide-svelte';
 
-  // import Dropdown from '$lib/components/form/Dropdown.svelte';
-
-
-export let prCount = 80;
-      export let issuesCount = 21;
-      export let forkCount = 8;
+  export let prCount = 80;
+  export let issuesCount = 21;
+  export let forkCount = 8;
 </script>
-
-<!-- <div class="px-10">
-  <Dropdown options={options} labelKey="label" valueKey="value"/>
-</div> -->
 
 <div class="container">
   <HeroSection />
@@ -26,51 +18,41 @@ export let prCount = 80;
   <Github class="w-6 h-6 text-[#204dff] mr-3" />
   <span class="text-zinc-900 text-3xl">Github Stats</span>
 </div>
-    <div class=" md:mb-10 bg-zinc-900 shadow-lg px-6 py-8 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 rounded-xl">
-    
-      
-      <div class="space-y-4 ">
-       
 
-<div class="flex gap-5 flex-col sm:flex-col md:flex-row justify-between">
-  <div class="flex items-center w-full px-5"> 
-    <BookDown class="w-6 h-6 text-primary mr-3" />
-    <span class="text-gray-300">Public Repos count:</span>
-    <span class="ml-auto font-semibold !text-primary">28+</span>
-  </div>
+<section class="m-[10px]">
+  <div  class="md:mb-10 bg-zinc-900 shadow-lg px-6 py-8 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 rounded-xl">
+    <div class="space-y-4">
+      <div class="flex gap-5 flex-col sm:flex-col md:flex-row justify-between">
+        <div class="flex items-center w-full xl:px-5 "> 
+          <BookDown class="w-6 h-6 text-primary mr-3" />
+          <span class="text-gray-300">Public Repos count:</span>
+          <span class="ml-auto font-semibold !text-primary">28+</span>
+        </div>
 
-  <div class="flex items-center w-full px-5">
-    <BookLock  class="w-6 h-6 text-primary mr-3" />
-    <span class="text-gray-300">Private Repos count:</span>
-    <span class="ml-auto font-semibold !text-primary">5+</span>
-  </div>
-</div>
+        <div class="flex items-center w-full xl:px-5 ">
+          <BookLock class="w-6 h-6 text-primary mr-3" />
+          <span class="text-gray-300">Private Repos count:</span>
+          <span class="ml-auto font-semibold !text-primary">5+</span>
+        </div>
+      </div>
 
-<div class="flex gap-4 flex-col sm:flex-col md:flex-row justify-between">
+      <div class="flex gap-4 flex-col sm:flex-col md:flex-row justify-between">
+        <div class="flex items-center w-full xl:px-5 ">
+          <GitPullRequestArrow class="w-6 h-6 text-primary mr-3" />
+          <span class="text-gray-300">PR count:</span>
+          <span class="ml-auto font-semibold !text-primary">49+</span>
+        </div>
 
-  <div class="flex items-center w-full px-5">
-    <GitPullRequestArrow class="w-6 h-6 text-primary mr-3" />
-    <span class="text-gray-300">PR count:</span>
-    <span class="ml-auto font-semibold !text-primary">49+</span>
-  </div>
-
-  <div class="flex items-center w-full px-5">
-    <GitCommitHorizontal  class="w-6 h-6 text-primary mr-3" />
-    <span class="text-gray-300 ">Total contributions:</span>
-    <span class="ml-auto font-semibold !text-primary">810+</span>
-  </div>
-</div>
-        
-<!--         
-        <div class="flex items-center">
-          <AlertCircle class="w-6 h-6 text-primary mr-3" />
-          <span class="text-gray-300 ">Issues count:</span>
-          <span class="ml-auto font-semibold !text-primary">{issuesCount}</span>
-        </div> -->
-        
+        <div class="flex items-center w-full xl:px-5 ">
+          <GitCommitHorizontal class="w-6 h-6 text-primary mr-3" />
+          <span class="text-gray-300">Total contributions:</span>
+          <span class="ml-auto font-semibold !text-primary">810+</span>
+        </div>
       </div>
     </div>
-    
+  </div>
+</section>
+
 <style>
   .container {
     width: 80%;

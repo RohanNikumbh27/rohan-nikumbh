@@ -164,6 +164,7 @@
       class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="description"
       bind:value={messageObj.desc}
+      rows="2" 
     ></textarea>
   </div>
   

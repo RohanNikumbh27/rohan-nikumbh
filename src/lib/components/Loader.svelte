@@ -6,7 +6,7 @@
     .loader {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(120deg, #f0f0f0 25%, #ff000019 50%,#0000000d, #f0f0f0 75%);
+        background: linear-gradient(120deg, #f0f0f0 25%, #ff000019 50%, #0000000d, #f0f0f0 75%);
         background-size: 200% 100%;
         animation: shimmer 2.5s infinite;
     }
@@ -21,6 +21,4 @@
     }
 </style>
 
-<div
-    class={`loader rounded-2xl ${className}`}
-></div>
+<div class={`loader rounded-2xl transition-all ${className}`}></div>
