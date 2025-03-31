@@ -10,6 +10,10 @@
 	--white-color: #FFFFFF;
 }
 
+/* body {
+	background: linear-gradient(120deg, #f0f0f0 25%, #ff000019 50%,#0000000d, #f0f0f0 75%);
+} */
+
 @keyframes smoothTransition {
 	from {
 		opacity: 0%;
@@ -150,7 +154,7 @@ footer {
 /* width */
 ::-webkit-scrollbar {
 	width: 7px;
-	background: transparent; 
+	background: black; 
 }
 
 /* Track */
@@ -161,7 +165,7 @@ footer {
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	border-radius: 30px;
-	background: #555; 
+	background: #d9000b; 
   }
   
   /* Handle on hover */
@@ -176,7 +180,8 @@ footer {
 	color: white;
 	font-weight: bold !important;
 	background-color: black;
-	text-shadow:0 0 5px teal
+	/* text-shadow:0 0 5px teal */
+	text-shadow:0 0 10px teal
   }
 
 

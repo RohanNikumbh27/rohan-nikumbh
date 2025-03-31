@@ -80,7 +80,6 @@
                 href={NavOption.ref}>{NavOption.label}
             </a>
           {/each}
-          
           </div>
         <button class="" on:click={handleSeachBarButton}>
   
@@ -92,7 +91,6 @@
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <img src="\closeiconround.svg" alt="close" class="h-6 hidden md:inline-block" in:blur={{duration:300, delay:100}}>
           {/if}
-            
         </button>
       </div>
       <div class="px-3 transition-all sm:hidden hidden {showSearchComp ? 'md:block' : 'md:hidden'}">
