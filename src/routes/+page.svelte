@@ -16,7 +16,7 @@
     
 <div class="flex items-center justify-center pb-4">
   <Github class="w-6 h-6 text-[#204dff] mr-3" />
-  <span class="text-zinc-900 text-3xl">Github Stats (31/01/2025)</span>
+  <span class="text-zinc-900 text-3xl">Github Stats <span class="text-sm text-zinc-500">(31/01/2025)</span></span>
 </div>
 
 <section class="m-[10px]">
