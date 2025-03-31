@@ -16,7 +16,7 @@
     
 <div class="flex items-center justify-center pb-4">
   <Github class="w-6 h-6 text-[#204dff] mr-3" />
-  <span class="text-zinc-900 text-3xl">Github Stats</span>
+  <span class="text-zinc-900 text-3xl">Github Stats (31/01/2025)</span>
 </div>
 
 <section class="m-[10px]">
@@ -26,13 +26,13 @@
         <div class="flex items-center w-full xl:px-5 "> 
           <BookDown class="w-6 h-6 text-primary mr-3" />
           <span class="text-gray-300">Public Repos count:</span>
-          <span class="ml-auto font-semibold !text-primary">28+</span>
+          <span class="ml-auto font-semibold !text-primary">33+</span>
         </div>
 
         <div class="flex items-center w-full xl:px-5 ">
           <BookLock class="w-6 h-6 text-primary mr-3" />
           <span class="text-gray-300">Private Repos count:</span>
-          <span class="ml-auto font-semibold !text-primary">5+</span>
+          <span class="ml-auto font-semibold !text-primary">6+</span>
         </div>
       </div>
 
@@ -40,13 +40,13 @@
         <div class="flex items-center w-full xl:px-5 ">
           <GitPullRequestArrow class="w-6 h-6 text-primary mr-3" />
           <span class="text-gray-300">PR count:</span>
-          <span class="ml-auto font-semibold !text-primary">49+</span>
+          <span class="ml-auto font-semibold !text-primary">209+</span>
         </div>
 
         <div class="flex items-center w-full xl:px-5 ">
           <GitCommitHorizontal class="w-6 h-6 text-primary mr-3" />
           <span class="text-gray-300">Total contributions:</span>
-          <span class="ml-auto font-semibold !text-primary">810+</span>
+          <span class="ml-auto font-semibold !text-primary">1729+</span>
         </div>
       </div>
     </div>

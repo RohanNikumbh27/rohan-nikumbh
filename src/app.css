@@ -180,7 +180,8 @@ footer {
 	color: white;
 	font-weight: bold !important;
 	background-color: black;
-	text-shadow:0 0 5px teal
+	/* text-shadow:0 0 5px teal */
+	text-shadow:0 0 10px teal
   }
 
 
