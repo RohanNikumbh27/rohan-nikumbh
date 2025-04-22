@@ -122,7 +122,7 @@
       <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
         {#if show}
           <span 
-            class="!font-sans bg-gradient-to-r  from-[#d9d9d9] via-[#dfd0d0] from-[#5e5e5e] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
+            class="!font-sans bg-gradient-to-r  from-[#d9d9d9] via-[#bcbcbc] from-[#5e5e5e] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
             in:blur={{ duration: 500 }}
             out:blur={{ duration: 500 }}
           >
