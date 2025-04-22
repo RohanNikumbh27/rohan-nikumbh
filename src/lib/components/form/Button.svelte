@@ -1,47 +1,65 @@
 <script>
-    export let title = "Click here";
-    export let href;
-    export let target = "_self"
-    let hovered = false;
-    
+  export let title = "Click here";
+  export let href;
+  export let target = "_self";
+  let hovered = false;
 </script>
 
-<!-- <a href={href} class="{hovered?"bg-slate-500 drop-shadow-lg":"bg-slate-600"}  text-white transition-all duration-300 px-6 py-2 rounded-full" on:mouseenter={() => hovered = true} on:mouseleave={() => hovered = false}>
-    <div class="h-10 w-5 absolute opacity-40 bg-white inline-block overflow-hidden blur-md rotate-45 hover:rotate-0 transition-all {hovered?"ml-5":"ml-20"}"></div>
-    <p class="inline-block z-30 font-bold">{title}</p>
-</a> -->
-<a href={href} target={target} class=" cursor-pointer shadow-sm shadow-inner  smoothClick {hovered?"bg-zinc-900 drop-shadow-lg shadow-sm shadow-red-600":"bg-primary-dark shadow-black"}  text-white text-lg transition-all duration-300 px-6 py-3 rounded-full flex justify-center items-center mx-auto" on:mouseenter={() => hovered = true} on:mouseleave={() => hovered = false}>
-    <div class="h-10 w-5 absolute opacity-50 bg-black z-[4] inline-block  overflow-hidden blur-md rotate-45 hover:rotate-0 transition-all {hovered?"ml-5":"ml-20"}"></div>
-    <p class="inline-block z-[6] text-primary !font-medium font-sans pb-0.5 shimmer">{title}</p>
+<a
+  href={href}
+  target={target}
+  class="relative cursor-pointer transition-all duration-300 px-[20px] py-3 rounded-full flex justify-center items-center mx-auto overflow-hidden group
+    bg-gradient-to-r from-primary-dark via-zinc-900 to-primary-dark shadow-xl shadow-black/70
+    text-white text-lg font-semibold border-[2px] border-transparent"
+  on:mouseenter={() => hovered = true}
+  on:mouseleave={() => hovered = false}
+>
+  <!-- Shine effect -->
+  <span
+    class="absolute left-0 top-0 h-full w-1/3 bg-white opacity-10 blur-lg pointer-events-none transition-all duration-700"
+    style="transform: translateX(-120%) rotate(20deg);"
+    class:shine-animate={hovered}
+  ></span>
 
-    <style>
-        
-@keyframes gradient-shuffle {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  /* Apply styles for the text */
-  .shimmer {
-    font-weight: bolder; /* Make the text bold (optional) */
-    background: linear-gradient(
-      to right,
-      #E50914, /* light green */
-      #870000, /* medium green */
-      #ff0000 /* dark green */
-    );
-    background-size: 200% 200%; /* Allow the gradient to shift */
-    background-clip: text; /* Apply the gradient to the text only */
-    -webkit-background-clip: text; /* Safari compatibility */
-    color: transparent; /* Make the background visible within the text */
-    animation: gradient-shuffle 3s ease-in-out infinite; /* Apply the animation */
-  }
-    </style>
+  <!-- Button text with shimmer -->
+  <span class="relative z-10 shimmer-text ">{title}</span>
 </a>
+
+<style>
+  a:hover {
+    box-shadow: 0 6px 32px 0 #e5091877, 0 1.5px 8px 0 #0008;
+    border: 2px solid #e50918;
+  }
+
+  /* Shine animation */
+  .shine-animate {
+    animation: shine-move 5s forwards;
+  }
+  @keyframes shine-move {
+    0% { transform: translateX(-120%) rotate(20deg);}
+    100% { transform: translateX(220%) rotate(20deg);}
+  }
+
+  /* Shimmer text effect */
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      hsl(0, 93%, 72%) 0%,
+      #e50918 25%,
+      #ff4d4d 50%,
+      #e50918 75%,
+      hsl(0, 93%, 72%) 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+</style>

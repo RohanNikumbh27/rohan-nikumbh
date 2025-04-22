@@ -272,3 +272,12 @@ footer {
     color: transparent; /* Make the background visible within the text */
     animation: gradient-shuffle 3s ease-in-out infinite; /* Apply the animation */
   }
+
+
+  @keyframes gradient-move {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+  }
+  .animate-gradient-move {
+	animation: gradient-move 2s ease-in-out infinite alternate;
+  }
