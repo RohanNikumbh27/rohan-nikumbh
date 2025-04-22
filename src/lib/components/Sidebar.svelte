@@ -38,23 +38,35 @@
         currentText = texts[currentIndex];
         show = true; // Blur in new text
       }, 300); // Match blur duration
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   });
 
+  let touchStartX = 0;
+
+  function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+  }
+
+  function handleTouchEnd(event) {
+    const touchEndX = event.changedTouches[0].clientX;
+    if (touchStartX - touchEndX > 50) { // 50px threshold for left swipe
+      toggleMobileNav();
+    }
+  }
 </script>
 
 <section id="DesktopHeader">
   <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
     <div class="px-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between ">
         <!-- Logo -->
-        <a href="/" class="flex items-center">
+        <a href="/" class="flex items-center ">
           <!-- <img src="/sparcle.svg" alt="sparcle" class="h-6 w-6"> -->
-          <div class="flex justify-center items-center flex-row text-xl text-zinc-700 font-semibold">
+          <div class="flex justify-center items-center flex-row text-xl text-zinc-700 font-semibold  {currentText == "Portfolio" && 'pr-[68px]'}">
             {#if show}
               <span 
-                class="!font-sans"
+                class="!font-sans bg-gradient-to-r  from-[#000000] via-[#a5a5a5]  to-[#000000] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
                 in:blur={{ duration: 500 }}
                 out:blur={{ duration: 500 }}
               >
@@ -110,7 +122,7 @@
       <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
         {#if show}
           <span 
-            class="!font-sans !font-semibold"
+            class="!font-sans bg-gradient-to-r  from-[#d9d9d9] via-[#dfd0d0] from-[#5e5e5e] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
             in:blur={{ duration: 500 }}
             out:blur={{ duration: 500 }}
           >
@@ -133,9 +145,28 @@
 {#if showNavbarSmall}
   <section id="MobileSidebar">
     <!-- Background overlay layers with fly transitions -->
-    <div in:fly={{ duration: 200, x: "-100%" }} out:fly={{ duration: 2000, x: "-400%", delay: 200 }} class="bg-primary-dark fixed h-[100vh] w-full z-[500] p-2 ease-in"></div>
-    <div in:fly={{ duration: 500, x: "-300%" }} out:fly={{ duration: 1700, x: "-350%", delay: 45 }} class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in"></div>
-    <div in:fly={{ duration: 500, x: "-300%", delay: 100 }} out:fly={{ duration: 1000, x: "-400%" }} class="bg-white fixed h-[100vh] w-[88vw] shadow-2xl shadow-zinc-700 z-[700] p-2 mr-10 ease-in">
+    <div 
+      in:fly={{ duration: 200, x: "-100%" }} 
+      out:fly={{ duration: 2000, x: "-400%", delay: 200 }} 
+      class="bg-primary-dark fixed h-[100vh] w-full z-[500] p-2 ease-in" 
+      style="will-change: transform;"
+      on:click={toggleMobileNav}>
+    </div>
+    <div 
+      in:fly={{ duration: 500, x: "-300%" }} 
+      out:fly={{ duration: 1700, x: "-350%", delay: 45 }} 
+      class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in" 
+      style="will-change: transform;"
+      on:click={toggleMobileNav}>
+    </div>
+    <div 
+      in:fly={{ duration: 500, x: "-300%", delay: 100 }} 
+      out:fly={{ duration: 1000, x: "-400%" }} 
+      class="bg-white fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in"
+      style="will-change: transform;"
+      on:touchstart={handleTouchStart}
+      on:touchend={handleTouchEnd}
+    >
       <div class="h-[70px] rounded-3xl bg-opacity-85 backdrop-blur-2xl flex items-center px-5 justify-between">
         <img src="/rohan-portfolio.svg" alt="sparcle" class="pt-7">
         <button on:click={toggleMobileNav}>

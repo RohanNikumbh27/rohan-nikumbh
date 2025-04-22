@@ -52,7 +52,7 @@
           out:fade="{{ duration: 3000 }}"
           src="/Rohan_Nikumbh1.jpg"
           alt="Img"
-          class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] md:mt-10 sm:mt-2 w-auto object-cover border-b-2  border-primary"
+          class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] md:mt-10 sm:mt-2 w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
         />
       {/if}
     </div>
@@ -61,8 +61,8 @@
   <!-- Text Content -->
   <div class="items-center flex h-full md:h-auto flex-col justify-evenly rounded-2xl md:w-[60%] py-10 sm:p-10 md:p-0 lg:p-0 xl:p-10 2xl:p-10">
     <div class="font-[500] text-center text-3xl leading-relaxed text-zinc-700 pb-2">
-      Transforming Ideas into Seamless Experiences 🚀 - Currently Software Engineer Intern 
-      <p class="gradient-text">@Syngenta</p>
+      Transforming Ideas into Seamless Experiences 🚀 - Currently <span class=" bg-gradient-to-r from-[#e50914] via-[#acacac] to-[#ff6f00] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text">Software Engineer </span> Intern 
+      <p class="text-zinc-600">@Syngenta</p>
     </div>
     <p class="text-center text-xl leading-relaxed text-zinc-500 ">
       I am Rohan Nikumbh, your tech partner in website development, weaving
