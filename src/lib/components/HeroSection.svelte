@@ -3,7 +3,7 @@
   import Loader from "$lib/components/Loader.svelte";
   import {onMount} from "svelte";
   import {quintOut} from "svelte/easing";
-  import {fade,fly} from "svelte/transition";
+  import {fade,fly, blur} from "svelte/transition";
 
   let scrollPosition = 0;
   let currentIndex = 0;
@@ -49,11 +49,12 @@
       <!-- in:fly="{{ y: 50, duration: 500, delay: 100, easing: quintOut }}" -->
 
       <img
-          out:fade="{{ duration: 3000 }}"
-          src="/Rohan_Nikumbh1.jpg"
-          alt="Img"
-          class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] md:mt-10 sm:mt-2 w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
-        />
+        in:blur={{ duration: 1000, amount: 20 }}
+        out:fade={{ duration: 3000 }}
+        src="/Rohan_Nikumbh1.jpg"
+        alt="Img"
+        class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] md:mt-10 sm:mt-2 w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
+      />
       {/if}
     </div>
   </div>

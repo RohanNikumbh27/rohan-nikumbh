@@ -3,7 +3,7 @@
   import {enhance, applyAction} from "$app/forms";
   import toast, { Toaster } from "svelte-french-toast";
 import Achievements from "./Achievements.svelte";
-  let resumeLink = "https://drive.google.com/file/d/14ZERfVAFdYRxAyox7wQHorNyYzQhPsgp/view"
+  let resumeLink = "https://drive.google.com/file/d/1AA0P-GukJJJbwI_l7wkq8JXQXowZPHD1/view?usp=sharing"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
   let reqStatus = "notSent";
   let disableReqSend = false;
