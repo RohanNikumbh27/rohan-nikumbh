@@ -19,7 +19,7 @@
     // Show loader for 2 seconds before displaying the image
     setTimeout(() => {
       showLoader = false;
-    }, 2000);
+    }, 0);
 
     const handleScroll = () => {
       scrollPosition = window.scrollY * 0.2;
@@ -42,7 +42,7 @@
 
 <div class="h-[40%] flex flex-col gap-4 md:flex-row ">
   <div class="min-h-[40%] flex flex-col gap-4 md:flex-row md:items-stretch justify-center">
-    <div class="mt-0 pt-0 w-[100%] sm:w-[100%] md:w-[90%] lg:w-[70%] items-center flex h-full md:h-auto flex-col justify-between rounded-2xl">
+    <div class="mt-0 pt-0 w-[100%] sm:w-[100%] md:w-[90%] lg:w-[70%] items-center flex h-full md:h-auto flex-col justify-between rounded-2xl  ">
       {#if showLoader}
         <Loader className="h-[500px] w-[330px] md:w-[370px] transition-all mx-10 rounded-2xl md:mt-10 sm:mt-2 " />
       {:else}
@@ -52,7 +52,7 @@
           out:fade="{{ duration: 3000 }}"
           src="/Rohan_Nikumbh1.jpg"
           alt="Img"
-          class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] md:mt-10 sm:mt-2 w-auto object-cover"
+          class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] md:mt-10 sm:mt-2 w-auto object-cover border-b-2  border-primary"
         />
       {/if}
     </div>

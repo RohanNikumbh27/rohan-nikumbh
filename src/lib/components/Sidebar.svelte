@@ -1,10 +1,10 @@
 <script>
   // ─── Parent Component State & Helpers ─────────────────────────────
-  import { page } from "$app/stores";
+  import {page} from "$app/stores";
+  import {onMount} from "svelte";
+  import {blur,fly} from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
-  import { SearchQ } from "$lib/store/userStore.js"
-  import { blur, fly } from "svelte/transition";
-
+  
   let showSearchComp = false;
   let showNavbarSmall = false;
   $: pathName = $page.url.pathname;
@@ -25,6 +25,23 @@
     showNavbarSmall = !showNavbarSmall;
   };
 
+  let texts = ["Rohan Nikumbh", "Portfolio"];
+  let currentIndex = 0;
+  let currentText = texts[currentIndex];
+  let show = true;
+
+  onMount(() => {
+    const interval = setInterval(() => {
+      show = false; // Start blur out
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % texts.length;
+        currentText = texts[currentIndex];
+        show = true; // Blur in new text
+      }, 300); // Match blur duration
+    }, 3000);
+    return () => clearInterval(interval);
+  });
+
 </script>
 
 <section id="DesktopHeader">
@@ -33,7 +50,24 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <a href="/" class="flex items-center">
-          <img src="/sparcle.svg" alt="sparcle" class="h-6 w-6">
+          <!-- <img src="/sparcle.svg" alt="sparcle" class="h-6 w-6"> -->
+          <div class="flex justify-center items-center flex-row text-xl text-zinc-700 font-semibold">
+            {#if show}
+              <span 
+                class="!font-sans"
+                in:blur={{ duration: 500 }}
+                out:blur={{ duration: 500 }}
+              >
+                {currentText}
+                <img 
+                  src="/sparcle.svg" 
+                  alt="sparcle" 
+                  class="text-primary h-6 w-6 pl-0.5 pb-0.5 transition-all duration-300 inline-block"
+                >
+              </span>
+            {/if}
+            
+           </div>
           <p class="sr-only">Rohan Nikumbh's Portfolio</p>
         </a>
 
@@ -71,9 +105,25 @@
 </section>
 
 <section id="MobileHeader" class="block md:hidden">
-  <header class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 bg-transparent">
+  <header class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 bg-transparent ">
     <div class="h-[60px] rounded-3xl bg-primary-dark bg-opacity-80 backdrop-blur-[10px] flex items-center px-5 justify-between">
-      <img src="/sparcle.svg" alt="sparcle" class="text-primary h-6 w-6">
+      <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
+        {#if show}
+          <span 
+            class="!font-sans !font-semibold"
+            in:blur={{ duration: 500 }}
+            out:blur={{ duration: 500 }}
+          >
+            {currentText}
+            <img 
+              src="/sparcle.svg" 
+              alt="sparcle" 
+              class="text-primary h-6 w-6 pl-0.5 transition-all duration-300 inline-block pb-0.5"
+            >
+          </span>
+        {/if}
+        
+       </div>
       <!-- Hamburger icon to toggle mobile sidebar -->
       <img src="/hamburger.svg" alt="menu" class="cursor-pointer w-7" on:click={toggleMobileNav}>
     </div>
