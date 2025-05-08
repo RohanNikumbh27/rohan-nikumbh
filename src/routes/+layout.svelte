@@ -18,15 +18,8 @@
         }
     })
 </script>
-
-<div class="fixed top-0 left-0 w-full h-[2px] bg-gray-300">
-		<div class="h-full bg-teal-600" id="readingProgress" style="width: 0;"></div>
-		</div>
 <div class="min-h-svh">
-	
-
-
-    <!-- <Header /> -->
+	    <!-- <Header /> -->
      <Sidebar/>
     <div class="h-20 ">
     </div>
