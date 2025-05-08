@@ -20,7 +20,7 @@
 </div>
 
 <section class="m-[10px]">
-  <div  class="md:mb-10 bg-zinc-900 dark:bg-zinc-950 shadow-lg px-6 py-8 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 rounded-xl">
+  <div  class="md:mb-10 bg-zinc-900 dark:bg-black/70 shadow-lg px-6 py-8 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 rounded-xl">
     <div class="space-y-4">
       <div class="flex gap-5 flex-col sm:flex-col md:flex-row justify-between">
         <div class="flex items-center w-full xl:px-5 "> 

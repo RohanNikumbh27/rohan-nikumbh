@@ -116,11 +116,11 @@
 
 <section class="my-0 md:my-8 space-y-12 min-h-svh  w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c">
   <center>
-    <h2 class=" primary-heading  my-1">Skills</h2>
+    <h2 class=" primary-heading dark:text-white  my-1">Skills</h2>
   </center>
   <div class=" min-h-svh !mt-0">
       {#each skills as section, i}
-      <div class="bg-zinc-100 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
+      <div class="bg-zinc-100 dark:bg-black/30 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]">
         <img src="/border-design.svg" alt="border-design" class="absolute h-[150px] right-0 bottom-0 -z-[10]"/>
         <h1 class="pt-5 px-5 text-3xl bg-gradient-to-br from-primary to-primary bg-clip-text text-transparent  transition-all">{section.category}</h1>
         <div class="flex justify-center items-center flex-wrap py-5 px-5">
