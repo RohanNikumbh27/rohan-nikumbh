@@ -330,7 +330,7 @@ import { onMount } from 'svelte';
 
 </script>
 
-<h2 class="py-7  primary-heading text-center">Specialization</h2>
+<h2 class="py-7  primary-heading text-center dark:text-white">Specialization</h2>
 <section class=" text-primary-dark">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -338,18 +338,18 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex flex-col bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex border border-zinc-900 flex-col bg-gradient-to-r from-black via-zinc-900 to-zinc-800  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>
-                <h3 class="text-xl font-semibold mb-2 relative z-10 text-zinc-800">{cert.name}</h3>
-                <p class="text-zinc-900 text-sm relative z-10">Issued by: {cert.by}</p>
+                <h3 class="text-xl font-semibold mb-2 relative z-10 text-zinc-200">{cert.name}</h3>
+                <p class="text-zinc-300 text-sm relative z-10">Issued by: {cert.by}</p>
               </div>
               <a href={cert.link} target="_blank">
                 
-                  <div class="px-6 py-4  bg-primary-dark flex justify-between items-center cursor-pointer">
-                      <span class="text-sm font-semibold text-purple-300">View Certificate</span>
-                      <svg class="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <div class="px-6 py-4  bg-white/10 flex justify-between items-center cursor-pointer">
+                      <span class="text-sm font-semibold text-primary">View Certificate</span>
+                      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </div>
@@ -360,7 +360,7 @@ import { onMount } from 'svelte';
     </div>
   </section>
 
-<h2 class="py-7  primary-heading text-center">Certifications</h2>
+<h2 class="py-7  primary-heading text-center dark:text-white">Certifications</h2>
 <section class=" text-primary-dark">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -368,18 +368,18 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex flex-col bg-gradient-to-r from-green-200 via-emerald-400 to-emerald-700 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex flex-col bg-gradient-to-r from-zinc-800 via-zinc-800 to-zinc-700 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>
-                <h3 class="text-xl font-semibold mb-2 relative z-10 text-zinc-800">{cert.name}</h3>
-                <p class="text-zinc-900 text-sm relative z-10">Issued by: {cert.by}</p>
+                <h3 class="text-xl font-semibold mb-2 relative z-10 text-zinc-200">{cert.name}</h3>
+                <p class="text-zinc-400 text-sm relative z-10">Issued by: {cert.by}</p>
               </div>
               <a href={cert.link} target="_blank">
                 
-                  <div class="px-6 py-4  bg-primary-dark flex justify-between items-center cursor-pointer">
-                      <span class="text-sm font-semibold text-purple-300">View Certificate</span>
-                      <svg class="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <div class="px-6 py-4  bg-black/20 flex justify-between items-center cursor-pointer">
+                      <span class="text-sm font-semibold text-primary">View Certificate</span>
+                      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </div>

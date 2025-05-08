@@ -67,7 +67,7 @@
 </script>
 
 <section id="DesktopHeader">
-  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] dark:bg-white/70 py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
+  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] dark:bg-white/0 py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
     <div class="px-4">
       <div class="flex items-center justify-between ">
         <!-- Logo -->
@@ -133,7 +133,7 @@
       <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
         {#if show}
           <span 
-            class="!font-sans bg-gradient-to-r  from-[#ffffff]  via-[#484848]  to-[#ffffff]    bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
+            class="!font-sans bg-gradient-to-r  from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]    bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
             in:blur={{ duration: 500 }}
             out:blur={{ duration: 500 }}
           >
