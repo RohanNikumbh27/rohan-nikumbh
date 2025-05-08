@@ -15,8 +15,9 @@
     email: '',
     desc: '',
   };
-  var formStatus =  "submmited";
-  // var formStatus =  "notSubmitted";
+  var formStatus = "notSubmitted";
+  // var formStatus = "submmited";
+  // var formStatus = "loading";
   $:console.log("formStatus", formStatus);
   async function handleFormSubmit(event) {
     event.preventDefault();
@@ -68,7 +69,7 @@
 
 
 <div class="container">
-    <div class=" bg-zinc-100 dark:bg-black/30 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
+    <div class=" bg-zinc-100 dark:bg-black/20 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center">
         <p
           class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500 dark:text-zinc-400"
@@ -98,7 +99,7 @@
           <span class="dark:text-zinc-400 ">Pune</span>
           </div>
           <div
-            class="flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
+            class=" flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
           >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-black dark:invert">
               <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
@@ -108,7 +109,7 @@
             <a href="mailto:rohannikumbh2793@gmail.com" class="dark:text-zinc-400 overflow-auto ">rohannikumbh2793@gmail.com</a>
           </div>
           <div
-            class="flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
+            class=" flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
           >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 dark:invert">
               <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
@@ -120,7 +121,7 @@
         </div>
         <div>
           
-<div class="flex max-w-[90%]">
+<div class="max-w-[100%] flex items-center justify-center">
 
 {#if formStatus=="notSubmitted"}
 <form 
@@ -146,7 +147,7 @@
     <input
       type="text"
       placeholder="Name"
-      class="w-[80%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="name"
       bind:value={messageObj.name}
     />
@@ -157,7 +158,7 @@
       id="email_address"
       type="text"
       placeholder="Your Email Address"
-      class="w-[80%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="email"
       bind:value={messageObj.email}
     />
@@ -166,7 +167,7 @@
   <div class="mb-3">
     <textarea
       placeholder="Type your message here!"
-      class="w-[80%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="description"
       bind:value={messageObj.desc}
       rows="2" 
@@ -181,11 +182,11 @@
 {:else if formStatus=="loading"}
 <!-- <div class="container"> -->
   <div
-    class="min-w-[110%]  container rounded-[16px] h-[250px] flex justify-center items-center flex-col gap-3 !p-6 border-none focus:ring-none"
+    class="min-w-[110%] flex flex-col container rounded-[16px] h-[250px] justify-center items-center gap-3 !p-6 border-none focus:ring-none"
   >
     <svg
       aria-hidden="true"
-      class="w-14 h-14 text-primary animate-spin fill-primary-dark dark:fill-zinc-900"
+      class="w-14 h-14 text-primary animate-spin fill-primary-dark dark:fill-zinc-200"
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +205,7 @@
 <!-- </div> -->
 {:else if formStatus=="submmited"}
 <div
-    class=" container rounded-[16px] h-[250px] flex justify-center items-center flex-col gap-3 !p-6 border-none focus:ring-none"
+    class=" container rounded-[16px] h-[250px] justify-center items-center  gap-3 !p-6 border-none focus:ring-none"
   >
     <h1 class="text-primary-dark dark:text-white/70 text-[29px] ">
       (<span class="text-primary">: </span>Thank you for your response <span class="text-primary">:</span>)
