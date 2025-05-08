@@ -3,7 +3,7 @@
   import Socials from "./Home/Socials.svelte";
 
 </script>
-<footer class="mb-0 bg-zinc-900 ">
+<footer class="mb-0 bg-zinc-900 dark:bg-black ">
     <!-- <footer class="flex flex-col space-y-10 justify-center m-10"> -->
 
         <!-- <footer class="mx-auto w-full max-w-container lg:px-8 flex justify-center items-center">

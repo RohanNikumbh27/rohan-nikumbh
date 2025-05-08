@@ -10,15 +10,18 @@
 
     onMount(()=> {
         if (typeof window !== 'undefined') {
-        const savedTheme = localStorage.getItem('theme');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         if (savedTheme) {
-            theme = savedTheme;
-            document.documentElement.classList.toggle('dark', theme === 'dark');
+            // theme = savedTheme;
+            //for development time only it should be removed after whole dark mode development is done
+            var theme = 'dark';
+            console.log("theme", theme)
+            document.documentElement.classList.toggle('dark', theme == 'dark');
         }
         }
     })
 </script>
-<div class="min-h-svh">
+<div class="min-h-svh bg-white dark:bg-[#181616]">
 	    <!-- <Header /> -->
      <Sidebar/>
     <div class="h-20 ">
