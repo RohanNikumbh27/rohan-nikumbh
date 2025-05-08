@@ -54,13 +54,14 @@ import Achievements from "./Achievements.svelte";
   let name = "";
   let feedbackMsg = "";
   let saveState = "notStarted";
+  // let saveState = "saving";
 
   
     
 </script>
 
 
-  <h2 class="py-7  primary-heading text-center">Resume</h2>
+  <h2 class="py-7  primary-heading text-center dark:text-white">Resume</h2>
 
   <div class="flex items-center mt-2">
 
@@ -74,7 +75,7 @@ import Achievements from "./Achievements.svelte";
     {#if saveState == "saved"}
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] bg-[#171717] !min-w-[340px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" container rounded-[16px] bg-[#171717] dark:bg-black min-w-[300px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <h1 class="text-[#D9D9D9] text-[20px]">
             Thank you for giving feedback
@@ -84,7 +85,7 @@ import Achievements from "./Achievements.svelte";
     {:else if saveState == "saving"}
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] bg-[#171717] !min-w-[340px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" container rounded-[16px] bg-[#171717] dark:bg-black dark:text-white min-w-[300px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <svg
             aria-hidden="true"
@@ -130,7 +131,7 @@ import Achievements from "./Achievements.svelte";
       
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] !bg-[#171717] !min-w-[340px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" container rounded-[16px] bg-[#171717] dark:bg-black min-w-[300px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <textarea
             bind:value={feedbackMsg}
@@ -156,7 +157,7 @@ import Achievements from "./Achievements.svelte";
     {/if}
 
     <div
-      class=" container rounded-[16px] !min-w-[340px] h-[250px] bg-[#171717] flex flex-col items-center justify-evenly"
+      class=" container rounded-[16px] min-w-[300px] sm:min-w-[340px] md:min-w-[370px] h-[250px] bg-[#171717] dark:bg-black flex flex-col items-center justify-evenly"
     >
       <h1 class="text-[#D9D9D9] text-[20px]">Want to see all reviews ?</h1>
       <button

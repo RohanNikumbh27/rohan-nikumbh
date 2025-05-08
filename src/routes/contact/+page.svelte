@@ -1,6 +1,6 @@
 
 <script>
-  import {enhance, applyAction} from "$app/forms";
+  import {applyAction,enhance} from "$app/forms";
   import Button from "$lib/components/form/Button.svelte";
   import '../../app.css';
   export let form;
@@ -15,7 +15,9 @@
     email: '',
     desc: '',
   };
-  var formStatus =  "notSubmitted";
+  var formStatus = "notSubmitted";
+  // var formStatus = "submmited";
+  // var formStatus = "loading";
   $:console.log("formStatus", formStatus);
   async function handleFormSubmit(event) {
     event.preventDefault();
@@ -61,16 +63,16 @@
 </script>
 
 <center>
-  <h2 class="primary-heading pt-5 pb-3 ">Contact</h2>
+  <h2 class="primary-heading pt-5 pb-3 dark:text-white">Contact</h2>
 </center>
 
 
 
 <div class="container">
-    <div class=" bg-zinc-100 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
+    <div class=" bg-zinc-100 dark:bg-black/20 rounded-2xl md:px-10  px-5 sm:px-5" id="contact">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center">
         <p
-          class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500"
+          class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500 dark:text-zinc-400"
         >
           Want to contact us? Choose an option below and well be happy to show you
           how we can transform companys web experience.
@@ -79,43 +81,47 @@
       <div
         class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16"
       >
-        <div>
-          <h2 class="text-lg font-bold text-zinc-900">Contact Us</h2>
-          <p class="max-w-sm mt-4 mb-4 text-zinc-600">
+        <div >
+          <h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-200">Contact Us</h2>
+          <p class="max-w-[70vw] mt-4 mb-4 text-zinc-600 dark:text-zinc-500">
             Have something to say? We are here to help. Fill up the form or send
             email or call phone.
           </p>
+          <div class="w-[80%] overflow-x-auto pb-4">
+
           <div
-            class="flex items-center mt-8 space-x-2 text-dark-600 text-zinc-900"
+            class="flex items-center mt-8 space-x-2 text-dark-600  text-zinc-900 max-w-[70vw] "
           >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 dark:invert">
               <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
             </svg>
               
-          <span>Pune</span>
+          <span class="dark:text-zinc-400 ">Pune</span>
           </div>
           <div
-            class="flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
+            class=" flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
           >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-black dark:invert">
               <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
               <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
             
-            <a href="mailto:rohannikumbh2793@gmail.com">rohannikumbh2793@gmail.com</a>
+            <a href="mailto:rohannikumbh2793@gmail.com" class="dark:text-zinc-400 overflow-auto ">rohannikumbh2793@gmail.com</a>
           </div>
           <div
-            class="flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
+            class=" flex items-center mt-2 space-x-2 text-dark-600 text-zinc-900"
           >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 dark:invert">
               <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
             </svg>
             
-            <a href="tel:9284492299">+91 9284492299</a>
+            <a href="tel:9284492299" class="dark:text-zinc-400 overflow-auto">+91 9284492299</a>
           </div>
+        </div>
         </div>
         <div>
           
+<div class="max-w-[100%] flex items-center justify-center">
 
 {#if formStatus=="notSubmitted"}
 <form 
@@ -141,7 +147,7 @@
     <input
       type="text"
       placeholder="Name"
-      class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="name"
       bind:value={messageObj.name}
     />
@@ -152,7 +158,7 @@
       id="email_address"
       type="text"
       placeholder="Your Email Address"
-      class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="email"
       bind:value={messageObj.email}
     />
@@ -161,7 +167,7 @@
   <div class="mb-3">
     <textarea
       placeholder="Type your message here!"
-      class="w-full px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="description"
       bind:value={messageObj.desc}
       rows="2" 
@@ -176,11 +182,11 @@
 {:else if formStatus=="loading"}
 <!-- <div class="container"> -->
   <div
-    class=" container rounded-[16px] h-[250px] flex justify-center items-center flex-col gap-3 !p-6 border-none focus:ring-none"
+    class="min-w-[110%] flex flex-col container rounded-[16px] h-[250px] justify-center items-center gap-3 !p-6 border-none focus:ring-none"
   >
     <svg
       aria-hidden="true"
-      class="w-14 h-14 text-primary animate-spin fill-primary-dark"
+      class="w-14 h-14 text-primary animate-spin fill-primary-dark dark:fill-zinc-200"
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -194,18 +200,20 @@
         fill="currentFill"
       />
     </svg>
-    <p class="font-semibold text-primary-dark">Submitting :)</p>
+    <p class="font-semibold text-primary-dark dark:text-zinc-400">Submitting :)</p>
   </div>
 <!-- </div> -->
 {:else if formStatus=="submmited"}
 <div
-    class=" container rounded-[16px] h-[250px] flex justify-center items-center flex-col gap-3 !p-6 border-none focus:ring-none"
+    class=" container rounded-[16px] h-[250px] justify-center items-center  gap-3 !p-6 border-none focus:ring-none"
   >
-    <h1 class="text-primary-dark text-[29px] font-bold  ">
+    <h1 class="text-primary-dark dark:text-white/70 text-[29px] ">
       (<span class="text-primary">: </span>Thank you for your response <span class="text-primary">:</span>)
     </h1>
 </div>
 {/if}
+</div>
+
         </div>
       </div>
     </div>

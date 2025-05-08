@@ -8,7 +8,7 @@
 
 <div class=" p-4 transition-c">
   <center>
-    <h2 class=" primary-heading">Timeline</h2>
+    <h2 class=" primary-heading dark:text-white">Timeline</h2>
   </center>
   <div class="flex flex-col grid-cols-9 p-2 mx-auto md:grid transition-c">
     <ProgressComp pos="left" title="Software Engineer Intern" desc="@Syngenta" date="Jan 25 - Present"/>

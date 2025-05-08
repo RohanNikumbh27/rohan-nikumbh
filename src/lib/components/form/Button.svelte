@@ -9,7 +9,7 @@
   href={href}
   target={target}
   class="relative cursor-pointer transition-all duration-300 px-[20px] py-3 rounded-full flex justify-center items-center mx-auto overflow-hidden group
-    bg-gradient-to-r from-primary-dark via-zinc-900 to-primary-dark shadow-xl shadow-black/70
+    bg-gradient-to-r from-primary-dark via-zinc-900 to-primary-dark dark:from-black dark:via-zinc-950 dark:to-black shadow-md shadow-black/70
     text-white text-lg font-semibold border-[2px] border-transparent"
   on:mouseenter={() => hovered = true}
   on:mouseleave={() => hovered = false}
@@ -22,7 +22,7 @@
   ></span>
 
   <!-- Button text with shimmer -->
-  <span class="relative z-10 shimmer-text ">{title}</span>
+  <span class="relative z-10 shimmer-text text-center">{title}</span>
 </a>
 
 <style>
