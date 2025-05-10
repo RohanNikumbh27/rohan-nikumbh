@@ -10,11 +10,11 @@
 
     onMount(()=> {
         if (typeof window !== 'undefined') {
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedTheme = localStorage.getItem('theme') || 'light';
         if (savedTheme) {
-            // theme = savedTheme;
+            var theme = savedTheme;
             //for development time only it should be removed after whole dark mode development is done
-            var theme = 'dark';
+            // theme = 'dark';
             console.log("theme", theme)
             document.documentElement.classList.toggle('dark', theme == 'dark');
         }
