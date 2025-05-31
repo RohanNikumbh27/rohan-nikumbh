@@ -3,6 +3,18 @@
     export let toggleTheme = () => {
         console.log("The theme is being toggled!")
     };
+    import {onMount} from 'svelte';
+    onMount(() => {
+        // Check for saved user preference, if any, on initial load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            theme = savedTheme;
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+        } else {
+            // Default to light theme
+            document.documentElement.classList.remove('dark');
+        }
+    });
 </script>
 
 <button class="ml-6 p-3 rounded-full transition-colors bg-zinc-200 dark:bg-zinc-700" on:click={toggleTheme} aria-label="Toggle theme">
