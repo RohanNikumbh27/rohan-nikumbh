@@ -8,7 +8,6 @@
   
   let showSearchComp = false;
   let showNavbarSmall = false;
-  $: pathName = $page.url.pathname;
 
   const navItems = [
     { label: "Home", ref: "/" },
@@ -25,6 +24,18 @@
   const toggleMobileNav = () => {
     showNavbarSmall = !showNavbarSmall;
   };
+
+  let pendingRoute = null;
+
+  const closeMobileNav = () => {
+    showNavbarSmall = false;
+    pendingRoute = null;
+  };
+
+  function handleMobileNavClick(ref) {
+    pendingRoute = ref;
+    setTimeout(() => closeMobileNav(), 30);
+  }
 
   let texts = ["Rohan Nikumbh", "Portfolio"];
   let currentIndex = 0;
@@ -43,12 +54,12 @@
 
   onMount(() => {
     const interval = setInterval(() => {
-      show = false; // Start blur out
+      show = false;
       setTimeout(() => {
         currentIndex = (currentIndex + 1) % texts.length;
         currentText = texts[currentIndex];
-        show = true; // Blur in new text
-      }, 300); // Match blur duration
+        show = true;
+      }, 300);
     }, 4000);
     return () => clearInterval(interval);
   });
@@ -103,7 +114,7 @@
             <a
               href={item.ref}
               transition:blur={{ duration: 300, delay: 100 }}
-              class="px-2 py-1 text-xl font-[500] transition-all duration-200 {pathName === item.ref ? 'text-primary' : 'text-zinc-500'}"
+              class="px-2 py-1 text-xl font-[500] transition-all duration-200 {$page.url.pathname === item.ref ? 'text-primary' : 'text-zinc-500'}"
             >
               {item.label}
             </a>
@@ -195,9 +206,9 @@
         {#each navItems as item}
           <a
             href={item.ref}
-            on:click={toggleMobileNav}
+            on:click={() => handleMobileNavClick(item.ref)}
             transition:blur={{ duration: 300, delay: 100 }}
-            class="px-2 py-1 m-4 block text-3xl rounded-2xl transition-all duration-200 {pathName === item.ref ? '!text-primary' : 'text-[#342121b4] dark:text-[#afafaf]'}"
+            class="px-2 py-1 m-4 block text-3xl rounded-2xl transition-all duration-200 {(pendingRoute ? pendingRoute === item.ref : $page.url.pathname === item.ref) ? '!text-primary' : 'text-[#342121b4] dark:text-[#afafaf]'}"
           >
             {item.label}
           </a>
