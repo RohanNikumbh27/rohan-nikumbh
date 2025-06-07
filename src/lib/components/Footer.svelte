@@ -5,7 +5,7 @@
 <footer class="mb-0 bg-zinc-900 dark:bg-black relative overflow-hidden">
     <!-- Blurred circle background effect, sticks to the left (sidebar) -->
     <div
-      class="absolute left-[20vw] top-1/4  w-[100vw] h-[100vh] bg-zinc-600/20 md:bg-zinc-400/20 rounded-full blur-3xl md:blur-[100px] pointer-events-none z-0"
+      class="absolute left-[20vw] top-1/4  w-[100vw] h-[100vh] bg-zinc-400/20 md:bg-zinc-500/20 rounded-full blur-3xl md:blur-[100px] pointer-events-none z-0"
     ></div>
 
     <!-- Footer main content -->
