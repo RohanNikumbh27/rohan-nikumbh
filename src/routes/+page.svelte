@@ -10,6 +10,8 @@
   export let forkCount = 8;
 </script>
 
+<!-- <div class="w-[50vw] h-[30vh] fixed dark:bg-zinc-500/30 bg-zinc-500/20 left-[2vw] top-[20vh] blur-3xl "></div> -->
+
 <div class="container">
   <HeroSection />
 </div>
