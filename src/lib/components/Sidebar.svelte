@@ -79,11 +79,11 @@
 </script>
 
 <section id="DesktopHeader">
-  <div class="h-12 w-12 fixed bottom-4 right-10 hidden md:inline-block">
+  <div class="h-12 w-12 fixed bottom-4 right-9 hidden md:inline-block">
     <DarkModeToggle {theme} {toggleTheme}/>
   </div>
-  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] dark:bg-white/70 py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
-    <div class="px-4">
+  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] dark:bg-black/80 border-b border-primary/30 py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
+    <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between ">
         <!-- Logo -->
         <a href="/" class="flex items-center ">
@@ -109,7 +109,7 @@
         </a>
 
         <!-- Nav Links -->
-        <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
+        <div class="hidden md:flex md:items-center md:justify-center md:gap-2">
           {#each navItems as item}
             <a
               href={item.ref}
@@ -122,13 +122,13 @@
         </div>
 
         <!-- Search Toggle Button -->
-        <button on:click={toggleSearch}>
+        <!-- <button on:click={toggleSearch}>
           {#if !showSearchComp}
             <img src="/searchicon.svg" alt="search" class="h-6 hidden md:inline-block" in:blur={{ duration: 300, delay: 100 }}>
           {:else}
             <img src="/closeiconround.svg" alt="close" class="h-6 hidden md:inline-block" in:blur={{ duration: 300, delay: 100 }}>
           {/if}
-        </button>
+        </button> -->
         <!-- Theme Toggle Button -->
       </div>
 
@@ -144,7 +144,7 @@
 
 <section id="MobileHeader" class="block md:hidden">
   <header class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 bg-transparent ">
-    <div class="h-[60px] rounded-3xl bg-primary-dark dark:bg-black/50 bg-opacity-70 backdrop-blur-[10px] flex items-center px-5 justify-between">
+    <div class="h-[60px] rounded-3xl bg-primary-dark dark:bg-black/50 bg-opacity-70 backdrop-blur-[10px] flex items-center px-5 justify-between border-b border-primary/30">
       <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
         {#if show}
           <span 
@@ -213,7 +213,7 @@
             {item.label}
           </a>
         {/each}
-        <div class="mt-8">
+        <div class="mt-8 ">
           <DarkModeToggle {theme} {toggleTheme}/>
         </div>
       </div>

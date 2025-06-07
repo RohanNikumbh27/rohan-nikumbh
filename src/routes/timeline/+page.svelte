@@ -12,7 +12,7 @@
   </center>
   <div class="flex flex-col grid-cols-9 p-2 mx-auto md:grid transition-c">
     <ProgressComp pos="left" title="Software Engineer Intern" desc="@Syngenta" date="Jan 25 - Present"/>
-    <ProgressComp pos="right" title="BlackRock Hackathon" desc="Achieved 4thj Rank & awarded for best Idea." date="July 18, 19, 20"/>
+    <ProgressComp pos="right" title="BlackRock Hackathon" desc="Achieved 4th Rank & awarded for best Idea." date="July 18, 19, 20"/>
     <ProgressComp pos="left" title="Software Engineer Intern" desc="@Timechain labs" date="June 2024 - Oct 2024"/>
     <ProgressComp pos="right" title="Design Head" desc="@CodeChef Club, VIIT" date="Jan 2024 - May 2024"/>
     <ProgressComp pos="left" title="Design Joint Head" desc="@CodeChef Club, VIIT" date="Oct 2023 - Jan 2024"/>
