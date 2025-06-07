@@ -37,9 +37,9 @@
   });
 </script>
 
-<div class="h-[0px] sm:h-[0px] md:h-[40px] lg:h-[40px] xl:h-[40px] 2xl:h-[40px] "></div>
+<div class="h-[0px] sm:h-[0px] md:h-[40px] lg:h-[15px] xl:h-[40px] 2xl:h-[40px] "></div>
 
-<div class="h-[40%] flex flex-col gap-12 xl:flex-row xl:gap-0">
+<div class="h-[40%] flex flex-col gap-12 lg:flex-row xl:gap-0">
   <div class="min-h-[40%] flex flex-col md:flex-row md:items-stretch justify-center xl:min-w-[493px]">
     <div class=" justify-center mt-0 pt-0 w-[100%] sm:w-[100%] md:w-[90%] lg:w-[70%] items-center flex h-full md:h-auto flex-col rounded-2xl  ">
       {#if showLoader}
@@ -54,14 +54,14 @@
         style="will-change: filter:blur"
         alt="Img"
         loading="lazy"
-        class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px]  w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
+        class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] min-w-[300px]  w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
       />
       {/if}
     </div>
   </div>
 
   <!-- Text Content -->
-  <div class="items-center flex h-full md:h-auto flex-col xl:justify-evenly rounded-2xl md:w-[85%] xl:w-[70%] md:mx-auto pr-0 lg:pr-0 2xl:pr-[74px] ">
+  <div class="items-center flex h-full  md:h-auto md:justify-center flex-col xl:justify-evenly rounded-2xl md:w-[85%] xl:w-[70%] md:mx-auto pr-0 lg:pr-0 2xl:pr-[74px] ">
     <div class="font-[500] text-center text-3xl leading-relaxed text-zinc-700 dark:text-white pb-2">
       Transforming Ideas into Seamless Experiences 🚀 - Currently <span class=" bg-gradient-to-r from-[#e50914] via-[#acacac] to-[#ff6f00] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text">Software Engineer </span> Intern 
       <p class="text-zinc-600 dark:text-[#fff]">@Syngenta</p>

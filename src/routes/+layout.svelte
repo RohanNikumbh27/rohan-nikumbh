@@ -17,10 +17,19 @@
         }
     })
 </script>
-<div class="min-h-svh bg-white dark:bg-gradient-to-tr dark:from-[#0a0909] dark:to-[#4d4d4d] overflow-auto scroll-smooth">
+
+
+<!-- self blur bg circle  -->
+<!-- <div class="w-[40vw] h-[40vh] fixed bg-orange-500/30 left-[1%] min-w-[100px] blur-[100px] -z-1000"></div>
+<div class="w-[40vw] h-[40vh] fixed bg-primary-dark/20 right-1 bottom-[30%] min-w-[100px] blur-[100px] -z-1000"></div>
+<div class="w-[50vw] h-[40vh] fixed bg-blue-500/30 left-[25vw] bottom-0 min-w-[100px] blur-[70px] -z-1000"></div> -->
+
+
+
+<div class="min-h-svh bg-white dark:bg-gradient-to-tr dark:from-[#0a0909] dark:to-[#4d4d4d] overflow-auto scroll-smooth z-100">
 	    <!-- <Header /> -->
     <Sidebar/>
-    <div class="h-20 ">
+    <div class="h-20 z-200 ">
     </div>
     <slot />
     <Footer />
