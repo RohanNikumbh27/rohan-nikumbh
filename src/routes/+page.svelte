@@ -14,7 +14,7 @@
   <HeroSection />
 </div>
     
-<div class="flex items-center justify-center pb-4">
+<div class="flex items-center justify-center pt-10 md:pt-0">
   <Github class="w-6 h-6 text-[#204dff] mr-3" />
   <span class="text-zinc-900 text-3xl dark:text-zinc-100">Github Stats <span class="text-sm text-zinc-500">(31/01/2025)</span></span>
 </div>
