@@ -156,7 +156,7 @@ import Achievements from "./Achievements.svelte";
     </form>
     {/if}
 
-    <div
+    <!-- <div
       class=" container rounded-[16px] min-w-[300px] sm:min-w-[340px] md:min-w-[370px] h-[250px] bg-[#171717] dark:bg-black flex flex-col items-center justify-evenly"
     >
       <h1 class="text-[#D9D9D9] text-[20px]">Want to see all reviews ?</h1>
@@ -223,7 +223,7 @@ import Achievements from "./Achievements.svelte";
           {/if}
         </div>
       </button>
-    </div>
+    </div> -->
   </div>
 </div>
 

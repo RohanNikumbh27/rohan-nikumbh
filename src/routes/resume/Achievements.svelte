@@ -338,16 +338,16 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex border border-zinc-900 flex-col bg-gradient-to-r from-black via-zinc-900 to-zinc-800  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex border border-zinc-900 flex-col bg-gradient-to-tr from-black via-zi8nc-800 to-zinc-900  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
-                <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>
+                <div class="absolute top-0 right-0 w-16 h-16 ransform rotate-45 translate-x-8 -translate-y-8"></div>
                 <h3 class="text-xl font-semibold mb-2 relative z-10 text-zinc-200">{cert.name}</h3>
                 <p class="text-zinc-300 text-sm relative z-10">Issued by: {cert.by}</p>
               </div>
               <a href={cert.link} target="_blank">
                 
-                  <div class="px-6 py-4  bg-white/10 flex justify-between items-center cursor-pointer">
+                  <div class="px-6 py-4  bg-black/10 flex justify-between items-center cursor-pointer border-t border-zinc-800">
                       <span class="text-sm font-semibold text-primary">View Certificate</span>
                       <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -368,7 +368,7 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex flex-col bg-gradient-to-r from-zinc-800 via-zinc-800 to-zinc-700 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex flex-col bg-gradient-to-tr from-zinc-900 via-zinc-850 to-zinc-900 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>
@@ -377,7 +377,7 @@ import { onMount } from 'svelte';
               </div>
               <a href={cert.link} target="_blank">
                 
-                  <div class="px-6 py-4  bg-black/20 flex justify-between items-center cursor-pointer">
+                  <div class="px-6 py-4  bg-black/30 flex justify-between items-center cursor-pointer">
                       <span class="text-sm font-semibold text-primary">View Certificate</span>
                       <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -391,7 +391,7 @@ import { onMount } from 'svelte';
   </section>
 
 
-  <div class="fixed bottom-3  right-3 p-4 transition-opacity duration-300 group" class:opacity-100={showButton} class:opacity-0={!showButton}>
+  <div class="fixed bottom-3  left-3 p-4 transition-opacity duration-300 group" class:opacity-100={showButton} class:opacity-0={!showButton}>
     <!-- Tooltip -->
     <span class="absolute w-20 right-0 bottom-16 bg-primary-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
       Back to top
