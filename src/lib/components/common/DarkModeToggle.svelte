@@ -18,5 +18,5 @@
 </script>
 
 <button class=" ml-3.5 md:ml-5 rounded-xl md:bg-zinc-100 md:dark:bg-black/70 h-14 w-14 p-1.5 md:h-12 md:w-12 " on:click={toggleTheme} aria-label="Toggle theme">
-    <img src="\new_darkmode.svg" alt="Toggle dark mode" class=" rounded-full block dark:invert " />
+    <img src="\darkmode.svg" alt="Toggle dark mode" class=" rounded-full block dark:invert " />
 </button>
