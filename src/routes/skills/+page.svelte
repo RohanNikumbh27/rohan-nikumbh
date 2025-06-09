@@ -72,6 +72,7 @@
       category: 'Testing and Tools',
       skills: [
         { name: 'Playwright', icon: 'playwright.png' },
+        { name: 'Jest', icon: 'jest.png' },
         { name: 'BrowserStack', icon: 'browserstack.png' },
         { name: 'Postman', icon: 'postman.png' },
         { name: 'Confluence', icon: 'confluence.png' },
