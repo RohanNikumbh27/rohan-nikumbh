@@ -15,11 +15,11 @@
   on:mouseleave={() => hovered = false}
 >
   <!-- Shine effect -->
-  <span
-    class="absolute left-0 top-0 h-full w-1/3 bg-white opacity-10 blur-lg pointer-events-none transition-all duration-700"
+  <!-- <span
+    class="absolute left-0 top-0 h-full w-1/3 bg-black blur-lg pointer-events-none transition-all duration-700"
     style="transform: translateX(-120%) rotate(20deg);"
     class:shine-animate={hovered}
-  ></span>
+  ></span> -->
 
   <!-- Button text with shimmer -->
   <span class="relative z-10 shimmer-text text-center">{title}</span>
@@ -44,11 +44,11 @@
   .shimmer-text {
     background: linear-gradient(
       90deg,
-      hsl(0, 93%, 72%) 0%,
+      hsl(0, 100%, 50%) 0%,
       #e50918 25%,
-      #ff4d4d 50%,
+      rgb(135, 0, 0) 50%,
       #e50918 75%,
-      hsl(0, 93%, 72%) 100%
+      hsl(0, 100%, 50%) 100%
     );
     background-size: 200% auto;
     background-clip: text;
