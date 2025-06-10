@@ -200,8 +200,8 @@
     <div class="w-[60vw] h-[30vh] absolute dark:bg-zinc-700/40 bg-zinc-500/30 left-[1vw] bottom-10 blur-3xl pointer-events-none"></div>
     <div class="w-[60vw] h-[30vh] absolute dark:bg-gray-700/20 bg-zinc-500/20 -right-[10vw] bottom-[35vh] blur-3xl pointer-events-none"></div>
 
-      <div class="h-[70px] rounded-3xl bg-opacity-85 backdrop-blur-2xl flex items-center px-5 justify-between">
-        <img src="/rohan-portfolio.svg" alt="rohan nikumbh" class="pt-7 dark:invert dark:hue-rotate-180 dark:saturate-200"/>
+      <div class="h-[70px] rounded-3xl flex items-center px-5 justify-between pt-5">
+        <img src="/rohan-portfolio.svg" alt="rohan nikumbh" class="dark:invert dark:hue-rotate-180 dark:saturate-200"/>
         <button on:click={toggleMobileNav}>
           <img src="/cross.svg" alt="close" class="w-7">
         </button>

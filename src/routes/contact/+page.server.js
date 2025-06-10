@@ -13,6 +13,7 @@ export const actions = {
         const body = formData.get('description').trim();
 
         if (!email && !name && !body) {
+            await new Promise(resolve => setTimeout(resolve, 500));
             return fail(400, {missing: true, message: 'All fields are required!' });
         } else if (!email) {
 			return fail(400, { email, missing: true, message: 'Email is required!' });

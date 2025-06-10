@@ -1,8 +1,9 @@
 <script>
+  import {applyAction,enhance} from "$app/forms";
+  import CustomToast from "$lib/components/common/Toast.svelte";
+  import {showToast} from "$lib/store/toastStore.js";
   import Button from "$lib/components/form/Button.svelte";
-  import {enhance, applyAction} from "$app/forms";
-  import toast, { Toaster } from "svelte-french-toast";
-import Achievements from "./Achievements.svelte";
+  import Achievements from "./Achievements.svelte";
   let resumeLink = "https://drive.google.com/file/d/1AA0P-GukJJJbwI_l7wkq8JXQXowZPHD1/view?usp=sharing"
   let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
   let reqStatus = "notSent";
@@ -75,7 +76,7 @@ import Achievements from "./Achievements.svelte";
     {#if saveState == "saved"}
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] bg-[#171717] dark:bg-black min-w-[340px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" rounded-[16px] bg-[#171717] dark:bg-black min-w-[340px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <h1 class="text-[#D9D9D9] text-[20px]">
             Thank you for giving feedback
@@ -85,7 +86,7 @@ import Achievements from "./Achievements.svelte";
     {:else if saveState == "saving"}
       <div class="w-[100%]">
         <div
-          class="container rounded-[16px] bg-[#171717] dark:bg-black min-w-[340px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class=" rounded-[16px] bg-[#171717] dark:bg-black min-w-[340px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
         >
           <svg
             aria-hidden="true"
@@ -110,16 +111,14 @@ import Achievements from "./Achievements.svelte";
     <form 
       method="POST" 
       use:enhance={({ formElement, formData, action, cancel }) => {
-        console.log("formData", formData)
         saveState = "saving";
         return async ({ result }) => {
           if (result.type === 'success') {
             saveState = "saved";
-            toast.success("Feedback sent to Rohan Nikumbh", position)
-
+            showToast({ message: "Feedback sent to Rohan Nikumbh", type: "success" });
           } else {
-            if("result", result?.data?.missing){
-              toast.error(result?.data?.message, position)
+            if (result?.data?.missing) {
+              showToast({ message: result?.data?.message, type: "error" });
             }
             setTimeout(() => {
               saveState = "notStarted";
@@ -133,7 +132,7 @@ import Achievements from "./Achievements.svelte";
       
       <div class="w-[100%]">
         <div
-          class=" container rounded-[16px] bg-[#171717] dark:bg-black min-w-[300px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none"
+          class="container  rounded-[16px] bg-[#171717] dark:bg-black min-w-[340px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none  !animate-none"
         >
           <textarea
             bind:value={feedbackMsg}
@@ -234,7 +233,7 @@ import Achievements from "./Achievements.svelte";
 
 <div class="h-[40px]"></div>
 
-<Toaster />
+<CustomToast />
 
 <style>
   .flexc {
