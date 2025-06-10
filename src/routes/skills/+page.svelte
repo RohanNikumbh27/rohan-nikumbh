@@ -117,7 +117,7 @@
 
 <section class="my-0 md:my-8 space-y-12 min-h-svh  w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c">
   <center>
-    <h2 class=" primary-heading dark:text-white/30  my-1">Skills</h2>
+    <h2 class=" primary-heading dark:text-white/30  mb-5 mt-8 md:mt-14">Skills</h2>
   </center>
   <div class=" min-h-svh !mt-0">
       {#each skills as section, i}

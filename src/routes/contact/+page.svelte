@@ -63,7 +63,7 @@
 </script>
 
 <center>
-  <h2 class="primary-heading pt-5 pb-3 dark:text-white">Contact</h2>
+  <h2 class="primary-heading pt-5 pb-1 dark:text-white mt-2 md:mt-7">Contact</h2>
 </center>
 
 

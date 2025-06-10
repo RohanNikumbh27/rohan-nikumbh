@@ -4,7 +4,7 @@
   import {scale} from "svelte/transition";
 </script>
 
-<div class="fixed top-20 md:top-28 right-6 z-[9999] flex flex-col gap-3">
+<div class="fixed top-20 md:top-28 right-6 z-[99] flex flex-col gap-3">
   {#each $toasts as toast (toast.id)}
     <div
       class="font-serif min-w-[350px] max-w-[88vw] md:max-w-[380px] px-4 py-3 rounded-2xl custom-shadow flex items-center justify-between gap-1

@@ -82,7 +82,7 @@
   <div class="h-12 w-12 fixed bottom-4 right-9 hidden md:inline-block">
     <DarkModeToggle {theme} {toggleTheme}/>
   </div>
-  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] dark:bg-black/80 border-b border-primary/30 py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
+  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/80 border-b  py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
     <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between ">
         <!-- Logo -->
@@ -91,7 +91,7 @@
           <div class="flex justify-center items-center flex-row text-xl text-zinc-700 font-semibold  {currentText == "Portfolio" && 'pr-[68px]'}">
             {#if show}
               <span 
-                class="!font-sans bg-gradient-to-r  from-[#000000] via-[#a5a5a5]  to-[#000000] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
+                class="!font-sans bg-gradient-to-r  from-[#7f7f7f]  via-[#3b3b3b]  to-[#7f7f7f] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
                 in:blur={{ duration: 500 }}
                 out:blur={{ duration: 500 }}
               >
@@ -142,13 +142,14 @@
   </header>
 </section>
 
+<!-- from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]   -->
 <section id="MobileHeader" class="block md:hidden">
   <header class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 bg-transparent ">
-    <div class="h-[60px] rounded-3xl bg-primary-dark dark:bg-black/50 bg-opacity-70 backdrop-blur-[10px] flex items-center px-5 justify-between border-b border-primary/30">
+    <div class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] flex items-center px-5 justify-between ">
       <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
         {#if show}
           <span 
-            class="!font-sans bg-gradient-to-r  from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]    bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
+            class="!font-sans bg-gradient-to-r  from-[#7f7f7f]  via-[#3b3b3b]  to-[#7f7f7f]    bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
             in:blur={{ duration: 500 }}
             out:blur={{ duration: 500 }}
           >
@@ -196,9 +197,9 @@
       on:touchstart={handleTouchStart}
       on:touchend={handleTouchEnd}
     >
-    <div class="w-[50vw] h-[30vh] absolute dark:bg-zinc-500/30 bg-zinc-500/20 left-[25vw] blur-3xl pointer-events-none"></div>
+    <!-- <div class="w-[50vw] h-[30vh] absolute dark:bg-zinc-500/30 bg-zinc-500/20 left-[25vw] blur-3xl pointer-events-none"></div>
     <div class="w-[60vw] h-[30vh] absolute dark:bg-zinc-700/40 bg-zinc-500/30 left-[1vw] bottom-10 blur-3xl pointer-events-none"></div>
-    <div class="w-[60vw] h-[30vh] absolute dark:bg-gray-700/20 bg-zinc-500/20 -right-[10vw] bottom-[35vh] blur-3xl pointer-events-none"></div>
+    <div class="w-[60vw] h-[30vh] absolute dark:bg-gray-700/20 bg-zinc-500/20 -right-[10vw] bottom-[35vh] blur-3xl pointer-events-none"></div> -->
 
       <div class="h-[70px] rounded-3xl flex items-center px-5 justify-between pt-5">
         <img src="/rohan-portfolio.svg" alt="rohan nikumbh" class="dark:invert dark:hue-rotate-180 dark:saturate-200"/>
