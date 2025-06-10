@@ -62,7 +62,8 @@
 </script>
 
 
-  <h2 class="py-7  primary-heading text-center dark:text-white">Resume</h2>
+  <h2 class="primary-heading text-center dark:text-white pt-7 pb-4 mt-2 md:mt-7">Resume</h2>
+
 
   <div class="flex items-center mt-2">
 

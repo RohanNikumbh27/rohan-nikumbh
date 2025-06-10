@@ -28,7 +28,7 @@
 <div class="min-h-svh bg-[#ffffff] bg-gradient-to-r dark:from-neutral-600 dark:to-neutral-900 overflow-auto scroll-smooth z-100">
 	    <!-- <Header /> -->
     <Sidebar/>
-    <div class="h-20 z-200 ">
+    <div class="h-[60px] z-200 ">
     </div>
     <slot />
     <Footer />
