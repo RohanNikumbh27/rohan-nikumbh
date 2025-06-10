@@ -2,10 +2,10 @@
   import {applyAction,enhance} from "$app/forms";
   import Button from "$lib/components/form/Button.svelte";
   import '../../app.css';
+  import CustomToast from "$lib/components/common/Toast.svelte";
+  import {showToast} from "$lib/store/toastStore.js";
+
   export let form;
-  // import { mailPost } from '$lib/sendMail.js'
-  // import { mailForUser } from 'src/email_templates/mailForUser.js'
-  
 
 
 
@@ -46,6 +46,7 @@
 
             const result = await response.json();
             if (result.success) {
+                showToast({ message: "Message sent to Rohan Nikumbh", type: "success" });
                 alert('Email sent successfully!');
                 event.target.reset(); // Clear form after successful submission
             } else {
@@ -66,6 +67,7 @@
 </center>
 
 
+<CustomToast />
 
 <!-- Responsive Contact Page Container -->
 <div class="container max-w-full px-2 sm:px-4 md:px-6">
@@ -77,8 +79,8 @@
     </div>
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 pt-8 pb-16 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
       <!-- Contact Info -->
-      <div>
-        <h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-200">Contact Us</h2>
+      <div class="px-4">
+        <h2 class="text-lg font-[500] text-zinc-900 dark:text-zinc-200">Contact Us</h2>
         <p class="max-w-full mt-4 mb-4 text-zinc-600 dark:text-zinc-500">
           Have something to say? We are here to help. Fill up the form or send email or call phone.
         </p>
@@ -114,6 +116,7 @@
 {#if formStatus=="notSubmitted"}
 <form 
   method="POST" 
+  class="px-3"
   use:enhance={({ formElement, formData, action, cancel }) => {
     console.log("formData", formData)
     formStatus = "loading";
@@ -129,7 +132,7 @@
 	}}
 >
   {#if form?.missing}
-      <div class="text-red-500 text-sm mb-5">{form?.message}</div>
+      <div class="text-red-500 text-md mb-4 text-center">{form?.message}</div>
     {/if}
   <div class="mb-5">
     <input
@@ -188,7 +191,7 @@
         fill="currentFill"
       />
     </svg>
-    <p class="font-semibold text-primary-dark dark:text-zinc-400">Submitting :)</p>
+    <p class="font-semibold text-primary-dark dark:text-zinc-400">Loading :)</p>
   </div>
 <!-- </div> -->
 {:else if formStatus=="submmited"}
