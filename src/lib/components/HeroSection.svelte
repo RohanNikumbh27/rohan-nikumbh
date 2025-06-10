@@ -48,10 +48,10 @@
       <!-- in:fly="{{ y: 50, duration: 500, delay: 100, easing: quintOut }}" -->
 
       <img
-        in:blur={{ duration:1000, amount: 20 }}
+        in:fade={{ duration:1000, amount: 20 }}
         out:fade={{ duration: 3000 }}
         src="/Rohan_Nikumbh1.jpg"
-        style="will-change: filter:blur"
+        style="will-change: opacity"
         alt="Img"
         loading="lazy"
         class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] min-w-[300px]  w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
