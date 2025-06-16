@@ -37,7 +37,7 @@
   });
 </script>
 
-<div class="h-[0px] sm:h-[0px] md:h-[40px] lg:h-[15px] xl:h-[40px] 2xl:h-[40px] "></div>
+<div class="h-[20px] sm:h-[20px] md:h-[40px] lg:h-[30px] xl:h-[40px] 2xl:h-[40px] "></div>
 
 <div class="h-[40%] flex flex-col gap-12 lg:flex-row xl:gap-0">
   <div class="min-h-[40%] flex flex-col md:flex-row md:items-stretch justify-center xl:min-w-[493px]">
@@ -54,7 +54,7 @@
         style="will-change: opacity"
         alt="Img"
         loading="lazy"
-        class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] min-w-[300px]  w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
+        class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] min-w-[330px]  w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
       />
       {/if}
     </div>
