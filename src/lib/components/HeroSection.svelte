@@ -37,7 +37,7 @@
   });
 </script>
 
-<div class="h-[20px] sm:h-[15px] md:h-[40px] lg:h-[15px] xl:h-[40px] 2xl:h-[40px] "></div>
+<div class="h-[20px] sm:h-[20px] md:h-[40px] lg:h-[30px] xl:h-[40px] 2xl:h-[40px] "></div>
 
 <div class="h-[40%] flex flex-col gap-12 lg:flex-row xl:gap-0">
   <div class="min-h-[40%] flex flex-col md:flex-row md:items-stretch justify-center xl:min-w-[493px]">
