@@ -2,7 +2,7 @@
   // ─── Parent Component State & Helpers ─────────────────────────────
   import {page} from "$app/stores";
   import {onMount} from "svelte";
-  import {blur,fly} from "svelte/transition";
+  import {blur,fly, scale, slide} from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
   
@@ -111,13 +111,19 @@
         <!-- Nav Links -->
         <div class="hidden md:flex md:items-center md:justify-center md:gap-2">
           {#each navItems as item}
+          <div class="flex flex-col items-center justify-end">
             <a
               href={item.ref}
               transition:blur={{ duration: 300, delay: 100 }}
-              class="px-2 py-1 text-xl font-[500] transition-all duration-200 {$page.url.pathname === item.ref ? 'text-primary' : 'text-zinc-500'}"
+              class="px-2 py-1 text-xl font-[500] transition-all duration-200 {$page.url.pathname === item.ref ? 'text-primary ' : 'text-zinc-500 hover:text-stone-700'}"
             >
               {item.label}
             </a>
+            {#if $page.url.pathname === item.ref}
+              <span class="bg-primary-dark/20 !w-8 !h-[4px] rounded-full transition-all ease-in"
+              in:scale={{ start: 0.5, duration: 200 }}></span>
+            {/if}
+          </div>
           {/each}
         </div>
 
