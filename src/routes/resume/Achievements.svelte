@@ -338,7 +338,7 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex border border-zinc-900 flex-col bg-gradient-to-tr from-black via-zi8nc-800 to-zinc-900  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex border border-zinc-900 flex-col bg-gradient-to-tl from-stone-900 via-zinc-800 to-zinc-900  rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 ransform rotate-45 translate-x-8 -translate-y-8"></div>
@@ -347,7 +347,7 @@ import { onMount } from 'svelte';
               </div>
               <a href={cert.link} target="_blank">
                 
-                  <div class="px-6 py-4  bg-black/10 flex justify-between items-center cursor-pointer border-t border-zinc-800">
+                  <div class="px-6 py-4  bg-black/20 flex justify-between items-center cursor-pointer border-t border-zinc-800">
                       <span class="text-sm font-semibold text-primary">View Certificate</span>
                       <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -368,7 +368,7 @@ import { onMount } from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
-              class="justify-between flex flex-col bg-gradient-to-tr from-zinc-900 via-zinc-850 to-zinc-900 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+              class="justify-between flex flex-col bg-gradient-to-tr from-stone-900 via-zinc-850 to-stone-950 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
                 <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-primary transform rotate-45 translate-x-8 -translate-y-8"></div>
@@ -377,7 +377,7 @@ import { onMount } from 'svelte';
               </div>
               <a href={cert.link} target="_blank">
                 
-                  <div class="px-6 py-4  bg-black/30 flex justify-between items-center cursor-pointer">
+                  <div class="px-6 py-4  bg-black/40 flex justify-between items-center cursor-pointer">
                       <span class="text-sm font-semibold text-primary">View Certificate</span>
                       <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
