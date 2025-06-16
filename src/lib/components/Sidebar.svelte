@@ -82,7 +82,7 @@
   <div class="h-12 w-12 fixed bottom-4 right-9 hidden md:inline-block">
     <DarkModeToggle {theme} {toggleTheme}/>
   </div>
-  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/80 border-b  py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
+  <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/80  py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
     <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between ">
         <!-- Logo -->
@@ -145,7 +145,7 @@
 <!-- from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]   -->
 <section id="MobileHeader" class="block md:hidden">
   <header class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 bg-transparent ">
-    <div class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] flex items-center px-5 justify-between ">
+    <div class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] dark:bg-black/80 flex items-center px-5 justify-between ">
       <div class="flex justify-center items-center flex-row text-xl text-zinc-400 ">
         {#if show}
           <span 
