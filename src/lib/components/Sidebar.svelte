@@ -120,7 +120,7 @@
               {item.label}
             </a>
             {#if $page.url.pathname === item.ref}
-              <span class="bg-primary-dark/20 !w-8 !h-[4px] rounded-full transition-all ease-in"
+              <span class="bg-primary-dark/20 dark:invert !w-8 !h-[4px] rounded-full transition-all ease-in"
               in:scale={{ start: 0.5, duration: 200 }}></span>
             {/if}
           </div>
