@@ -330,8 +330,8 @@ import { onMount } from 'svelte';
 
 </script>
 
-<span id="certifications" class="relative bottom-20 pointer-events-none -z-100"></span>
-<h2 class="py-7  primary-heading text-center dark:text-white" >Specialization</h2>
+<span id="specializations" class="relative bottom-20 pointer-events-none -z-100"></span>
+<h2 class="py-7  primary-heading text-center dark:text-white" >Specializations</h2>
 <section class=" text-primary-dark">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
