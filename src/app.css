@@ -285,3 +285,15 @@ footer {
   .animate-gradient-move {
 	animation: gradient-move 2s ease-in-out infinite alternate;
   }
+
+
+  .glass-bg {
+  	border-radius: 20px;
+  	background: linear-gradient(120deg, rgba(255, 255, 255, 0.45) 0%, rgba(180, 200, 255, 0.25) 100%);
+  	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.22);
+  	backdrop-filter: saturate(180%);
+  	-webkit-backdrop-filter: saturate(180%);
+  	border: 2px solid rgba(255, 255, 255, 0.25);
+  	opacity: 0.95;
+  	transition: box-shadow 0.3s;
+  }
