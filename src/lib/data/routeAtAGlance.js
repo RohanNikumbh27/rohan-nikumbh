@@ -28,7 +28,7 @@ export const routeAtaGlanceObjects = [
     linkRoute: "/skills",
   },
   {
-    title: "Specialization",
+    title: "Specializations",
     description:
       "A deep dive into my areas of expertise, including specific technologies, frameworks, and methodologies that I excel in and enjoy working with.",
     LinkText: "Explore Specializations",

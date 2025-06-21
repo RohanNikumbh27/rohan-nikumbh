@@ -18,7 +18,7 @@
     // Show loader for 2 seconds before displaying the image
     setTimeout(() => {
       showLoader = false;
-    }, 0);
+    }, 900);
 
     const handleScroll = () => {
       scrollPosition = window.scrollY * 0.2;
@@ -41,12 +41,10 @@
 
 <div class="h-[40%] flex flex-col gap-12 lg:flex-row xl:gap-0">
   <div class="min-h-[40%] flex flex-col md:flex-row md:items-stretch justify-center xl:min-w-[493px]">
-    <div class=" justify-center mt-0 pt-0 w-[100%] sm:w-[100%] md:w-[90%] lg:w-[70%] items-center flex h-full md:h-auto flex-col rounded-2xl  ">
+    <div class=" justify-center mt-0 w-[100%] sm:w-[100%] md:w-[370px] lg:w-[70%] items-center flex h-full md:h-auto flex-col rounded-2xl relative ">
       {#if showLoader}
-        <Loader className="h-[500px] w-[330px] md:w-[370px] transition-all mx-10 rounded-2xl md:mt-10 sm:mt-2 " />
+        <Loader className="h-[500px] w-[330px] md:w-[370px] min-w-[340px] transition-all rounded-2xl md:mt-6" />
       {:else}
-      <!-- in:fly="{{ y: 50, duration: 500, delay: 100, easing: quintOut }}" -->
-
       <img
         in:fade={{ duration:1000, amount: 20 }}
         out:fade={{ duration: 3000 }}
@@ -54,7 +52,13 @@
         style="will-change: opacity"
         alt="Img"
         loading="lazy"
-        class="rounded-2xl cursor-pointer transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl h-[500px] min-w-[330px]  w-auto object-cover border-b-2  border-primary shadow-2xl shadow-primary-dark/80"
+        class="rounded-2xl !h-[500px] !w-[330px] !md:w-[370px] min-w-[340px] object-cover border-b-2  border-primary md:mt-8"
+      />
+      <img
+        src="/my_signature.png"
+        alt="signature"
+        class="absolute -right-4 overflow-hidden -bottom-2 w-[150px] pointer-events-none select-none invert transform -rotate-[16deg]"
+        style="z-index:2"
       />
       {/if}
     </div>
