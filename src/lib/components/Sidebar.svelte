@@ -79,7 +79,7 @@
 </script>
 
 <section id="DesktopHeader">
-  <div class="h-12 w-12 fixed bottom-4 right-9 hidden md:inline-block">
+  <div class="h-12 w-12 fixed bottom-4 right-9 hidden md:inline-block z-50">
     <DarkModeToggle {theme} {toggleTheme}/>
   </div>
   <header class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/80  py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500">
