@@ -2,7 +2,7 @@
   import HeroSection from "$lib/components/HeroSection.svelte";
   import GithubStats from "$lib/components/Home/GithubStats.svelte";
   import RouteAtAGlance from "../lib/components/Cards/RouteAtAGlance.svelte";
-  import { routeAtaGlanceObjects } from "$lib/data/routeAtaGlance.js";
+  import { routeAtaGlanceObjects } from "$lib/data/routeAtAGlance.js";
 </script>
 
 <div class="container md:pt-7">
