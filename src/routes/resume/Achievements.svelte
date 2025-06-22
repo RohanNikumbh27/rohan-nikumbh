@@ -378,7 +378,6 @@ import { onMount } from 'svelte';
                 <p class="text-zinc-400 text-sm relative z-10">Issued by: {cert.by}</p>
               </div>
               <a href={cert.link} target="_blank">
-                
                   <div class="px-6 py-4 bg-gray-700/10 dark:bg-black/40 flex justify-between items-center cursor-pointer">
                       <span class="text-sm font-semibold text-primary">View Certificate</span>
                       <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
