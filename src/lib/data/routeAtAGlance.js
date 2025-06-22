@@ -17,7 +17,7 @@ export const routeAtaGlanceObjects = [
     title: "Contact",
     description:
       "Get in touch with me for collaborations, inquiries, suggestions, or just to say hello! I’m always open to exciting opportunities and thoughtful discussions.",
-    LinkText: "Explore Contact",
+    LinkText: "Contact me 😀",
     linkRoute: "/contact",
   },
   {
