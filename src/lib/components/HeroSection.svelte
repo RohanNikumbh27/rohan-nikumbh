@@ -10,6 +10,7 @@
     "/Rohan_Nikumbh.jpg",
     "/Rohan_Nikumbh1.jpg",
     "/Rohan_Nikumbh2.jpg",
+    "/Rohan_Kailas_Nikumbh.jpg"
   ];
 
   let showLoader = true;
@@ -46,19 +47,12 @@
         <Loader className="h-[500px] w-[330px] md:w-[370px] min-w-[340px] transition-all rounded-2xl md:mt-6" />
       {:else}
       <img
-        in:fade={{ duration:1000, amount: 20 }}
-        out:fade={{ duration: 3000 }}
-        src="/Rohan_Nikumbh1.jpg"
+        transition={{ duration:1000, amount: 20 }}
+        src='/Rohan_Nikumbh.jpg'
         style="will-change: opacity"
         alt="Img"
         loading="lazy"
         class="rounded-2xl !h-[500px] !w-[330px] !md:w-[370px] min-w-[340px] object-cover border-b-2  border-primary md:mt-8"
-      />
-      <img
-        src="/my_signature.png"
-        alt="signature"
-        class="absolute -right-4 overflow-hidden -bottom-2 w-[150px] pointer-events-none select-none invert transform -rotate-[16deg]"
-        style="z-index:2"
       />
       {/if}
     </div>
