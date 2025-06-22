@@ -21,4 +21,4 @@
     }
 </style>
 
-<div class={`loader rounded-2xl transition-all ${className}`}></div>
+<div class={`loader rounded-2xl transition-all ${className} dark:invert dark:hue-rotate-180 dark:saturate-200`}></div>

@@ -295,5 +295,4 @@ footer {
   	-webkit-backdrop-filter: saturate(180%);
   	border: 2px solid rgba(255, 255, 255, 0.25);
   	opacity: 0.95;
-  	transition: box-shadow 0.3s;
   }
