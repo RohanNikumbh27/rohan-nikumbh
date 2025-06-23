@@ -7,9 +7,12 @@
     };
     import {MoveRight} from "lucide-svelte";
     import {slide} from "svelte/transition";
+    import {perspectiveTilt} from '$lib/utils.js';
 </script>
 
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center"
+    use:perspectiveTilt
+>
 <div
     class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-neutral-900/70 border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40">
     <!-- Decorative Bar -->
