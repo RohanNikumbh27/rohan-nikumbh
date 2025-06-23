@@ -1,9 +1,8 @@
 <script>
   import {page} from "$app/stores";
+  import {SearchQ} from "$lib/store/userStore.js";
+  import {blur} from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
-  $:pathName = $page.url.pathname;
-  import { SearchQ } from "$lib/store/userStore.js"
-import {blur, fade, fly, scale} from "svelte/transition";
 
 
    
@@ -125,7 +124,7 @@ import {blur, fade, fly, scale} from "svelte/transition";
                     class="px-2 py-1  block md:inline-block m-4 text-3xl transition-all duration-200  rounded-2xl {pathName === NavOption.ref ? "text-primary  transition-all": "text-[#342121b4]"}"
                     href={NavOption.ref}>{NavOption.label}</a
                   >
-                {/each}
+                {/each} 
               {/if}
               </div>
             <SearchComp />

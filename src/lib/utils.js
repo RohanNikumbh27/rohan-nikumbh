@@ -1,22 +1,22 @@
 export function clickOutside(node) {
-	window.addEventListener('click', handleClick);
+  window.addEventListener("click", handleClick);
 
-	function handleClick(e) {
-		if (!node.contains(e.target)) {
-			node.dispatchEvent(new CustomEvent('outsideclick'));
-		}
-	}
+  function handleClick(e) {
+    if (!node.contains(e.target)) {
+      node.dispatchEvent(new CustomEvent("outsideclick"));
+    }
+  }
 
-	return {
-		destroy() {
-			window.removeEventListener('click', handleClick);
-		}
-	};
+  return {
+    destroy() {
+      window.removeEventListener("click", handleClick);
+    },
+  };
 }
 
-export function perspectiveTilt(node, { multiplier = 10 } = {}) {
-  let rotationX = 0;
-  let rotationY = 0;
+export function perspectiveTilt(node, { multiplier = 15, scale = 0.95} = {}) {
+  // Set initial transition for smoothness
+  node.style.transition = "transform 0.25s cubic-bezier(.25,.8,.25,1)";
 
   function handleMouseMove(e) {
     const rect = node.getBoundingClientRect();
@@ -24,15 +24,14 @@ export function perspectiveTilt(node, { multiplier = 10 } = {}) {
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    rotationY = ((x - centerX) / centerX) * multiplier;
-    rotationX = -((y - centerY) / centerY) * multiplier;
-    node.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    const rotationY = ((x - centerX) / centerX) * multiplier;
+    const rotationX = -((y - centerY) / centerY) * multiplier; // Negative for "lean towards cursor"
+    node.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg) scale(${scale})`;
   }
 
   function handleMouseLeave() {
-    rotationX = 0;
-    rotationY = 0;
-    node.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    node.style.transform =
+      "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
   }
 
   node.addEventListener("mousemove", handleMouseMove);
