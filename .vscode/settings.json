@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // PRETTIER AS DEFAULT FORMATTER.
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode" // FORMATTER FOR SVELTE FILES.
+  },
+  "editor.formatOnSave": true, // FORMAT A FILE ON SAVE.
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "explicit" // SORT IMPORTS ON SAVE.
+  }
+}

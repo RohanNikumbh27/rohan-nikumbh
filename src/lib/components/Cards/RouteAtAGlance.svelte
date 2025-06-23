@@ -5,12 +5,13 @@
         LinkText: "Explore",
         linkRoute: "www.rohannikumbh.me"
     };
-    import { MoveRight } from "lucide-svelte";
-    import { slide } from "svelte/transition";
+    import {MoveRight} from "lucide-svelte";
+    import {slide} from "svelte/transition";
 </script>
 
 <div class="flex items-center justify-center">
-<div class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-neutral-900/70 border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40">
+<div
+    class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-neutral-900/70 border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40">
     <!-- Decorative Bar -->
     <div class="flex items-center justify-center gap-2 mb-5">
         <div class="h-1 w-1/2 bg-gradient-to-r from-primary/40 via-primary to-primary/40 rounded-full animate-pulse"></div>
