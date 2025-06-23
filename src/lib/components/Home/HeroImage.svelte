@@ -3,7 +3,6 @@
 import {blur} from 'svelte/transition';
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
   use:perspectiveTilt
   style="perspective: 1000px; display: inline-block;"
