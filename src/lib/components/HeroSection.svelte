@@ -45,7 +45,7 @@
   <div class="min-h-[40%] flex flex-col md:flex-row md:items-stretch justify-center xl:min-w-[493px]">
     <div class=" justify-center mt-0 w-[100%] sm:w-[100%] md:w-[370px] lg:w-[70%] items-center flex h-full md:h-auto flex-col rounded-2xl relative ">
       {#if showLoader}
-        <Loader className="h-[500px] w-[330px] md:w-[370px] min-w-[340px] transition-all rounded-2xl md:mt-6" />
+        <Loader className="h-[450px] w-[330px] md:w-[350px] min-w-[340px] transition-all rounded-2xl md:mt-6" />
       {:else}
         <HeroImage/>
       {/if}
