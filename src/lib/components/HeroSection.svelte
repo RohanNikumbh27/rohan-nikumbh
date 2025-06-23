@@ -53,7 +53,7 @@
   </div>
 
   <!-- Text Content -->
-  <div class="items-center flex h-full  md:h-auto md:justify-center flex-col xl:justify-evenly rounded-2xl md:w-[85%] xl:w-[70%] md:mx-auto pr-0 lg:pr-0 2xl:pr-[74px]">
+  <div class="items-center flex h-full  md:h-auto md:justify-center flex-col xl:justify-evenly rounded-2xl md:w-[85%] xl:w-[70%] md:mx-auto pr-0 lg:pr-0 2xl:pr-[74px] transition-c">
     <div class="font-[500] text-center text-3xl leading-relaxed text-zinc-700 dark:text-white pb-2">
       Transforming Ideas into Seamless Experiences 🚀 - Currently <span class=" bg-gradient-to-r from-[#e50914] via-[#acacac] to-[#ff6f00] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text">Software Engineer </span> Intern 
       <p class="text-zinc-600 dark:text-[#fff]">@Syngenta</p>
