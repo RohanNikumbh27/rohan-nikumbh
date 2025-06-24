@@ -5,9 +5,9 @@
         LinkText: "Explore",
         linkRoute: "www.rohannikumbh.me"
     };
+    import {perspectiveTilt} from '$lib/utils.js';
     import {MoveRight} from "lucide-svelte";
     import {slide} from "svelte/transition";
-    import {perspectiveTilt} from '$lib/utils.js';
 </script>
 
 <div class="flex items-center justify-center"
@@ -22,12 +22,12 @@
         <div class="h-1 w-1/2 bg-gradient-to-l from-primary/40 via-primary to-primary/40 rounded-full animate-pulse"></div>
     </div>
     <!-- Content -->
-<div class="flex flex-col items-center text-center">
+<div class="flex flex-col items-center text-center ">
 
     </div>
     <!-- Icon -->
     <h2 class="text-3xl font-semibold text-zinc-800 dark:text-gray-100 tracking-tight mb-2 flex items-center justify-center gap-2">{obj.title}</h2>
-    <p class="text-stone-500 dark:text-gray-400 text-base mb-6">{obj.description}</p>
+    <p class="text-stone-500 dark:text-gray-400 text-base mb-6 overflow-auto">{obj.description}</p>
 
     <!-- Link Button -->
     <a
