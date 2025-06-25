@@ -2,7 +2,7 @@ export const routeAtaGlanceObjects = [
   {
     title: "TimeLine",
     description:
-      "A chronological journey of my academics, internships, leadership roles, and hackathons — showcasing how I’ve evolved from early education to impactful industry contributions.",
+      "A chronological journey of my academics, internships, leadership roles — showcasing how I’ve evolved from early education to impactful industry contributions.",
     LinkText: "Explore TimeLine",
     linkRoute: "/timeline",
   },

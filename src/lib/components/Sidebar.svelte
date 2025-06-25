@@ -183,7 +183,7 @@
     <div 
       in:fly={{ duration: 200, x: "-100%" }} 
       out:fly={{ duration: 2000, x: "-400%", delay: 200 }} 
-      class="bg-primary-dark dark:bg-zinc-900 fixed h-[100vh] w-full z-[500] p-2 ease-in transform-gpu" 
+      class="bg-primary-dark dark:bg-zinc-900 fixed h-[100vh] w-full z-[500] p-2 ease-in transform-cpu" 
       style="will-change: transform;"
       on:click={toggleMobileNav}>
     </div>
@@ -191,14 +191,14 @@
     <div 
       in:fly={{ duration: 500, x: "-300%" }} 
       out:fly={{ duration: 1700, x: "-350%", delay: 45 }} 
-      class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in transform-gpu" 
+      class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in transform-cpu" 
       style="will-change: transform;"
       on:click={toggleMobileNav}>
     </div>
     <div 
       in:fly={{ duration: 500, x: "-300%", delay: 100 }} 
       out:fly={{ duration: 1000, x: "-400%" }} 
-      class="bg-white dark:bg-primary-dark fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-gpu"
+      class="bg-white dark:bg-primary-dark fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
       style="will-change: transform;"
       on:touchstart={handleTouchStart}
       on:touchend={handleTouchEnd}

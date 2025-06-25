@@ -22,7 +22,7 @@ import {perspectiveTilt} from '$lib/utils.js';
             use:perspectiveTilt={{scale: 1.05}}
             class="relative inline-block p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto shadow-2xl hover:shadow-primary transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl">
             <span class=" text-sm text-zinc-300  whitespace-nowrap">{date}</span>
-            <h3 class="text-lg font-semibold lg:text-xl">{title}</h3>
+            <h3 class="text-lg font-[500] lg:text-xl">{title}</h3>
             <p class="mt-2 leading-6 text-zinc-400">{desc}</p>
         </div>
         <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
@@ -53,9 +53,9 @@ import {perspectiveTilt} from '$lib/utils.js';
         </div>
         <div 
         use:perspectiveTilt={{scale: 1.05}}
-        class="relative p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-6 col-end-10 mr-auto hover:shadow-primary transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl">
+        class="relative p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-6 col-end-10 mr-auto hover:shadow-primary transition-all transform duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl">
             <span class=" text-sm text-zinc-300  whitespace-nowrap ">{date}</span>
-            <h3 class="text-lg font-semibold lg:text-xl">{title}</h3>
+            <h3 class="text-lg font-[500] lg:text-xl">{title}</h3>
             <p class="mt-2 leading-6 text-zinc-400">{desc}</p>
         </div>
     </div>
