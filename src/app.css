@@ -279,3 +279,53 @@ footer {
   transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity;
 }
+
+.hero-image {
+  flex: 1 1 340px;
+  height: 490px;
+  width: 330px;
+  min-width: 340px;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    height: 490px;
+    width: 370px;
+  }
+}
+
+@media (max-width: 362px) {
+  .hero-image {
+    min-width: 90vw !important;
+    height: auto !important;
+  }
+}
+
+
+
+
+
+
+
+/* Show .hero-up-buttons and hide .hero-down-buttons for width 1024px to 1090px */
+@media (min-width: 1024px) and (max-width: 1190px) {
+  .hero-heading {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    
+  }
+  .hero-subheading {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* For all other widths, show .hero-down-buttons and hide .hero-up-buttons */
+/* @media (max-width: 1023px), (min-width: 1091px) {
+  .hero-heading {
+    display: none !important;
+  }
+  .hero-subheading {
+    display: flex !important;
+  }
+} */
