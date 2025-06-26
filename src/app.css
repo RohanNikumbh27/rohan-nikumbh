@@ -85,14 +85,16 @@
 	animation: fadeTransition alternate ; */
   /* animation-duration: 0.3s; */
   /* font-family: "Mona Sans","MonaSansFallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
-  font-family: "Mona Sans","MonaSansFallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: "Mona Sans", "MonaSansFallback", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -282,14 +284,14 @@ footer {
 
 .hero-image {
   flex: 1 1 340px;
-  height: 490px;
+  height: 460px;
   width: 330px;
   min-width: 340px;
 }
 
 @media (min-width: 768px) {
   .hero-image {
-    height: 490px;
+    height: 460px;
     width: 370px;
   }
 }
@@ -301,31 +303,40 @@ footer {
   }
 }
 
-
-
-
-
-
-
 /* Show .hero-up-buttons and hide .hero-down-buttons for width 1024px to 1090px */
 @media (min-width: 1024px) and (max-width: 1190px) {
   .hero-heading {
     font-size: 1.7rem;
     line-height: 2rem;
-    
   }
   .hero-subheading {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    /* line-height: 1.3rem; */
   }
 }
 
 /* For all other widths, show .hero-down-buttons and hide .hero-up-buttons */
-/* @media (max-width: 1023px), (min-width: 1091px) {
+@media (min-width: 1191px) {
   .hero-heading {
-    display: none !important;
+    font-size: 1.7rem;
+    line-height: 2.3rem;
   }
   .hero-subheading {
-    display: flex !important;
+    font-size: 1.1rem;
   }
-} */
+}
+
+
+@media (min-width: 1125px) {
+  .hero-heading {
+    font-size: 1.7rem;
+    line-height: 2.3rem;
+  }
+}
+
+@media (min-width: 1196px) and (max-width: 1279px) {
+  .hero-heading {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+  }
+}
