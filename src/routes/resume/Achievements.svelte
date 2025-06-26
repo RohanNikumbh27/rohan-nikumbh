@@ -371,6 +371,7 @@ import {onMount} from 'svelte';
             <div 
               in:fly="{{ y: 50, duration: 500, delay: index * 100, easing: quintOut }}"
               out:fade="{{ duration: 300 }}"
+              use:perspectiveTilt={{scale: 1.05}}
               class="justify-between flex flex-col glass-bg dark:bg-gradient-to-tr !border-none dark:from-stone-900 dark:via-zinc-850 dark:to-stone-950 rounded-3xl overflow-hidden  shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
