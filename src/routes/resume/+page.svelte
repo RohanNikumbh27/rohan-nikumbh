@@ -73,7 +73,7 @@
 <div
   class="my-10 flex items-center justify-evenly font-serif font-bold flex-col gap-1 transition-c "
 >
-  <div class="flex gap-3  sm:gap-4 md:gap-10 flex-col sm:flex-col md:flex-row">
+  <div class="flex gap-3 sm:gap-4 md:gap-10 flex-col sm:flex-col md:flex-row">
     {#if saveState == "saved"}
       <div class="w-[100%]">
         <div
@@ -133,13 +133,13 @@
       
       <div class="w-[100%]">
         <div
-          class="container rounded-[16px] bg-[#171717] dark:bg-black min-w-[340px] sm:min-w-[340px] md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none  !animate-none"
+          class="container rounded-[16px] bg-[#171717] dark:bg-black min-w-[300px] sm:min-w-[300px] mx-auto md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none  !animate-none"
         >
           <textarea
             bind:value={feedbackMsg}
             name="feedbackMsg"
             class="w-full smoothClick grayd h-full flexc text-center pt-[12px] px-10 rounded-[20px] min-h-[100px]"
-            placeholder="Give some feedback on resume..."
+            placeholder="Give feedback on resume, portfolio..."
           ></textarea>
           <div class="w-full !pt-3 h-[40%] flexc gap-3 flex-row">
             <input

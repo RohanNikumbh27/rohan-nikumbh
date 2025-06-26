@@ -343,7 +343,7 @@ import {onMount} from 'svelte';
               class="justify-between flex  flex-col bg-gradient-to-tl from-stone-400/95 via-zinc-300 to-zinc-300 dark:from-stone-900 dark:via-zinc-800 dark:to-zinc-900  rounded-3xl overflow-hidden  shadow-xl transform transition-all duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
             >
               <div class="p-6 relative flex flex-col justify-center flex-grow">
-                <div class="absolute top-0 right-0 w-16 h-16 ransform rotate-45 translate-x-8 -translate-y-8"></div>
+                <div class="absolute top-0 right-0 w-16 h-16 transform rotate-45 translate-x-8 -translate-y-8"></div>
                 <h3 class="text-xl font-semibold mb-2 relative z-10 text-stone-600 dark:text-zinc-200">{cert.name}</h3>
                 <p class="text-stone-500 dark:text-zinc-300 text-sm relative z-10">Issued by: {cert.by}</p>
               </div>
