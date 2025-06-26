@@ -2,7 +2,7 @@ import { writable } from "svelte/store";
 
 export const toasts = writable([]);
 
-export function showToast({ message, type = "info", duration = 3000 }) {
+export function showToast({ message, type = "info", duration = 4000 }) {
   const id = Date.now() + Math.random();
   toasts.update((all) => [...all, { id, message, type }]);
   if (duration > 0) {
