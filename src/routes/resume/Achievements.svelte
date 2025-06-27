@@ -1,7 +1,7 @@
 <script>
-  import {perspectiveTilt} from "$lib/utils.js";
-  import {quintOut} from "svelte/easing";
-  import {fade,fly} from "svelte/transition";
+  import { perspectiveTilt } from "$lib/utils.js";
+  import { quintOut } from "svelte/easing";
+  import { fade, fly } from "svelte/transition";
 
   //   let certs = Array.from(document.querySelectorAll('.horizontal-box'))
   //     .map(box => {
@@ -305,13 +305,13 @@
     },
   ];
 
-  import {onMount} from "svelte";
+  import { onMount } from "svelte";
 
   let showButton = false;
 
   onMount(() => {
     const handleScroll = () => {
-                          showButton = window.scrollY > window.innerHeight; // Show when scrolled more than 100vh
+      showButton = window.scrollY > window.innerHeight; // Show when scrolled more than 100vh
     };
 
     window.addEventListener("scroll", handleScroll);
