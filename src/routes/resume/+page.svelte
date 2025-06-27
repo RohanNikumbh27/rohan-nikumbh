@@ -1,28 +1,30 @@
 <script>
-  import {applyAction,enhance} from "$app/forms";
+  import { applyAction, enhance } from "$app/forms";
   import CustomToast from "$lib/components/common/Toast.svelte";
-  import {showToast} from "$lib/store/toastStore.js";
   import Button from "$lib/components/form/Button.svelte";
+  import { showToast } from "$lib/store/toastStore.js";
   import Achievements from "./Achievements.svelte";
-  let resumeLink = "https://drive.google.com/file/d/1AA0P-GukJJJbwI_l7wkq8JXQXowZPHD1/view?usp=sharing"
-  let position = {style:"color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px"};
+  let resumeLink =
+    "https://drive.google.com/file/d/1AA0P-GukJJJbwI_l7wkq8JXQXowZPHD1/view?usp=sharing";
+  let position = {
+    style:
+      "color:#fdfdfd; font-weight:bold; padding: 16px; background:black; border-radius:30px",
+  };
   let reqStatus = "notSent";
   let disableReqSend = false;
   export let form;
 
-  $:currencyObj = {
+  $: currencyObj = {
     name: "",
     symbol: "",
     iso_code: "",
-  }
-
+  };
 
   // const getUsersCurrentAddress = async (latitude, longitude) => {
   //   try {
   //       const apiKey = "a5c44d8678ef43d098a989a5c4fe8ead";
   //       let query = `${latitude},${longitude}`
   //       const apiUrl = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${query}`;
-
 
   //       const res = await fetch(apiUrl);
   //       const data = await res.json()
@@ -34,11 +36,10 @@
 
   //       userCurrency.set(currencyObj);
   //       return currency;
-        
+
   //   } catch (error) {
   //       console.log(error);
   //   }
-    
 
   // };
 
@@ -46,9 +47,9 @@
     reqStatus = "sending";
 
     setTimeout(() => {
-        disableReqSend = true;
-        reqStatus = "sent"
-        toast.success("Request sent successfully", position)
+      disableReqSend = true;
+      reqStatus = "sent";
+      toast.success("Request sent successfully", position);
     }, 2000);
   };
 
@@ -56,22 +57,18 @@
   let feedbackMsg = "";
   let saveState = "notStarted";
   // let saveState = "saving";
-
-  
-    
 </script>
 
+<h2 class="primary-heading text-center dark:text-white pt-7 pb-4 mt-2 md:mt-7">
+  Resume
+</h2>
 
-  <h2 class="primary-heading text-center dark:text-white pt-7 pb-4 mt-2 md:mt-7">Resume</h2>
-
-
-  <div class="flex items-center mt-2">
-
-    <Button title="View Resume" href={resumeLink} target="_blank"/>
-  </div>
+<div class="flex items-center mt-2">
+  <Button title="View Resume" href={resumeLink} target="_blank" />
+</div>
 
 <div
-  class="my-10 flex items-center justify-evenly font-serif font-bold flex-col gap-1 transition-c "
+  class="my-10 flex items-center justify-evenly font-serif font-bold flex-col gap-1 transition-c"
 >
   <div class="flex gap-3 sm:gap-4 md:gap-10 flex-col sm:flex-col md:flex-row">
     {#if saveState == "saved"}
@@ -108,54 +105,54 @@
         </div>
       </div>
     {:else}
-    
-    <form 
-      method="POST" 
-      use:enhance={({ formElement, formData, action, cancel }) => {
-        saveState = "saving";
-        return async ({ result }) => {
-          if (result.type === 'success') {
-            saveState = "saved";
-            showToast({ message: "Feedback sent to Rohan Nikumbh", type: "success" });
-          } else {
-            if (result?.data?.missing) {
-              showToast({ message: result?.data?.message, type: "error" });
+      <form
+        method="POST"
+        use:enhance={({ formElement, formData, action, cancel }) => {
+          saveState = "saving";
+          return async ({ result }) => {
+            if (result.type === "success") {
+              saveState = "saved";
+              showToast({
+                message: "Feedback sent to Rohan Nikumbh",
+                type: "success",
+              });
+            } else {
+              if (result?.data?.missing) {
+                showToast({ message: result?.data?.message, type: "error" });
+              }
+              setTimeout(() => {
+                saveState = "notStarted";
+              }, 500);
+              await applyAction(result);
             }
-            setTimeout(() => {
-              saveState = "notStarted";
-            }, 500);
-            await applyAction(result);
-          }
-        };
-      }}
-    >
-
-      
-      <div class="w-[100%]">
-        <div
-          class="container rounded-[16px] bg-[#171717] dark:bg-black min-w-[300px] sm:min-w-[300px] mx-auto md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none  !animate-none"
-        >
-          <textarea
-            bind:value={feedbackMsg}
-            name="feedbackMsg"
-            class="w-full smoothClick grayd h-full flexc text-center pt-[12px] px-10 rounded-[20px] min-h-[100px]"
-            placeholder="Give feedback on resume, portfolio..."
-          ></textarea>
-          <div class="w-full !pt-3 h-[40%] flexc gap-3 flex-row">
-            <input
-              bind:value={name}
-              name="name"
-              class="h-full w-full smoothClick flexc grayd rounded-[20px] pl-4"
-              placeholder="Enter Your name"
-            />
-            <button
-              class="h-full w-[30%] flexc smoothClick bg-[#D9D9D9] text-[#000] font-medium !rounded-[20px] text-xl px-2"
-              >Save</button
-            >
+          };
+        }}
+      >
+        <div class="w-[100%]">
+          <div
+            class="container rounded-[16px] bg-[#171717] dark:bg-black min-w-[300px] sm:min-w-[300px] mx-auto md:min-w-[370px] h-[250px] flexc !justify-evenly flex-col gap-3 !p-6 border-none focus:ring-none !animate-none"
+          >
+            <textarea
+              bind:value={feedbackMsg}
+              name="feedbackMsg"
+              class="w-full smoothClick grayd h-full flexc text-center pt-[12px] px-10 rounded-[20px] min-h-[100px]"
+              placeholder="Give feedback on resume, portfolio..."
+            ></textarea>
+            <div class="w-full !pt-3 h-[40%] flexc gap-3 flex-row">
+              <input
+                bind:value={name}
+                name="name"
+                class="h-full w-full smoothClick flexc grayd rounded-[20px] pl-4"
+                placeholder="Enter Your name"
+              />
+              <button
+                class="h-full w-[30%] flexc smoothClick bg-[#D9D9D9] text-[#000] font-medium !rounded-[20px] text-xl px-2"
+                >Save</button
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
     {/if}
 
     <!-- <div
@@ -228,7 +225,6 @@
     </div> -->
   </div>
 </div>
-
 
 <Achievements />
 

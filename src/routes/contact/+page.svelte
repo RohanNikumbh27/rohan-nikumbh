@@ -1,9 +1,9 @@
 <script>
-  import {applyAction,enhance} from "$app/forms";
-  import Button from "$lib/components/form/Button.svelte";
-  import '../../app.css';
+  import { applyAction, enhance } from "$app/forms";
   import CustomToast from "$lib/components/common/Toast.svelte";
-  import {showToast} from "$lib/store/toastStore.js";
+  import Button from "$lib/components/form/Button.svelte";
+  import { showToast } from "$lib/store/toastStore.js";
+  import '../../app.css';
 
   export let form;
 

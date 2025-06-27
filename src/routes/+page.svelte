@@ -1,15 +1,15 @@
 <script>
   import HeroSection from "$lib/components/HeroSection.svelte";
   import GithubStats from "$lib/components/Home/GithubStats.svelte";
-  import RouteAtAGlance from "../lib/components/Cards/RouteAtAGlance.svelte";
   import { routeAtaGlanceObjects } from "$lib/data/routeAtAGlance.js";
+  import RouteAtAGlance from "../lib/components/Cards/RouteAtAGlance.svelte";
 </script>
 
 <div class="container md:pt-7">
   <HeroSection />
 </div>
-    
-<GithubStats/>
+
+<GithubStats />
 
 <div class="pt-10"></div>
 
@@ -19,6 +19,7 @@
   {/each}
 </div>
 <div class="pt-10"></div>
+
 <style>
   .container {
     width: 80%;

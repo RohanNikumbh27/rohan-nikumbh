@@ -6,13 +6,13 @@
 </script>
 
 <a
-  href={href}
-  target={target}
+  {href}
+  {target}
   class="relative cursor-pointer transition-all duration-300 px-[20px] py-3 rounded-full flex justify-center items-center mx-auto overflow-hidden group
     bg-gradient-to-r from-primary-dark via-zinc-900 to-primary-dark dark:from-black dark:via-zinc-950 dark:to-black shadow-md shadow-black/70
     text-white text-lg font-semibold border-[2px] border-transparent"
-  on:mouseenter={() => hovered = true}
-  on:mouseleave={() => hovered = false}
+  on:mouseenter={() => (hovered = true)}
+  on:mouseleave={() => (hovered = false)}
 >
   <!-- Shine effect -->
   <!-- <span
@@ -27,7 +27,9 @@
 
 <style>
   a:hover {
-    box-shadow: 0 6px 32px 0 #e5091877, 0 1.5px 8px 0 #0008;
+    box-shadow:
+      0 6px 32px 0 #e5091877,
+      0 1.5px 8px 0 #0008;
     border: 2px solid #e50918;
   }
 
@@ -36,8 +38,12 @@
     animation: shine-move 5s forwards;
   }
   @keyframes shine-move {
-    0% { transform: translateX(-120%) rotate(20deg);}
-    100% { transform: translateX(220%) rotate(20deg);}
+    0% {
+      transform: translateX(-120%) rotate(20deg);
+    }
+    100% {
+      transform: translateX(220%) rotate(20deg);
+    }
   }
 
   /* Shimmer text effect */
@@ -59,7 +65,11 @@
     letter-spacing: 0.04em;
   }
   @keyframes shimmer {
-    0% { background-position: 200% center; }
-    100% { background-position: -200% center; }
+    0% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
   }
 </style>

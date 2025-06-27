@@ -1,7 +1,7 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode", // PRETTIER AS DEFAULT FORMATTER.
   "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode" // FORMATTER FOR SVELTE FILES.
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" // FORMATTER FOR SVELTE FILES.
   },
   "editor.formatOnSave": true, // FORMAT A FILE ON SAVE.
   "editor.codeActionsOnSave": {
