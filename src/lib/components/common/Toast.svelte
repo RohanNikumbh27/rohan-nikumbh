@@ -11,7 +11,7 @@
     <div
       class="font-serif w-full px-4 py-3 rounded-2xl custom-shadow flex items-center justify-between gap-1
          backdrop-blur-xl bg-stone-300/50 text-zinc-700 dark:bg-zinc-950/50 dark:text-zinc-200 font-[400] border-b-[2px] ease-in
-        {toast.type === 'success' ? 'border-emerald-600' : ''}
+        {toast.type === 'success' ? 'border-green-600' : ''}
         {toast.type === 'error' ? 'border-primary' : ''}
         {toast.type === 'info' ? 'border-violet-700' : ''}"
       in:scale={{ duration: 200, start: 0.9 }}

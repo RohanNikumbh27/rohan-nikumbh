@@ -1,5 +1,5 @@
 export const emailToAdmin = (name, email, description) => {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,13 @@ export const emailToAdmin = (name, email, description) => {
             margin: 0;
             padding: 20px;
         }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+        }
         .gold-frame {
             margin-top: 50px;
             height: 90px;
@@ -20,13 +27,6 @@ export const emailToAdmin = (name, email, description) => {
             border-radius: 50%;
             object-fit: cover;
             background: #fff;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background-color: #1f1f1f;
-            border-radius: 8px;
-            overflow: hidden;
         }
         .header {
             text-align: center;
@@ -80,7 +80,6 @@ export const emailToAdmin = (name, email, description) => {
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://media.licdn.com/dms/image/v2/D4D16AQHWrfpyvaPHQA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1722585273437?e=1743638400&v=beta&t=c8caqDi5TQXSxbhJgWiFOwHVdjOvIfQaqaMbRSNEpmk" alt="Header Image">
             <img src="https://rohan-nikumbh.vercel.app/Rohan_squared.png" alt="Rohan Nikumbh" class="gold-frame" style="height:90px; width:90px">
         </div>
         <div class="content">
@@ -100,5 +99,5 @@ export const emailToAdmin = (name, email, description) => {
     </div>
 </body>
 </html>
-`    
-}
+`;
+};
