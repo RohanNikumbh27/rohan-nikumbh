@@ -1,8 +1,8 @@
 <script>
-  import { applyAction, enhance } from "$app/forms";
+  import {applyAction,enhance} from "$app/forms";
   import CustomToast from "$lib/components/common/Toast.svelte";
   import Button from "$lib/components/form/Button.svelte";
-  import { showToast } from "$lib/store/toastStore.js";
+  import {showToast} from "$lib/store/toastStore.js";
   import '../../app.css';
 
   export let form;
@@ -116,7 +116,7 @@
 {#if formStatus=="notSubmitted"}
 <form 
   method="POST" 
-  class="px-3"
+  class="px-3 w-full"
   use:enhance={({ formElement, formData, action, cancel }) => {
     console.log("formData", formData)
     formStatus = "loading";
@@ -158,7 +158,7 @@
   <div class="mb-3">
     <textarea
       placeholder="Type your message here!"
-      class="w-[100%] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
+      class="w-[100%] min-h-[100px] px-4 py-3 border-[3px] placeholder:text-zinc-400 rounded-2xl outline-none font-semibold bg-gray-200 focus:ring-0 border-transparent focus:border-primary-dark"
       name="description"
       bind:value={messageObj.desc}
       rows="2" 

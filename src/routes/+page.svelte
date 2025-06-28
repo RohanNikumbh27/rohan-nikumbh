@@ -13,7 +13,7 @@
 
 <div class="pt-10"></div>
 
-<div class="flex flex-wrap justify-center gap-4">
+<div class="flex flex-wrap justify-center gap-4 max-w-screen-3xl mx-auto">
   {#each routeAtaGlanceObjects as obj}
     <RouteAtAGlance {obj} />
   {/each}
