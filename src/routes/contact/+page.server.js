@@ -35,7 +35,7 @@ export const actions = {
       const messageForUser = {
         from: GOOGLE_EMAIL,
         to: email,
-        subject: `Thank you ${name} for Contacting Us`,
+        subject: `Thank you ${name}, for Contacting Us`,
         html: emailToUserTemplate(),
       };
       const messageForAdmin = {

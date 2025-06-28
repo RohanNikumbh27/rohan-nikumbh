@@ -1,5 +1,5 @@
 export const emailToUserTemplate = () => {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,14 +21,6 @@ export const emailToUserTemplate = () => {
             overflow: hidden;
             position: relative;
         }
-        .header {
-            text-align: center;
-            position: relative;
-        }
-        .header img {
-            width: 100%;
-            height: auto;
-        }
         .gold-frame {
             margin-top: 50px;
             height: 90px;
@@ -37,6 +29,13 @@ export const emailToUserTemplate = () => {
             object-fit: cover;
             background: #fff;
         }
+        .header {
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
         .content {
             padding: 20px;
             text-align: center;
@@ -44,11 +43,12 @@ export const emailToUserTemplate = () => {
         }
         .content h2 {
             color: #e50914;
+            fonr-weight: 400;
         }
         .message {
             background-color: #222;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 15px;
             margin-top: 10px;
             color: #bbb;
         }
@@ -69,6 +69,7 @@ export const emailToUserTemplate = () => {
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
+            margin-inline: auto;
         }
         .social-icons img:hover {
             background-color: #e50914;
@@ -87,11 +88,12 @@ export const emailToUserTemplate = () => {
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://media.licdn.com/dms/image/v2/D4D16AQHWrfpyvaPHQA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1722585273437?e=1743638400&v=beta&t=c8caqDi5TQXSxbhJgWiFOwHVdjOvIfQaqaMbRSNEpmk" alt="Header Image">
             <img src="https://rohan-nikumbh.vercel.app/Rohan_squared.png" alt="Rohan Nikumbh" class="gold-frame" style="height:90px; width:90px">
         </div>
         <div class="content">
-            <h2>Thank You!</h2>
+            <h3 style="color:#fff; font-weight:normal;">
+                (<span style="color:#E50914;">: </span>Thank you for Contacting us <span style="color:#E50914;">:</span>)
+            </h3>
             <div class="message">
                 <p>Thank you for your response. We respect your valuable time and will get back to you as soon as possible.</p>
             </div>
@@ -110,4 +112,4 @@ export const emailToUserTemplate = () => {
     </div>
 </body>
 </html>`;
-}
+};
