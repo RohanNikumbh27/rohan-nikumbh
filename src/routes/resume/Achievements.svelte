@@ -1,7 +1,7 @@
 <script>
-  import { perspectiveTilt } from "$lib/utils.js";
-  import { quintOut } from "svelte/easing";
-  import { fade, fly } from "svelte/transition";
+  import {perspectiveTilt} from "$lib/utils.js";
+  import {quintOut} from "svelte/easing";
+  import {fade,fly} from "svelte/transition";
 
   //   let certs = Array.from(document.querySelectorAll('.horizontal-box'))
   //     .map(box => {
@@ -305,7 +305,7 @@
     },
   ];
 
-  import { onMount } from "svelte";
+  import {onMount} from "svelte";
 
   let showButton = false;
 
@@ -320,6 +320,16 @@
 
   function backToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function trackCertificateClick(cert) {
+    if (window.gtag) {
+      window.gtag('event', 'view_certificate', {
+        event_category: 'Resume',
+        event_label: cert.name,
+        value: cert.name
+      });
+    }
   }
 </script>
 
@@ -356,7 +366,7 @@
               Issued by: {cert.by}
             </p>
           </div>
-          <a href={cert.link} target="_blank">
+          <a href={cert.link} target="_blank" on:click={() => trackCertificateClick(cert)}>
             <div
               class="px-6 py-4 bg-black/5 flex justify-between items-center cursor-pointer"
             >
@@ -416,7 +426,7 @@
               Issued by: {cert.by}
             </p>
           </div>
-          <a href={cert.link} target="_blank">
+          <a href={cert.link} target="_blank" on:click={() => trackCertificateClick(cert)}>
             <div
               class="px-6 py-4 bg-gray-700/10 dark:bg-black/40 flex justify-between items-center cursor-pointer"
             >

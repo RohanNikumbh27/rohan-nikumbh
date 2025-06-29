@@ -5,7 +5,6 @@
   import Spinner from "$lib/images/svgs/Spinner.svg.svelte";
   import {showToast} from "$lib/store/toastStore.js";
   import Achievements from "./Achievements.svelte";
-  import SeeAllReviews from "./SeeAllReviews.svelte";
   let resumeLink =
     "https://drive.google.com/file/d/1AA0P-GukJJJbwI_l7wkq8JXQXowZPHD1/view?usp=sharing";
   let position = {
@@ -48,6 +47,13 @@
                     message: "Feedback sent to Rohan Nikumbh",
                     type: "success",
                   });
+                  if (window.gtag) {
+                    window.gtag('event', 'resume_feedback_submit', {
+                      event_category: 'Resume',
+                      event_label: 'Feedback Submitted',
+                      value: name
+                    });
+                  }
                 } else {
                   if (result?.data?.missing) {
                     showToast({ message: result?.data?.message, type: "error" });

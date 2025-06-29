@@ -1,8 +1,8 @@
 <script>
   // ─── Parent Component State & Helpers ─────────────────────────────
-  import { page } from "$app/stores";
-  import { onMount } from "svelte";
-  import { blur, fly, scale, slide } from "svelte/transition";
+  import {page} from "$app/stores";
+  import {onMount} from "svelte";
+  import {blur,fly} from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
 
@@ -50,6 +50,12 @@
       document.documentElement.classList.toggle("dark", theme === "dark");
       localStorage.setItem("theme", theme);
     }
+    if (window.gtag) {
+      window.gtag('event', 'toggle_theme', {
+        event_category: 'Theme',
+        event_label: theme
+      });
+    }
   }
 
   onMount(() => {
@@ -75,6 +81,15 @@
     if (touchStartX - touchEndX > 50) {
       // 50px threshold for left swipe
       toggleMobileNav();
+    }
+  }
+
+  function trackNavClick(label) {
+    if (window.gtag) {
+      window.gtag("event", "navigation_click", {
+        event_category: "Navigation",
+        event_label: label,
+      });
     }
   }
 </script>
@@ -124,6 +139,7 @@
                   .url.pathname === item.ref
                   ? 'text-primary '
                   : 'text-zinc-500 hover:text-stone-700'}"
+                on:click={() => trackNavClick(item.label)}
               >
                 {item.label}
               </a>
@@ -241,7 +257,7 @@
         {#each navItems as item}
           <a
             href={item.ref}
-            on:click={() => handleMobileNavClick(item.ref)}
+            on:click={() => { handleMobileNavClick(item.ref); trackNavClick(item.label); }}
             transition:blur={{ duration: 300, delay: 100 }}
             class="px-2 py-1 m-4 block text-3xl rounded-2xl transition-all duration-200 {(
               pendingRoute

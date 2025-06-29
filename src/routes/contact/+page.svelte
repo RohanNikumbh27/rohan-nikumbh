@@ -17,7 +17,6 @@
   var formStatus = "notSubmitted";
   // var formStatus = "submmited";
   // var formStatus = "loading";
-  $:console.log("formStatus", formStatus);
   async function handleFormSubmit(event) {
     event.preventDefault();
     formErrors = { name: '', email: '', description: '' };
@@ -54,11 +53,10 @@
             }
         } catch (error) {
             console.error(error);
-            alert('An error occurred while sending the email.');
+            // alert('An error occurred while sending the email.');
         }
     }
 }
-
   
 </script>
 
@@ -118,16 +116,22 @@
   method="POST" 
   class="px-3 w-full"
   use:enhance={({ formElement, formData, action, cancel }) => {
-    console.log("formData", formData)
     formStatus = "loading";
 		return async ({ result }) => {
       if (result.type === 'success') {
-        console.log('if success');
         formStatus = "submmited";
 			} else {
         formStatus = "notSubmitted";
 				await applyAction(result);
+        
 			}
+      if (window.gtag) {
+        window.gtag('event', 'contact_form_submit', {
+          event_category: 'Contact',
+          event_label: 'Contact Form Submitted',
+          value: formData.get('email')
+        });
+      }
 		};
 	}}
 >

@@ -1,5 +1,14 @@
 <script>
   import Socials from "./Home/Socials.svelte";
+
+  function trackContactClick() {
+    if (window.gtag) {
+      window.gtag('event', 'contact_footer_click', {
+        event_category: 'Footer',
+        event_label: 'Contact Rohan'
+      });
+    }
+  }
 </script>
 
 <footer class="mb-0 bg-zinc-900 dark:bg-black relative overflow-hidden -z-100">
@@ -17,10 +26,12 @@
     </div>
     <div>
       <p class="text-[24px]">Wanna Hire Me :) ?</p>
-
-      <!-- <a href="mailto:rohannikumbh2793@gmail.com" class="text-primary underline">rohannikumbh2793@gmail.com</a>
-        <p>OR</p> -->
-      <a href="/contact" class="text-primary">Contact Rohan</a>
+      <a
+        href="/contact"
+        class="text-primary"
+        on:click={trackContactClick}
+        >Contact Rohan</a
+      >
     </div>
     <div class="text-center md-custom:text-right">
       <p class="text-secondary-1 hover:text-primary-1 text-slate-500">
