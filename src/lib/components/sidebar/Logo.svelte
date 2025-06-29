@@ -1,4 +1,6 @@
 <script>
+import {blur} from "svelte/transition";
+
     export let currentText = "Rohan Nikumbh";
     export let show = true;
 </script>
@@ -11,11 +13,12 @@
     out:blur={{ duration: 500 }}
     >
     {currentText}
-    <img
+    <!-- <img
         src="/sparcle.svg"
         alt="sparcle"
         class="text-primary h-6 w-6 pl-0.5 pb-0.5 transition-all duration-300 inline-block"
-    />
+    /> -->
+    <span class="!h-[5px] !w-[5px] bg-primary inline-block rounded-full relative -left-[4px]"></span>
     </span>
 {/if}
 </div>
