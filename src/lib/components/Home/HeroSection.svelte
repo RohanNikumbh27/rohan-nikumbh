@@ -10,9 +10,9 @@
 
   onMount(() => {
     innerHeight = window.innerHeight;
-    setTimeout(() => {
+    // setTimeout(() => {
       showLoader = false;
-    }, 900);
+    // }, 10);
   });
 </script>
 

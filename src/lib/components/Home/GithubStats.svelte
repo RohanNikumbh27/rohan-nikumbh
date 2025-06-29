@@ -8,28 +8,29 @@
     GitFork,
     Github,
     GitPullRequestArrow,
+    Info
   } from "lucide-svelte";
 
   const statsData = {
-    publicRepos: "33+",
-    privateRepos: "6+",
-    prCount: "209+",
-    totalContributions: "1729+",
+    publicRepos: "41+",
+    privateRepos: "11+",
+    prCount: "240+",
+    totalContributions: "1832+",
   };
 </script>
 
 <div class="flex items-center justify-center pt-10 md:pt-0">
   <Github class="w-6 h-6 text-[#204dff] mr-3" />
   <span class=" text-zinc-900 text-3xl dark:text-zinc-100"
-    >Github Stats <span class="text-sm text-zinc-500">(31/01/2025)</span></span
+    >Github Stats <span class="text-sm text-zinc-500">(29/06/2025)</span></span
   >
 </div>
 
 <section class="m-[15px]">
   <div
-    class="md:mb-10 bg-black text-white px-6 py-8 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 rounded-xl"
+    class="md:mb-10 text-white  max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 "
   >
-    <div class="space-y-4">
+    <div class="space-y-4 bg-black px-6 py-8 rounded-xl">
       <div class="flex gap-5 flex-col sm:flex-col md:flex-row justify-between">
         <div class="flex items-center w-full xl:px-5">
           <BookDown class="w-6 h-6 text-primary  mr-3" />
@@ -66,5 +67,6 @@
         </div>
       </div>
     </div>
+    <p class="mx-auto p-4 text-stone-700 dark:text-stone-400 text-center font-sans"><Info size={20} class="inline-block mb-[4px] mr-1 text-black dark:text-stone-400"/>15k+ LOC merged in Production (with best practices & reusability).</p>
   </div>
 </section>
