@@ -18,7 +18,7 @@ import {blur} from "svelte/transition";
         alt="sparcle"
         class="text-primary h-6 w-6 pl-0.5 pb-0.5 transition-all duration-300 inline-block"
     /> -->
-    <span class="!h-[5px] !w-[5px] bg-primary inline-block rounded-full relative -left-[4px]"></span>
+    <span class="!h-[4px] !w-[4px] bg-primary inline-block rounded-full relative -left-[2px]"></span>
     </span>
 {/if}
 </div>

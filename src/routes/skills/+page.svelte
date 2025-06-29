@@ -125,7 +125,7 @@
   <div class=" min-h-svh !mt-0">
     {#each skills as section, i}
       <div
-        class="bg-zinc-300/30 dark:bg-black/30 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]"
+        class="bg-zinc-100 dark:bg-black/30 min-h-[200px] my-3 rounded-3xl text-center relative z-[1]"
       >
         <img
           src="/border-design.svg"
