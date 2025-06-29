@@ -1,7 +1,17 @@
 <script>
-  import { closeToast, toasts } from "$lib/store/toastStore.js";
-  import { X } from "lucide-svelte";
-  import { scale } from "svelte/transition";
+  import {closeToast,toasts} from "$lib/store/toastStore.js";
+  import {X} from "lucide-svelte";
+  import {scale} from "svelte/transition";
+
+  function trackToastClose(type, message) {
+    if (window.gtag) {
+      window.gtag('event', 'toast_closed', {
+        event_category: 'Toast',
+        event_label: type,
+        value: message
+      });
+    }
+  }
 </script>
 
 <div
@@ -20,7 +30,10 @@
       <span class="flex-1 text-[20px]">{toast.message}</span>
       <button
         class="rounded-md text-md text-gray-400 hover:text-zinc-500"
-        on:click={() => closeToast(toast.id)}
+        on:click={() => {
+          closeToast(toast.id);
+          trackToastClose(toast.type, toast.message);
+        }}
         aria-label="Close"
       >
         <X size={28} />
