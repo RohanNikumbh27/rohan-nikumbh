@@ -5,6 +5,7 @@
   import {blur,fly} from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
+  import Logo from "./sidebar/Logo.svelte";
 
   let showSearchComp = false;
   let showNavbarSmall = false;
@@ -105,27 +106,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <a href="/" class="flex items-center">
-          <!-- <img src="/sparcle.svg" alt="sparcle" class="h-6 w-6"> -->
-          <div
-            class="flex justify-center items-center flex-row text-xl text-zinc-700 font-semibold {currentText ==
-              'Portfolio' && 'pr-[68px]'}"
-          >
-            {#if show}
-              <span
-                class="!font-sans bg-gradient-to-r from-[#7f7f7f] via-[#3b3b3b] to-[#7f7f7f] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
-                in:blur={{ duration: 500 }}
-                out:blur={{ duration: 500 }}
-              >
-                {currentText}
-                <img
-                  src="/sparcle.svg"
-                  alt="sparcle"
-                  class="text-primary h-6 w-6 pl-0.5 pb-0.5 transition-all duration-300 inline-block"
-                />
-              </span>
-            {/if}
-          </div>
-          <p class="sr-only">Rohan Nikumbh's Portfolio</p>
+          <Logo {show} {currentText}/>
         </a>
 
         <!-- Nav Links -->
@@ -143,10 +124,6 @@
               >
                 {item.label}
               </a>
-              <!-- {#if $page.url.pathname === item.ref}
-              <span class="bg-primary-dark/20 dark:invert !w-8 !h-[4px] rounded-full transition-all ease-in"
-              in:scale={{ start: 0.5, duration: 200 }}></span>
-            {/if} -->
             </div>
           {/each}
         </div>
@@ -162,14 +139,14 @@
         <!-- Theme Toggle Button -->
       </div>
 
-      <!-- Search Component (only visible when toggled) -->
-      {#if showSearchComp}
-        <div class="px-3 transition-all sm:hidden md:block">
-          <SearchComp toggle={() => (showSearchComp = false)} />
-        </div>
-      {/if}
-    </div>
-  </header>
+<!-- Search Component (only visible when toggled) -->
+{#if showSearchComp}
+<div class="px-3 transition-all sm:hidden md:block">
+  <SearchComp toggle={() => (showSearchComp = false)} />
+</div>
+{/if}
+</div>
+</header>
 </section>
 
 <!-- from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]   -->
@@ -180,24 +157,7 @@
     <div
       class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] dark:bg-black/80 flex items-center px-5 justify-between"
     >
-      <div
-        class="flex justify-center items-center flex-row text-xl text-zinc-400"
-      >
-        {#if show}
-          <span
-            class="!font-sans bg-gradient-to-r from-[#7f7f7f] via-[#3b3b3b] to-[#7f7f7f] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
-            in:blur={{ duration: 500 }}
-            out:blur={{ duration: 500 }}
-          >
-            {currentText}
-            <img
-              src="/sparcle.svg"
-              alt="sparcle"
-              class="text-primary h-6 w-6 pl-0.5 transition-all duration-300 inline-block pb-0.5"
-            />
-          </span>
-        {/if}
-      </div>
+    <Logo {show} {currentText}/>
       <!-- Hamburger icon to toggle mobile sidebar -->
       <img
         src="/hamburger.svg"
