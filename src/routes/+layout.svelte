@@ -1,7 +1,7 @@
 <script>
   import Footer from "$lib/components/Footer.svelte";
   import Sidebar from "$lib/components/Sidebar.svelte";
-  import { onMount } from "svelte";
+  import {onMount} from "svelte";
   import "../app.css";
   console.log(
     "%c" + " Don't try to copy the code, this overall code is written by, ",
@@ -22,6 +22,21 @@
     }
   });
 </script>
+
+<svelte:head>
+  <title>Rohan Nikumbh Portfolio</title>
+  <meta name="description" content="Rohan Nikumbh - Software Engineer. Explore my portfolio, projects, skills, timeline, and contact information.">
+  <meta name="keywords" content="Rohan Nikumbh, Rohan, Nikumbh, Rohan Nikum, Nikum, Software Engineer, Portfolio, Developer, Pune, India">
+  <meta property="og:title" content="Rohan Nikumbh | Software Engineer" />
+  <meta property="og:description" content="Portfolio of Rohan Nikumbh, Software Engineer. Explore my work, skills, and contact me for collaborations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rohannikumbh.me/" />
+  <meta property="og:image" content="https://www.rohannikumbh.me/Rohan_Nikumbh.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rohan Nikumbh | Software Engineer" />
+  <meta name="twitter:description" content="Portfolio of Rohan Nikumbh, Software Engineer. Explore my work, skills, and contact me for collaborations." />
+  <meta name="twitter:image" content="https://www.rohannikumbh.me/Rohan_Nikumbh.jpg" />
+</svelte:head>
 
 <!-- self blur bg circle  -->
 <!-- <div class="w-[40vw] h-[40vh] fixed bg-orange-500/30 left-[1%] min-w-[100px] blur-[100px] -z-1000"></div>
