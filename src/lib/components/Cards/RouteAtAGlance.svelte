@@ -41,10 +41,12 @@
       href={obj.linkRoute}
       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-black hover:bg-white hover:text-zinc-900 transition duration-500 font-medium group"
     >
-      <span class="font-mono pb-[1px]">{obj.LinkText}</span>
+      <span class="font-mono shimmer-text pb-[1px] !bg-gradient-to-r !from-white !via-zinc-600 !to-white hover:!from-zinc-900 hover:!to-zinc-900 hover:!via-zinc-300 !bg-clip-text !text-transparent animate-shimmer">
+        {obj.LinkText}
+      </span>
       <span
         transition:slide={{ x: -12, duration: 300 }}
-        class="transform group-hover:translate-x-1 transition-transform duration-300 ease-in-out"
+        class="transform group-hover:translate-x-1 transition-transform duration-300 ease-in-out "
       >
         <MoveRight />
       </span>

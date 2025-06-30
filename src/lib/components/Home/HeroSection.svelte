@@ -72,7 +72,7 @@
     <p
       class="hero-subheading text-center text-xl leading-relaxed  text-stone-500 dark:text-zinc-400 font-[350]"
     >
-      I am Rohan Nikumbh, your tech partner in website development, weaving
+      I am Rohan Nikumbh, your tech partner in Software development, weaving
       together <span class="bluelink">Comprehensive Development</span> and proficiency
       for exceptional digital transformations of your project visions.
     </p>

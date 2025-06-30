@@ -28,21 +28,21 @@
       <p class="text-[24px]">Wanna Hire Me :) ?</p>
       <a
         href="/contact"
-        class="text-primary"
+        class="text-primary shimmer-text !font-[500]"
         on:click={trackContactClick}
         >Contact Rohan</a
       >
     </div>
     <div class="text-center md-custom:text-right">
-      <p class="text-secondary-1 hover:text-primary-1 text-slate-500">
+      <p class="text-secondary-1 hover:text-primary-1 text-zinc-500">
         🌍 Available to work Remotely
       </p>
       <p
-        class="text-[12px] font-[400] text-secondary-2 md-custom:mt-1 text-slate-500"
+        class="text-[12px] font-[400] text-secondary-2 md-custom:mt-1 text-zinc-500"
       >
         Made with ❤️ By Rohan Nikumbh
       </p>
-      <p class=" text-center text-sm leading-6 text-slate-500">
+      <p class=" text-center text-sm leading-6 text-zinc-500">
         © 2025 Rohan Nikumbh.
       </p>
     </div>

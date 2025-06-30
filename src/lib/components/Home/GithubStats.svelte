@@ -22,7 +22,7 @@
 <div class="flex items-center justify-center pt-10 md:pt-0">
   <Github class="w-6 h-6 text-[#204dff] mr-3" />
   <span class=" text-zinc-900 text-3xl dark:text-zinc-100"
-    >Github Stats <span class="text-sm text-zinc-500">(29/06/2025)</span></span
+    >Github Stats <span class="text-xs text-zinc-500">(29/06/2025)</span></span
   >
 </div>
 
@@ -48,7 +48,6 @@
           >
         </div>
       </div>
-
       <div class="flex gap-4 flex-col sm:flex-col md:flex-row justify-between">
         <div class="flex items-center w-full xl:px-5">
           <GitPullRequestArrow class="w-6 h-6 text-primary  mr-3" />
@@ -67,6 +66,6 @@
         </div>
       </div>
     </div>
-    <p class="mx-auto p-4 text-stone-700 dark:text-stone-400 text-center font-sans"><Info size={20} class="inline-block mb-[4px] mr-1 text-black dark:text-stone-400"/>15k+ LOC merged in Production (with best practices & reusability).</p>
+    <p class="mx-auto p-4 text-stone-700 dark:text-stone-400 text-center font-sans"><Info size={20} class="inline-block mb-[4px] mr-1 text-black dark:text-stone-400"/>30k+ LOC merged into production across more than 7 global projects, following best practices and reusability.</p>
   </div>
 </section>

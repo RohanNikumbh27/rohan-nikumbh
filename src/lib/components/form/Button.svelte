@@ -32,44 +32,4 @@
       0 1.5px 8px 0 #0008;
     border: 2px solid #e50918;
   }
-
-  /* Shine animation */
-  .shine-animate {
-    animation: shine-move 5s forwards;
-  }
-  @keyframes shine-move {
-    0% {
-      transform: translateX(-120%) rotate(20deg);
-    }
-    100% {
-      transform: translateX(220%) rotate(20deg);
-    }
-  }
-
-  /* Shimmer text effect */
-  .shimmer-text {
-    background: linear-gradient(
-      90deg,
-      hsl(0, 100%, 50%) 0%,
-      #e50918 25%,
-      rgb(135, 0, 0) 50%,
-      #e50918 75%,
-      hsl(0, 100%, 50%) 100%
-    );
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: shimmer 4s linear infinite;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-  @keyframes shimmer {
-    0% {
-      background-position: 200% center;
-    }
-    100% {
-      background-position: -200% center;
-    }
-  }
 </style>
