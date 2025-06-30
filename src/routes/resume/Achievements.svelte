@@ -233,11 +233,11 @@
       by: "IBM",
       link: "https://www.coursera.org/account/accomplishments/records/FKJ4NTT6V5T6",
     },
-    {
-      name: "Django Web Framework",
-      by: "Meta",
-      link: "https://www.coursera.org/account/accomplishments/records/B5T4IZYK1NLP",
-    },
+    // {
+    //   name: "Django Web Framework",
+    //   by: "Meta",
+    //   link: "https://www.coursera.org/account/accomplishments/records/B5T4IZYK1NLP",
+    // },
     {
       name: "Programming in Python",
       by: "Meta",

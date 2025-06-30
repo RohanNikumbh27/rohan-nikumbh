@@ -1,40 +1,45 @@
 <script>
   import { perspectiveTilt } from "$lib/utils.js";
-  import { fly } from "svelte/transition";
 
   export let skills = [
     {
       category: "Development & Programming",
       skills: [
         { name: "JavaScript", icon: "js.png" },
-        { name: "TypeScript", icon: "ts.png" },
         { name: "React.js", icon: "react.png" },
         { name: "Svelte", icon: "svelte.png" },
         { name: "SvelteKit", icon: "svelte.png" },
         { name: "Next.js", icon: "nextjs.png" },
         { name: "Lynx.js", icon: "lynx.png" },
+        { name: "Angular 20", icon: "angular20.png" },
         { name: "HTML", icon: "html.png" },
         { name: "CSS", icon: "css.png" },
         { name: "Java", icon: "java.png" },
         { name: "Bootstrap", icon: "bootstrap.png" },
-        { name: "Tailwind CSS", icon: "tailwind.png" },
         { name: "Ant Design (antd)", icon: "antd.png" },
+        { name: "Tailwind CSS", icon: "tailwind.png" },
         { name: "shadcn", icon: "shadcn.png" },
         { name: "styled-components", icon: "styled-components.png" },
         { name: "Node.js", icon: "nodejs.png" },
         { name: "Express.js", icon: "expressjs.png" },
+        { name: "TypeScript", icon: "ts.png" },
+        { name: "Spring Boot", icon: "springboot.png" },
         { name: "Modular Programming", icon: "modular.png" },
+        { name: "VLSI", icon: "vlsi.png" },
+        { name: "Blockchain Fundamentals", icon: "blockchain.png" },
       ],
     },
     {
       category: "Cloud and DevOps",
       skills: [
+        { name: "Git", icon: "git.png" },
+        { name: "GitHub", icon: "github.png" },
+        { name: "Linux Commands", icon: "linux.png" },
+        { name: "Deployment", icon: "deployment.png" },
+        { name: "Vercel", icon: "vercel.png" },
         { name: "AWS Fundamentals", icon: "aws.png" },
         { name: "Cloud Computing", icon: "cloud.png" },
         { name: "Docker Basics", icon: "docker.png" },
-        { name: "Linux Commands", icon: "linux.png" },
-        { name: "Git", icon: "git.png" },
-        { name: "GitHub", icon: "github.png" },
         { name: "CircleCI", icon: "circleci.png" },
       ],
     },
@@ -42,12 +47,12 @@
       category: "Software Engineering",
       skills: [
         { name: "Software Engineering (SE)", icon: "se.png" },
-        { name: "Software Testing Basics", icon: "testing.png" },
+        { name: "Software Testing", icon: "testing.png" },
+        { name: "Automation Testing", icon: "automationtesting.png" },
         { name: "SDLC", icon: "sdlc.png" },
-        { name: "UML", icon: "uml.png" },
+        { name: "Search Engine Optimization", icon: "seo.png" },
         { name: "OOP", icon: "oop.png" },
         { name: "DSA", icon: "dsa.png" },
-        { name: "VLSI", icon: "vlsi.png" },
       ],
     },
     {
@@ -56,6 +61,7 @@
         { name: "Figma", icon: "figma.png" },
         { name: "UI/UX", icon: "uiux.png" },
         { name: "Prototyping", icon: "prototyping.png" },
+        { name: "UML", icon: "uml.png" },
       ],
     },
     {
@@ -65,7 +71,7 @@
         { name: "MongoDB", icon: "mongodb.png" },
         { name: "MongoDB Atlas", icon: "mongodb-atlas.png" },
         { name: "Mongoose", icon: "mongoose.png" },
-        { name: "SQL", icon: "sql.png" },
+        { name: "SQL", icon: "sql.png" }, 
       ],
     },
     {
@@ -75,10 +81,14 @@
         { name: "Jest", icon: "jest.png" },
         { name: "BrowserStack", icon: "browserstack.png" },
         { name: "Postman", icon: "postman.png" },
+        { name: "Google Analytics", icon: "googleanalytics.png" },
         { name: "Confluence", icon: "confluence.png" },
         { name: "Jira", icon: "jira.png" },
         { name: "SonarQube", icon: "sonarqube.png" },
         { name: "Lighthouse", icon: "lighthouse.png" },
+        { name: "axios", icon: "axios.png" },
+        { name: "Leaflet js", icon: "leafletjs.png" },
+
       ],
     },
     {
@@ -118,7 +128,7 @@
   class="my-0 md:my-8 space-y-12 min-h-svh w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c"
 >
   <center>
-    <h2 class=" primary-heading dark:text-white/30 mb-5 mt-8 md:mt-14">
+    <h2 class=" primary-heading dark:text-white mb-5 mt-8 md:mt-14">
       Skills
     </h2>
   </center>
