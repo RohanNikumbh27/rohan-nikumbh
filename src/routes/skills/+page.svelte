@@ -86,6 +86,8 @@
         { name: "Jira", icon: "jira.png" },
         { name: "SonarQube", icon: "sonarqube.png" },
         { name: "Lighthouse", icon: "lighthouse.png" },
+        { name: "axios", icon: "axios.png" },
+        { name: "Leaflet js", icon: "leafletjs.png" },
 
       ],
     },
