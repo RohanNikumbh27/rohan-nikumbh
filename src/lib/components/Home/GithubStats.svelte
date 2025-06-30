@@ -14,7 +14,7 @@
   const statsData = {
     publicRepos: "41+",
     privateRepos: "11+",
-    prCount: "240+",
+    prCount: "270+",
     totalContributions: "1832+",
   };
 </script>
@@ -50,7 +50,7 @@
       </div>
       <div class="flex gap-4 flex-col sm:flex-col md:flex-row justify-between">
         <div class="flex items-center w-full xl:px-5">
-          <GitPullRequestArrow class="w-6 h-6 text-primary  mr-3" />
+          <GitPullRequestArrow class="w-6 h-6 text-primary mr-3" />
           <span>PR count:</span>
           <span class="ml-auto font-semibold !text-primary"
             >{statsData.prCount}</span
