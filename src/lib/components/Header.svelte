@@ -31,7 +31,7 @@
     },
     {
       label: "Bio",
-      ref: "/resume",
+      ref: "/resume-and-certifications",
     },
   ];
 

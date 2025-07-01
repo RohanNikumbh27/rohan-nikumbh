@@ -11,7 +11,7 @@ export const routeAtaGlanceObjects = [
     description:
       "A detailed overview of my professional journey, skills, and accomplishments, highlighting my qualifications and experiences in the tech industry.",
     LinkText: "Explore Resume",
-    linkRoute: "/resume",
+    linkRoute: "/resume-and-certifications",
   },
   {
     title: "Contact",
@@ -32,13 +32,13 @@ export const routeAtaGlanceObjects = [
     description:
       "A deep dive into my areas of expertise, including specific technologies, frameworks, and methodologies that I excel in and enjoy working with.",
     LinkText: "Explore Specializations",
-    linkRoute: "/resume#specializations",
+    linkRoute: "/resume-and-certifications#specializations",
   },
   {
     title: "Certifications",
     description:
       "A collection of my certifications and achievements, showcasing my commitment to continuous learning and professional development in the tech field.",
     LinkText: "Explore Certifications",
-    linkRoute: "/resume#certifications",
+    linkRoute: "/resume-and-certifications#certifications",
   },
 ];

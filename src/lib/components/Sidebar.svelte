@@ -15,7 +15,7 @@
     { label: "Timeline", ref: "/timeline" },
     { label: "Skills", ref: "/skills" },
     { label: "Contact", ref: "/contact" },
-    { label: "Bio", ref: "/resume" },
+    { label: "Bio", ref: "/resume-and-certifications" },
   ];
 
   const toggleSearch = () => {

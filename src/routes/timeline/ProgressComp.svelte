@@ -24,7 +24,7 @@
       in:fly={{ y: 50, duration: 500, delay: 100, easing: quintOut }}
       out:fade={{ duration: 300 }}
       use:perspectiveTilt={{ scale: 1.05 }}
-      class="relative inline-block p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto shadow-2xl hover:shadow-primary transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
+      class="relative inline-block p-7 my-6 pt-10 text-zinc-300 bg-rad-dark rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto shadow-2xl hover:shadow-primary transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
     >
       <!-- Tag at top right -->
       <Tag>{tag}</Tag>
@@ -66,7 +66,7 @@
     </div>
     <div
       use:perspectiveTilt={{ scale: 1.05 }}
-      class="relative p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-6 col-end-10 mr-auto hover:shadow-primary transition-all transform duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
+      class="relative p-7 my-6 pt-10 text-zinc-300 bg-rad-dark rounded-xl col-start-6 col-end-10 mr-auto hover:shadow-primary transition-all transform duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
     >
       <!-- Tag at top right -->
       <Tag>{tag}</Tag>

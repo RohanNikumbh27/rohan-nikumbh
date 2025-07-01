@@ -11,7 +11,7 @@
     { label: "timeline", link: "/timeline" },
     { label: "skills", link: "/skills" },
     { label: "contact", link: "/contact" },
-    { label: "resume", link: "/resume" },
+    { label: "resume", link: "/resume-and-certifications" },
   ];
 
   // Filter the results based on the search query
