@@ -1,4 +1,4 @@
-<span class="absolute top-[6px] right-[6px] px-1.5 py-0.5 rounded-xl text-xs font-[500] bg-white/20 border-2 border-zinc-800 text-white shadow overflow-hidden">
+<span class="absolute top-[6px] right-[6px] px-2 py-1 rounded-2xl text-xs font-[500] bg-zinc-400/20 border-2 border-zinc-900 text-white shadow overflow-hidden">
   <span
     class="pointer-events-none absolute top-1 w-3 h-3 -translate-y-2 rounded-full bg-zinc-300 blur animate-dot-move"
     style="left:0%"
