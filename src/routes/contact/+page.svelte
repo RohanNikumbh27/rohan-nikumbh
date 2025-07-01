@@ -68,8 +68,8 @@
 <CustomToast />
 
 <!-- Responsive Contact Page Container -->
-<div class="container max-w-full px-2 sm:px-4 md:px-6">
-  <div class="bg-zinc-100 dark:bg-black/20 rounded-2xl md:px-10 px-2 sm:px-5" id="contact">
+<div class="container max-w-screen-2xl px-2 sm:px-4 md:px-6">
+  <div class="bg-zinc-100/0 dark:bg-black/20 rounded-2xl md:px-10 px-2 sm:px-5" id="contact">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 pt-6 text-center">
       <p class="pt-6 pb-6 text-base max-w-2xl text-center m-auto text-zinc-500 dark:text-zinc-400">
         Want to contact us? Choose an option below and we'll be happy to show you how we can transform your company's web experience.

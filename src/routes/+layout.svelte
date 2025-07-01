@@ -48,8 +48,9 @@
 >
   <!-- <Header /> -->
   <Sidebar />
-  <div class="h-[60px] z-200"></div>
-  <slot />
+  <div class="pt-[60px] z-200 min-h-svh flex flex-col justify-center">
+    <slot />
+  </div>
   <Footer />
 </div>
 
