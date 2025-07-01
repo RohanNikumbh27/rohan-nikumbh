@@ -80,7 +80,7 @@
       class="flex gap-2 text-sm font-[500] items-center w-full lg:w-[70%] mt-5"
     >
       <Button href="/contact" title={`Work Together`} />
-      <Button href="/resume" title="Resume" />
+      <Button href="/resume-and-certifications" title="Resume" />
     </div>
   </div>
 </div>
