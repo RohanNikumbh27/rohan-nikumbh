@@ -1,12 +1,14 @@
 <script>
-  import { perspectiveTilt } from "$lib/utils.js";
-  import { quintOut } from "svelte/easing";
-  import { fade, fly } from "svelte/transition";
+  import {perspectiveTilt} from "$lib/utils.js";
+  import {quintOut} from "svelte/easing";
+  import {fade,fly} from "svelte/transition";
+  import Tag from "./Tag.svelte";
 
-  export let pos = ""; // for position
+  export let pos = "";
   export let title = "";
   export let desc = "";
   export let date = "";
+  export let tag = "";
 
   let hovered = false;
 </script>
@@ -17,8 +19,6 @@
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
   <div
     class="flex md:contents flex-row-reverse"
-    on:mouseenter={() => (hovered = true)}
-    on:mouseout={() => (hovered = false)}
   >
     <div
       in:fly={{ y: 50, duration: 500, delay: 100, easing: quintOut }}
@@ -26,6 +26,8 @@
       use:perspectiveTilt={{ scale: 1.05 }}
       class="relative inline-block p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto shadow-2xl hover:shadow-primary transform transition duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
     >
+      <!-- Tag at top right -->
+      <Tag>{tag}</Tag>
       <span class=" text-sm text-zinc-300 whitespace-nowrap">{date}</span>
       <h3 class="text-lg font-[500] lg:text-xl">{title}</h3>
       <p class="mt-2 leading-6 text-zinc-400">{desc}</p>
@@ -66,6 +68,8 @@
       use:perspectiveTilt={{ scale: 1.05 }}
       class="relative p-7 my-6 text-zinc-300 bg-rad-dark rounded-xl col-start-6 col-end-10 mr-auto hover:shadow-primary transition-all transform duration-300 ease-in-out hover:scale-[1.01] sm:hover:scale-[1.01] md:hover:scale-[1.1] hover:shadow-2xl"
     >
+      <!-- Tag at top right -->
+      <Tag>{tag}</Tag>
       <span class=" text-sm text-zinc-300 whitespace-nowrap">{date}</span>
       <h3 class="text-lg font-[500] lg:text-xl">{title}</h3>
       <p class="mt-2 leading-6 text-zinc-400">{desc}</p>

@@ -287,14 +287,10 @@ footer {
 
 .glass-bg {
   border-radius: 20px;
-  background: linear-gradient(120deg,
-      rgba(255, 255, 255, 0.45) 0%,
-      rgba(180, 200, 255, 0.25) 100%);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.22);
-  backdrop-filter: saturate(180%);
-  -webkit-backdrop-filter: saturate(180%);
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  opacity: 0.95;
+  background: linear-gradient(140deg,
+      rgba(200, 200, 200, 0.15) 10%,
+      rgba(255, 255, 255, 0.45) 20%,
+      rgba(180, 200, 255, 0.35) 70%);
 }
 
 .fade-in-view {
