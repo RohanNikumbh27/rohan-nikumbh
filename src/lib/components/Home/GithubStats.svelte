@@ -66,6 +66,6 @@
         </div>
       </div>
     </div>
-    <p class="mx-auto p-4 text-stone-700 dark:text-stone-400 text-center font-sans"><Info size={20} class="inline-block mb-[4px] mr-1 text-black dark:text-stone-400"/>30k+ LOC merged into production across more than 7 global projects, following best practices and reusability.</p>
+    <p class="mx-auto p-4 text-stone-700 dark:text-stone-400 text-center font-sans"><Info size={20} class="inline-block mb-[4px] mr-1 text-black dark:text-stone-400"/>25k+ LOC merged into production for 7+ global projects, following best practices and reusability.</p>
   </div>
 </section>
