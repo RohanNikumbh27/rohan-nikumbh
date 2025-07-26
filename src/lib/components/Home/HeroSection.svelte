@@ -45,7 +45,7 @@
             style="will-change: transform, opacity;"
             alt="Rohan Nikumbh"
             loading="lazy"
-            class="rounded-2xl object-cover border-b-2 border-primary hero-image opacity-70 hover:opacity-100 transition-all"
+            class="rounded-2xl object-cover border-b-2 border-primary hero-image opacity-95 hover:opacity-100 transition-all"
           />
         </div>
       {/if}

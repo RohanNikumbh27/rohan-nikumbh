@@ -100,7 +100,7 @@
     <DarkModeToggle {theme} {toggleTheme} />
   </div>
   <header
-    class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/50 py-3 backdrop-blur-md md:top-6 md:rounded-3xl lg:max-w-[950px] xl:max-w-screen-lg 2xl:max-w-screen-xl"
+    class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-[#ffffff1f] py-3 backdrop-blur-2xl md:top-6 md:rounded-3xl lg:max-w-[950px] xl:max-w-screen-lg 2xl:max-w-screen-xl"
   >
     <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between">
@@ -115,10 +115,10 @@
             <div class="flex flex-col items-center justify-end">
               <a
                 href={item.ref}
-                class="px-2 py-1 text-xl font-[500] transition-transform duration-200 hover:scale-95 {$page
+                class="px-2 py-1 text-xl font-[500] transition-all duration-200 hover:scale-95 {$page
                   .url.pathname === item.ref
                   ? 'text-primary '
-                  : 'text-zinc-500 hover:text-stone-700'}"
+                  : 'text-stone-900 hover:text-stone-500 dark:text-zinc-100 dark:hover:text-zinc-400'}"
                 on:click={() => trackNavClick(item.label)}
               >
                 {item.label}
@@ -137,7 +137,7 @@
     class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 pt-2.5 bg-transparent"
   >
     <div
-      class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] dark:bg-black/40 flex items-center px-5 justify-between"
+      class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-2xl dark:bg-[#ffffff1f] flex items-center px-5 justify-between"
     >
     <Logo {show} {currentText}/>
       <!-- Hamburger icon to toggle mobile sidebar -->
@@ -202,7 +202,7 @@
                 : $page.url.pathname === item.ref
             )
               ? '!text-primary'
-              : 'text-[#342121b4] dark:text-[#afafaf]'}"
+              : 'text-[#342121b4] dark:text-stone-400'}"
           >
             {item.label}
           </a>

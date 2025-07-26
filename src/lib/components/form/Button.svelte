@@ -8,9 +8,8 @@
 <a
   {href}
   {target}
-  class="relative cursor-pointer transition-all duration-300 px-[20px] py-3 rounded-full flex justify-center items-center mx-auto overflow-hidden group
-    bg-gradient-to-r from-primary-dark via-zinc-900 to-primary-dark dark:from-black dark:via-zinc-950 dark:to-black shadow-md shadow-black/70
-    text-white text-lg font-semibold border-[2px] border-transparent"
+  class="relative !cursor-pointer transition-all duration-300 px-[20px] py-3 rounded-full flex justify-center items-center mx-auto overflow-hidden group
+   text-lg bg-zinc-900 dark:bg-white font-semibold border-[4px] border-transparent"
   on:mouseenter={() => (hovered = true)}
   on:mouseleave={() => (hovered = false)}
 >
@@ -22,14 +21,20 @@
   ></span> -->
 
   <!-- Button text with shimmer -->
-  <span class="relative z-10 shimmer-text text-center">{title}</span>
+  <span class="relative z-10 shimmer-text text-center font-thin">{title}</span>
 </a>
 
 <style>
-  a:hover {
+  a:hover{
     box-shadow:
       0 6px 32px 0 #e5091877,
       0 1.5px 8px 0 #0008;
-    border: 2px solid #e50918;
+    border: 1px dotted #e50918;
+  }
+  a{
+    box-shadow:
+      0 6px 32px 0 #717171,
+      0 1.5px 8px 0 #0008;
+    border: 1px dashed #636363;
   }
 </style>
