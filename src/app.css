@@ -149,7 +149,6 @@ footer {
   background-color: var(--white-color);
   padding: 1rem;
   margin: 1rem 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: smoothTransition;
   animation-duration: 0.2s;
 }
@@ -181,8 +180,6 @@ footer {
   color: white;
   font-weight: bold !important;
   background-color: black;
-  /* text-shadow:0 0 5px teal */
-  text-shadow: 0 0 10px teal;
 }
 
 .shadow-box {

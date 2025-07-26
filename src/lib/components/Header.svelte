@@ -58,7 +58,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <header
-  class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500 {expanded
+  class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-[#221f1f2f] py-3 backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-500 {expanded
     ? 'h-full md:h-[250px] md:max-h-auto '
     : 'h-[55px] md:h-[80px]'}"
 >
@@ -75,7 +75,7 @@
         {#each NavOptionsArr as NavOption, i}
           <a
             transition:blur={{ duration: 300, delay: 100 }}
-            class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {pathName ===
+            class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {$page.url.pathname ===
             NavOption.ref
               ? 'text-primary '
               : 'text-zinc-500'}"
@@ -140,7 +140,7 @@
               <a
                 transition:blur={{ duration: 300, delay: 100 }}
                 on:click={toggleNavBar}
-                class="px-2 py-1 block md:inline-block m-4 text-3xl transition-all duration-200 rounded-2xl {pathName ===
+                class="px-2 py-1 block md:inline-block m-4 text-3xl transition-all duration-200 rounded-2xl {$page.url.pathname ===
                 NavOption.ref
                   ? 'text-primary  transition-all'
                   : 'text-[#342121b4]'}"

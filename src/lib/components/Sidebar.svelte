@@ -2,7 +2,7 @@
   // ─── Parent Component State & Helpers ─────────────────────────────
   import {page} from "$app/stores";
   import {onMount} from "svelte";
-  import {blur,fly} from "svelte/transition";
+  import {fly} from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
   import Logo from "./sidebar/Logo.svelte";
@@ -100,7 +100,7 @@
     <DarkModeToggle {theme} {toggleTheme} />
   </div>
   <header
-    class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/80 py-3 shadow backdrop-blur-lg dark:backdrop-blur-sm md:top-6 md:rounded-3xl lg:max-w-[950px] xl:max-w-screen-lg 2xl:max-w-screen-xl transition-all duration-500"
+    class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-black/50 py-3 backdrop-blur-md md:top-6 md:rounded-3xl lg:max-w-[950px] xl:max-w-screen-lg 2xl:max-w-screen-xl"
   >
     <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between">
@@ -115,8 +115,7 @@
             <div class="flex flex-col items-center justify-end">
               <a
                 href={item.ref}
-                transition:blur={{ duration: 300, delay: 100 }}
-                class="px-2 py-1 text-xl font-[500] transition-all duration-200 hover:scale-95 {$page
+                class="px-2 py-1 text-xl font-[500] transition-transform duration-200 hover:scale-95 {$page
                   .url.pathname === item.ref
                   ? 'text-primary '
                   : 'text-zinc-500 hover:text-stone-700'}"
@@ -127,24 +126,7 @@
             </div>
           {/each}
         </div>
-
-        <!-- Search Toggle Button -->
-        <!-- <button on:click={toggleSearch}>
-          {#if !showSearchComp}
-            <img src="/searchicon.svg" alt="search" class="h-6 hidden md:inline-block" in:blur={{ duration: 300, delay: 100 }}>
-          {:else}
-            <img src="/closeiconround.svg" alt="close" class="h-6 hidden md:inline-block" in:blur={{ duration: 300, delay: 100 }}>
-          {/if}
-        </button> -->
-        <!-- Theme Toggle Button -->
       </div>
-
-<!-- Search Component (only visible when toggled) -->
-{#if showSearchComp}
-<div class="px-3 transition-all sm:hidden md:block">
-  <SearchComp toggle={() => (showSearchComp = false)} />
-</div>
-{/if}
 </div>
 </header>
 </section>
@@ -152,10 +134,10 @@
 <!-- from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]   -->
 <section id="MobileHeader" class="block md:hidden">
   <header
-    class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 bg-transparent"
+    class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 pt-2.5 bg-transparent"
   >
     <div
-      class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] dark:bg-black/80 flex items-center px-5 justify-between"
+      class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-[10px] dark:bg-black/40 flex items-center px-5 justify-between"
     >
     <Logo {show} {currentText}/>
       <!-- Hamburger icon to toggle mobile sidebar -->
@@ -177,7 +159,7 @@
     <div
       in:fly={{ duration: 200, x: "-100%" }}
       out:fly={{ duration: 2000, x: "-400%", delay: 200 }}
-      class="bg-primary-dark dark:bg-zinc-900 fixed h-[100vh] w-full z-[500] p-2 ease-in transform"
+      class="bg-primary-dark dark:bg-zinc-900 fixed h-[100vh] w-full z-[500] p-2 ease-in transform-cpu"
       style="will-change: transform;"
       on:click={toggleMobileNav}
     ></div>
@@ -185,22 +167,18 @@
     <div
       in:fly={{ duration: 500, x: "-300%" }}
       out:fly={{ duration: 1700, x: "-350%", delay: 45 }}
-      class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in transform"
+      class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in transform-cpu"
       style="will-change: transform;"
       on:click={toggleMobileNav}
     ></div>
     <div
       in:fly={{ duration: 500, x: "-300%", delay: 100 }}
       out:fly={{ duration: 1000, x: "-400%" }}
-      class="bg-white dark:bg-primary-dark fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform"
+      class="bg-white dark:bg-primary-dark fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
       style="will-change: transform;"
       on:touchstart={handleTouchStart}
       on:touchend={handleTouchEnd}
     >
-      <!-- <div class="w-[50vw] h-[30vh] absolute dark:bg-zinc-500/30 bg-zinc-500/20 left-[25vw] blur-3xl pointer-events-none"></div>
-    <div class="w-[60vw] h-[30vh] absolute dark:bg-zinc-700/40 bg-zinc-500/30 left-[1vw] bottom-10 blur-3xl pointer-events-none"></div>
-    <div class="w-[60vw] h-[30vh] absolute dark:bg-gray-700/20 bg-zinc-500/20 -right-[10vw] bottom-[35vh] blur-3xl pointer-events-none"></div> -->
-
       <div
         class="h-[70px] rounded-3xl flex items-center px-5 justify-between pt-5"
       >
@@ -218,7 +196,7 @@
           <a
             href={item.ref}
             on:click={() => { handleMobileNavClick(item.ref); trackNavClick(item.label); }}
-            class="px-2 py-1 m-4 block text-3xl rounded-2xl transition-all duration-200 {(
+            class="px-2 py-1 m-4 block text-3xl rounded-2xl {(
               pendingRoute
                 ? pendingRoute === item.ref
                 : $page.url.pathname === item.ref

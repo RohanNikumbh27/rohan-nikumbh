@@ -22,7 +22,7 @@
 
 <form on:submit|preventDefault={() => {}}>
   <div
-    class="mx-auto my-8 relative bg-white dark:bg-gray-50 min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2 shadow-2xl"
+    class="mx-auto my-8 relative bg-white dark:bg-gray-50 min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2"
   >
     <input
       id="search-bar"
@@ -54,7 +54,7 @@
         : "s"} for "{$SearchQ}"
     </div>
     <div
-      class="bg-[#1414147e] w-full text-left rounded-2xl p-5 mb-10 shadow-lg max-h-[350px] overflow-auto"
+      class="bg-[#1414147e] w-full text-left rounded-2xl p-5 mb-10 max-h-[350px] overflow-auto"
     >
       {#if filteredResults.length > 0}
         {#each filteredResults as result, i}
@@ -73,3 +73,14 @@
     </div>
   {/if}
 </form>
+
+
+<!-- Search Toggle Button -->
+        <!-- <button on:click={toggleSearch}>
+          {#if !showSearchComp}
+            <img src="/searchicon.svg" alt="search" class="h-6 hidden md:inline-block" in:blur={{ duration: 300, delay: 100 }}>
+          {:else}
+            <img src="/closeiconround.svg" alt="close" class="h-6 hidden md:inline-block" in:blur={{ duration: 300, delay: 100 }}>
+          {/if}
+        </button> -->
+        <!-- Theme Toggle Button -->

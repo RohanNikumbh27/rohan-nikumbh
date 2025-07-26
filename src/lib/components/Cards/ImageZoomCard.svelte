@@ -8,7 +8,7 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <a
   href={project.route}
-  class="group relative flex rounded-xl shadow-xl ring-white-900/5 cursor-pointer z-0 hover:shadow-2xl"
+  class="group relative flex rounded-xl ring-white-900/5 cursor-pointer z-0 "
 >
   <div
     class="z-10 h-full w-full overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-100 dark:opacity-70"
