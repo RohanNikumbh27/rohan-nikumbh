@@ -39,7 +39,7 @@
     <!-- Link Button -->
     <a
       href={obj.linkRoute}
-      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-zinc-800 hover:bg-zinc-800 bg-white hover:text-white transition duration-500 font-medium group"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black dark:text-zinc-800 hover:bg-zinc-800 dark:bg-white text-zinc-400 hover:text-white transition duration-500 font-medium group"
     >
       <span class="font-mono shimmer-text pb-[1px] !bg-gradient-to-r !from-zinc-300 !via-zinc-950 !to-zinc-300 hover:!from-zinc-900 hover:!to-zinc-900 hover:!via-zinc-300 !bg-clip-text !text-transparent animate-shimmer">
         {obj.LinkText}
