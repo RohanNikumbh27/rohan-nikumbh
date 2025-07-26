@@ -12,7 +12,7 @@
 
 <div class="flex items-center justify-center" use:perspectiveTilt>
   <div
-    class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-neutral-900/70 border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40"
+    class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-black border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40"
   >
     <!-- Decorative Bar -->
     <div class="flex items-center justify-center gap-2 mb-5">
@@ -39,9 +39,9 @@
     <!-- Link Button -->
     <a
       href={obj.linkRoute}
-      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-black hover:bg-white hover:text-zinc-900 transition duration-500 font-medium group"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-zinc-800 hover:bg-zinc-800 bg-white hover:text-white transition duration-500 font-medium group"
     >
-      <span class="font-mono shimmer-text pb-[1px] !bg-gradient-to-r !from-white !via-zinc-600 !to-white hover:!from-zinc-900 hover:!to-zinc-900 hover:!via-zinc-300 !bg-clip-text !text-transparent animate-shimmer">
+      <span class="font-mono shimmer-text pb-[1px] !bg-gradient-to-r !from-zinc-300 !via-zinc-950 !to-zinc-300 hover:!from-zinc-900 hover:!to-zinc-900 hover:!via-zinc-300 !bg-clip-text !text-transparent animate-shimmer">
         {obj.LinkText}
       </span>
       <span
