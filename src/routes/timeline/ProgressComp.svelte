@@ -35,11 +35,11 @@
     <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
       <!-- line -->
       <div class="flex items-center justify-center w-6 h-full">
-        <div class="w-1 h-full bg-zinc-500 rounded-t-full"></div>
+        <div class="w-1 h-full bg-zinc-900 rounded-t-full"></div>
       </div>
       <!-- circle round -->
       <div
-        class="transition-all absolute w-6 h-6 -mt-3 bg-white dark:bg-zinc-700 border-4 border-primary rounded-full top-1/2"
+        class="transition-all absolute w-6 h-6 -mt-3 bg-white dark:bg-zinc-900 border-4 border-primary rounded-full top-1/2"
       ></div>
     </div>
   </div>
@@ -57,11 +57,11 @@
     <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
       <!-- line -->
       <div class="flex items-center justify-center w-6 h-full">
-        <div class="w-1 h-full bg-zinc-500"></div>
+        <div class="w-1 h-full bg-zinc-900"></div>
       </div>
       <!-- cicle round -->
       <div
-        class="absolute w-6 h-6 -mt-3 bg-white border-4 dark:bg-zinc-700 border-primary rounded-full top-1/2"
+        class="absolute w-6 h-6 -mt-3 bg-white border-4 dark:bg-zinc-900 border-primary rounded-full top-1/2"
       ></div>
     </div>
     <div

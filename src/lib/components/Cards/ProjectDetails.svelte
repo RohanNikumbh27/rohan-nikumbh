@@ -9,7 +9,7 @@
   <div
     class="fixed z-4 inset-0 flex items-center justify-center bg-[#ffffff1d] backdrop-blur-sm"
   >
-    <div class="bg-[#ffffff87] backdrop-blur-xl rounded-xl shadow-md p-6 pt-10">
+    <div class="bg-[#ffffff87] backdrop-blur-xl rounded-xl p-6 pt-10">
       <button on:click={cancelIt} class="absolute top-4 right-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"

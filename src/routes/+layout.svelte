@@ -44,7 +44,7 @@
 <div class="w-[50vw] h-[40vh] fixed bg-blue-500/30 left-[25vw] bottom-0 min-w-[100px] blur-[70px] -z-1000"></div> -->
 
 <div
-  class="min-h-svh bg-[#ffffff] bg-gradient-to-tr dark:from-stone-600 dark:to-neutral-900 overflow-auto scroll-smooth z-100"
+  class="min-h-svh bg-[#ffffff] bg-gradient-to-tr dark:from-zinc-950 dark:to-zinc-900 overflow-auto scroll-smooth z-100"
 >
   <!-- <Header /> -->
   <Sidebar />
