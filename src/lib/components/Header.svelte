@@ -75,7 +75,7 @@
         {#each NavOptionsArr as NavOption, i}
           <a
             transition:blur={{ duration: 300, delay: 100 }}
-            class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {pathName ===
+            class="px-2 py-1 block md:inline-block text-xl transition-all duration-200 font-[500] {$page.url.pathname ===
             NavOption.ref
               ? 'text-primary '
               : 'text-zinc-500'}"
@@ -140,7 +140,7 @@
               <a
                 transition:blur={{ duration: 300, delay: 100 }}
                 on:click={toggleNavBar}
-                class="px-2 py-1 block md:inline-block m-4 text-3xl transition-all duration-200 rounded-2xl {pathName ===
+                class="px-2 py-1 block md:inline-block m-4 text-3xl transition-all duration-200 rounded-2xl {$page.url.pathname ===
                 NavOption.ref
                   ? 'text-primary  transition-all'
                   : 'text-[#342121b4]'}"

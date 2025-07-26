@@ -1,5 +1,6 @@
 <script>
   import Footer from "$lib/components/Footer.svelte";
+  import Header from "$lib/components/Header.svelte";
   import Sidebar from "$lib/components/Sidebar.svelte";
   import {onMount} from "svelte";
   import "../app.css";
