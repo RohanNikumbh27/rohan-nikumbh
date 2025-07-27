@@ -30,7 +30,7 @@
   <div
     class="md:mb-10 text-white  max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto my-2 "
   >
-    <div class="space-y-4 bg-black px-6 py-8 rounded-xl">
+    <div class="space-y-4 bg-black dark:bg-[#ffffff1f] px-6 py-8 rounded-xl">
       <div class="flex gap-5 flex-col sm:flex-col md:flex-row justify-between">
         <div class="flex items-center w-full xl:px-5">
           <BookDown class="w-6 h-6 text-primary  mr-3" />

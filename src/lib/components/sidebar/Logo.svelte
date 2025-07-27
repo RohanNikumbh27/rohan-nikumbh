@@ -8,7 +8,7 @@ import {blur} from "svelte/transition";
 <div class="flex justify-center items-center flex-row text-xl text-zinc-700 font-semibold {currentText == 'Portfolio' && 'pr-[68px]'}">
 {#if show}
     <span
-    class="!font-sans bg-gradient-to-r dark:bg-gradient-to-b from-zinc-400 via-[#3b3b3b] to-zinc-400 dark:from-zinc-100 dark:via-zinc-600 dark:to-zinc-100 bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
+    class="!font-sans bg-gradient-to-r from-zinc-400 via-[#3b3b3b] to-zinc-400 dark:from-zinc-100 dark:via-zinc-600 dark:to-zinc-100 bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
     in:blur={{ duration: 500 }}
     out:blur={{ duration: 500 }}
     >
