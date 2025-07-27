@@ -59,15 +59,13 @@
     <div
       class="hero-heading font-[500] text-center text-3xl leading-relaxed text-zinc-900 dark:text-white pb-2"
     >
-      Transforming Ideas into Seamless Experiences 🚀 - Currently <span
+      Transforming Ideas into Seamless Experiences 🚀 - Aspiring <span
         class=" bg-gradient-to-r from-[#e50914] via-[#acacac] to-[#ff6f00] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
         >Software Engineer
       </span>
-      Intern
       {#if innerHeight > '1024px'}
       <br>
       {/if}
-      <p class="text-zinc-600 dark:text-[#fff] inline">@Syngenta</p>
     </div>
     <p
       class="hero-subheading text-center text-xl leading-relaxed  text-stone-500 dark:text-zinc-400 font-[350]"
