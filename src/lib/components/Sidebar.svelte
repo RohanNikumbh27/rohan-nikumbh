@@ -174,7 +174,7 @@
     <div
       in:fly={{ duration: 500, x: "-300%", delay: 100 }}
       out:fly={{ duration: 1000, x: "-400%" }}
-      class="bg-white dark:bg-primary-dark fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
+      class="bg-white dark:bg-zinc-800 fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
       style="will-change: transform;"
       on:touchstart={handleTouchStart}
       on:touchend={handleTouchEnd}
