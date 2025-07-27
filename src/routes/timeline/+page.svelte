@@ -6,7 +6,7 @@
       pos: "left",
       title: "Software Engineer Intern",
       desc: "@Syngenta",
-      date: "Jan 25 - Present",
+      date: "Jan 2025 - July 2025",
       tag: "work",
     },
     {

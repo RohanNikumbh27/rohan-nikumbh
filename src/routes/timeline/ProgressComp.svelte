@@ -82,6 +82,6 @@
     background: radial-gradient(circle, #222, #111);
   }
   .bg-rad-dark {
-    background: radial-gradient(circle, #111, #000000);
+    background: radial-gradient(circle, #c1c1c11f, #ffffff1f);
   }
 </style>
