@@ -138,7 +138,7 @@
   <div class=" min-h-svh !mt-0">
     {#each skills as section, i}
       <div
-        class="bg-stone-100 dark:bg-black/30 min-h-[200px] my-3 rounded-3xl text-center relative z-[1] max-w-screen-2xl mx-auto"
+        class="bg-stone-100 dark:bg-[#ffffff1f] min-h-[200px] my-3 rounded-3xl text-center relative z-[1] max-w-screen-2xl mx-auto"
       >
         <img
           src="/border-design.svg"
@@ -154,7 +154,7 @@
           {#each section.skills as skill, i}
             <div
               use:perspectiveTilt={{ scale: 1.1 }}
-              class="skill-card flex items-center gap-3 py-2 px-4 md:px-5 m-1 md:m-2 w-full md:w-auto cursor-pointer bg-stone-950/90 dark:bg-[#ffffff1f] rounded-2xl text-white shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-primary group-hover:bg-primary"
+              class="skill-card flex items-center gap-3 py-2 px-4 md:px-5 m-1 md:m-2 w-full md:w-auto cursor-pointer bg-stone-950/90 dark:bg-zinc-90 rounded-2xl text-white shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-primary group-hover:bg-primary"
             >
               <span class="font-medium text-base md:text-lg">{skill.name}</span>
             </div>
