@@ -1,9 +1,9 @@
 <script>
   import Button from "$lib/components/form/Button.svelte";
   import Loader from "$lib/components/Loader.svelte";
-  import {perspectiveTilt} from "$lib/utils.js";
-  import {onMount} from "svelte";
-  import {blur} from "svelte/transition";
+  import { perspectiveTilt } from "$lib/utils.js";
+  import { onMount } from "svelte";
+  import { blur } from "svelte/transition";
 
   let innerHeight = 0;
   let showLoader = true;
@@ -15,6 +15,15 @@
     // }, 10);
   });
 </script>
+
+<svelte:head>
+  <link
+    rel="preload"
+    as="image"
+    href="/Rohan_Nikumbh.jpg"
+    fetchpriority="high"
+  />
+</svelte:head>
 
 <div
   class="h-[20px] sm:h-[20px] md:h-[40px] lg:h-[30px] xl:h-[40px] 2xl:h-[40px]"
@@ -41,10 +50,12 @@
         >
         <img
             src="/Rohan_Nikumbh.jpg"
-            transition:blur={{ duration: 1000, amount: 20 }}
+            transition:blur={{ duration: 200, amount: 20 }}
             style="will-change: transform, opacity;"
+            fetchpriority="high"
             alt="Rohan Nikumbh"
-            loading="lazy"
+            decoding="async"
+            loading="eager"
             class="rounded-2xl object-cover border-b-2 border-primary hero-image opacity-95 hover:opacity-100 transition-all"
           />
         </div>
