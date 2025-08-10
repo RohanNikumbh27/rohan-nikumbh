@@ -14,19 +14,11 @@
   <div
     class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-[#ffffff1f] border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40"
   >
-    <!-- Decorative Bar -->
-    <div class="flex items-center justify-center gap-2 mb-5">
-      <div
-        class="h-1 w-1/2 bg-gradient-to-r from-primary/40 via-primary to-primary/40 rounded-full animate-pulse"
-      ></div>
-      <div class="h-1 w-3 bg-primary rounded-full"></div>
-      <div
-        class="h-1 w-1/2 bg-gradient-to-l from-primary/40 via-primary to-primary/40 rounded-full animate-pulse"
-      ></div>
+    <!-- Decorative Bar: same visuals, fewer nodes -->
+    <div class="decor-bar mb-5" aria-hidden="true">
+      <span class="center-pill"></span>
     </div>
-    <!-- Content -->
-    <div class="flex flex-col items-center text-center"></div>
-    <!-- Icon -->
+    
     <h2
       class="text-3xl font-semibold text-zinc-800 dark:text-gray-100 tracking-tight mb-2 flex items-center justify-center gap-2"
     >
@@ -53,3 +45,58 @@
     </a>
   </div>
 </div>
+
+<style>
+  /* Primary color to match `bg-primary` (#E50914) */
+  :root {
+    --primary: #e50914;
+    --primary-40: rgba(229, 9, 20, 0.4);
+  }
+
+  .decor-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4px;
+    left: 10px;
+  }
+
+  /* Left bar */
+  .decor-bar::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: 50%;
+    height: 4px;
+    border-radius: 50px;
+    background: linear-gradient(to right, var(--primary-40), var(--primary));
+  }
+
+  /* Right bar (mirror) */
+  /* .decor-bar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 0;
+    height: 4px;
+    border-radius: 9999px;
+    background: linear-gradient(to left, var(--primary-40), var(--primary));
+    animation: pulseFade 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  } */
+
+  /* Center pill: w-3 h-1 rounded-full bg-primary */
+  .center-pill {
+    position: relative;
+    width: 0.75rem; 
+    height: 0.25rem;
+    border-radius: 50px;
+    background: var(--primary);
+    z-index: 1;
+  }
+
+  @keyframes pulseFade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+</style>
