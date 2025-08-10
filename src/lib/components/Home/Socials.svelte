@@ -59,7 +59,7 @@
       rel={s.external ? "noopener noreferrer" : undefined}
     >
       <span class="sr-only">{s.label}</span>
-      <img src={s.icon} alt="" aria-hidden="true" />
+      <img src={s.icon} alt="" aria-hidden="true" width="24" height="24" />
     </a>
   {/each}
 </div>

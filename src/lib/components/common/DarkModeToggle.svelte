@@ -25,6 +25,8 @@
   <img
     src="\dark-theme.svg"
     alt="Toggle dark mode"
-    class=" rounded-full block dark:invert"
+    width="56"
+    height="56"
+    class="h-full w-full rounded-full block dark:invert"
   />
 </button>
