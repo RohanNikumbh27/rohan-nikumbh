@@ -1,8 +1,8 @@
 <script>
   // ─── Parent Component State & Helpers ─────────────────────────────
-  import {page} from "$app/stores";
-  import {onMount} from "svelte";
-  import {fly} from "svelte/transition";
+  import { page } from "$app/stores";
+  import { onMount } from "svelte";
+  import { fly } from "svelte/transition";
   import SearchComp from "./SearchComp.svelte";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
   import Logo from "./sidebar/Logo.svelte";
@@ -105,25 +105,23 @@
     <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between">
         <!-- Logo -->
-        <a href="/" class="flex items-center">
+        <a href="/" class="flex items-center" aria-label="Rohan Nikumbh's Portfolio">
           <Logo {show} {currentText}/>
         </a>
 
         <!-- Nav Links -->
         <div class="hidden md:flex md:items-center md:justify-center md:gap-2">
           {#each navItems as item}
-            <div class="flex flex-col items-center justify-end">
-              <a
-                href={item.ref}
-                class="px-2 py-1 text-xl font-[500] transition-all duration-200 hover:scale-95 {$page
-                  .url.pathname === item.ref
-                  ? 'text-primary '
-                  : 'text-stone-900 hover:text-stone-500 dark:text-zinc-100 dark:hover:text-zinc-400'}"
-                on:click={() => trackNavClick(item.label)}
-              >
-                {item.label}
-              </a>
-            </div>
+            <a
+              href={item.ref}
+              class="px-2 py-1 text-xl font-[500] transition-all duration-200 hover:scale-95 {$page
+                .url.pathname === item.ref
+                ? 'text-primary '
+                : 'text-stone-900 hover:text-stone-500 dark:text-zinc-100 dark:hover:text-zinc-400'}"
+              on:click={() => trackNavClick(item.label)}
+            >
+              {item.label}
+            </a>
           {/each}
         </div>
       </div>

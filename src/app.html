@@ -6,18 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rohan Nikumbh Portfolio</title>
     %sveltekit.head%
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-NQ13FXQG4P"
-    ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
+      window.gtag = function () {
         dataLayer.push(arguments);
+      };
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+      });
+
+      function loadGA() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+
+        var s = document.createElement("script");
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-NQ13FXQG4P";
+        s.async = true;
+        s.onload = function () {
+          gtag("js", new Date());
+          gtag("config", "G-NQ13FXQG4P", {
+            anonymize_ip: true,
+            transport_type: "beacon",
+          });
+          // Grant analytics after an explicit interaction trigger
+          gtag("consent", "update", { analytics_storage: "granted" });
+        };
+        document.head.appendChild(s);
       }
-      gtag("js", new Date());
-      gtag("config", "G-NQ13FXQG4P");
+
+      // Do not eagerly load on constrained connections
+      var cn = navigator.connection || {};
+      if (cn.saveData || /2g/.test(cn.effectiveType || "")) {
+        // Skip loading on very slow networks by default
+      } else {
+        // Load on first interaction
+        var triggerOnce = () => {
+          loadGA();
+          window.removeEventListener("pointerdown", triggerOnce, {
+            passive: true,
+          });
+          window.removeEventListener("keydown", triggerOnce);
+          window.removeEventListener("scroll", triggerOnce, { passive: true });
+        };
+        window.addEventListener("pointerdown", triggerOnce, {
+          once: true,
+          passive: true,
+        });
+        window.addEventListener("keydown", triggerOnce, { once: true });
+        window.addEventListener("scroll", triggerOnce, {
+          once: true,
+          passive: true,
+        });
+
+        // Idle fallback
+        (
+          window.requestIdleCallback ||
+          function (cb) {
+            setTimeout(cb, 5000);
+          }
+        )(loadGA);
+      }
     </script>
   </head>
   <body data-sveltekit-preload-data="hover" class="dark:bg-black">
