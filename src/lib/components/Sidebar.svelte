@@ -2,6 +2,7 @@
   // ─── Parent Component State & Helpers ─────────────────────────────
   import { page } from "$app/stores";
   import { onMount, tick } from "svelte";
+  import { cubicOut, quintOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
   import Logo from "./sidebar/Logo.svelte";
@@ -167,28 +168,28 @@
 
 {#if showNavbarSmall}
   <section id="MobileSidebar">
-    <!-- Background overlay layers with fly transitions -->
+    <!-- Secondary gray layer -->
     <div
-      in:fly={{ duration: 200, x: "-100%" }}
-      out:fly={{ duration: 2000, x: "-400%", delay: 200 }}
+      in:fly={{ duration: 180, x: "-100%"}}
+      out:fly={{ duration: 2000, x: "-400%", delay: 200, easing: quintOut }}
       class="bg-primary-dark dark:bg-zinc-900 fixed h-[100vh] w-full z-[500] p-2 ease-in transform-cpu"
       style="will-change: transform;"
       on:click={toggleMobileNav}
       aria-hidden="true"
-    ></div>
-
+    />
+    <!-- Primary red layer -->
     <div
-      in:fly={{ duration: 500, x: "-300%" }}
-      out:fly={{ duration: 1700, x: "-350%", delay: 45 }}
+      in:fly={{ duration: 480, x: "-300%",  delay: 10 }}
+      out:fly={{ duration: 1700, x: "-350%", delay: 40, easing: quintOut }}
       class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in transform-cpu"
       style="will-change: transform;"
       on:click={toggleMobileNav}
       aria-hidden="true"
-    ></div>
-
+    />
+    <!-- Foreground white panel -->
     <div
-      in:fly={{ duration: 500, x: "-300%", delay: 100 }}
-      out:fly={{ duration: 1000, x: "-400%" }}
+      in:fly={{ duration: 500, x: "-300%", delay: 100}}
+      out:fly={{ duration: 1000, x: "-400%", easing: quintOut }}
       class="bg-white dark:bg-zinc-800 fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
       style="will-change: transform;"
       on:touchstart={handleTouchStart}
