@@ -33,43 +33,20 @@
             anonymize_ip: true,
             transport_type: "beacon",
           });
-          // Grant analytics after an explicit interaction trigger
           gtag("consent", "update", { analytics_storage: "granted" });
         };
         document.head.appendChild(s);
       }
 
-      // Do not eagerly load on constrained connections
+      window.enableAnalytics = loadGA;
       var cn = navigator.connection || {};
-      if (cn.saveData || /2g/.test(cn.effectiveType || "")) {
-        // Skip loading on very slow networks by default
-      } else {
-        // Load on first interaction
-        var triggerOnce = () => {
-          loadGA();
-          window.removeEventListener("pointerdown", triggerOnce, {
-            passive: true,
-          });
-          window.removeEventListener("keydown", triggerOnce);
-          window.removeEventListener("scroll", triggerOnce, { passive: true });
-        };
+      if (!(cn.saveData || /2g/.test(cn.effectiveType || ""))) {
+        var triggerOnce = () => loadGA();
         window.addEventListener("pointerdown", triggerOnce, {
           once: true,
           passive: true,
         });
         window.addEventListener("keydown", triggerOnce, { once: true });
-        window.addEventListener("scroll", triggerOnce, {
-          once: true,
-          passive: true,
-        });
-
-        // Idle fallback
-        (
-          window.requestIdleCallback ||
-          function (cb) {
-            setTimeout(cb, 5000);
-          }
-        )(loadGA);
       }
     </script>
   </head>
