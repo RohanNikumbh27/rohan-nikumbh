@@ -17,10 +17,12 @@
 </script>
 
 <svelte:head>
+  <!-- Preload AVIF (next‑gen) instead of JPEG -->
   <link
     rel="preload"
     as="image"
-    href="/Rohan_Nikumbh.jpg"
+    href="/Rohan_Nikumbh.avif"
+    imagesizes="(min-width: 768px) 340px, 90vw"
     fetchpriority="high"
   />
 </svelte:head>
@@ -45,19 +47,33 @@
       {:else}
         <div
           use:perspectiveTilt
-            class="transition-all ease-out duration-1000 md:mt-5 delay-75"
-            style="display: inline-block;"
+          class="transition-all ease-out duration-1000 md:mt-5 delay-75"
+          style="display: inline-block;"
         >
-        <img
-            src="/Rohan_Nikumbh.jpg"
-            transition:blur={{ duration: 200, amount: 20 }}
-            style="will-change: transform, opacity;"
-            fetchpriority="high"
-            alt="Rohan Nikumbh"
-            decoding="async"
-            loading="eager"
-            class="rounded-2xl object-cover border-b-2 border-primary hero-image opacity-95 hover:opacity-100 transition-all"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset="/Rohan_Nikumbh.avif"
+              sizes="(min-width: 768px) 340px, 90vw"
+            />
+            <source
+              type="image/webp"
+              srcset="/Rohan_Nikumbh.webp"
+              sizes="(min-width: 768px) 340px, 90vw"
+            />
+            <img
+              src="/Rohan_Nikumbh.jpg"  
+              alt="Rohan Nikumbh"
+              width="340"
+              height="460"
+              decoding="async"
+              loading="eager"
+              fetchpriority="high"
+              transition:blur={{ duration: 200, amount: 20 }}
+              style="will-change: transform, opacity;"
+              class="rounded-2xl object-cover border-b-2 border-primary hero-image opacity-95 hover:opacity-100 transition-all"
+            />
+          </picture>
         </div>
       {/if}
     </div>
