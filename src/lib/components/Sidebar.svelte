@@ -1,13 +1,12 @@
 <script>
   // ─── Parent Component State & Helpers ─────────────────────────────
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
+  import { cubicOut, quintOut } from "svelte/easing";
   import { fly } from "svelte/transition";
-  import SearchComp from "./SearchComp.svelte";
   import DarkModeToggle from "./common/DarkModeToggle.svelte";
   import Logo from "./sidebar/Logo.svelte";
 
-  let showSearchComp = false;
   let showNavbarSmall = false;
 
   const navItems = [
@@ -17,10 +16,6 @@
     { label: "Contact", ref: "/contact" },
     { label: "Bio", ref: "/resume-and-certifications" },
   ];
-
-  const toggleSearch = () => {
-    showSearchComp = !showSearchComp;
-  };
 
   const toggleMobileNav = () => {
     showNavbarSmall = !showNavbarSmall;
@@ -93,7 +88,19 @@
       });
     }
   }
+
+  // ─── A11y: focus management + Esc to close for mobile sidebar ─────
+  let sidebarEl;
+  $: if (showNavbarSmall) {
+    // focus the panel when it opens
+    tick().then(() => sidebarEl?.focus());
+  }
+  function onWindowKeydown(e) {
+    if (e.key === "Escape" && showNavbarSmall) closeMobileNav();
+  }
 </script>
+
+<svelte:window on:keydown={onWindowKeydown} />
 
 <section id="DesktopHeader">
   <div class="h-12 w-12 fixed bottom-4 right-9 hidden md:inline-block z-50">
@@ -110,7 +117,7 @@
         </a>
 
         <!-- Nav Links -->
-        <div class="hidden md:flex md:items-center md:justify-center md:gap-2">
+        <nav class="hidden md:flex md:items-center md:justify-center md:gap-2" aria-label="Main">
           {#each navItems as item}
             <a
               href={item.ref}
@@ -118,18 +125,18 @@
                 .url.pathname === item.ref
                 ? 'text-primary '
                 : 'text-stone-900 hover:text-stone-500 dark:text-zinc-100 dark:hover:text-zinc-400'}"
+              aria-current={$page.url.pathname === item.ref ? "page" : undefined}
               on:click={() => trackNavClick(item.label)}
             >
               {item.label}
             </a>
           {/each}
-        </div>
+        </nav>
       </div>
-</div>
-</header>
+    </div>
+  </header>
 </section>
 
-<!-- from-[#ffffff]  via-[#7f7f7f]  to-[#ffffff] dark:from-[#ffffff]  dark:via-[#484848]  dark:to-[#ffffff]   -->
 <section id="MobileHeader" class="block md:hidden">
   <header
     class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 pt-2.5 bg-transparent"
@@ -137,56 +144,73 @@
     <div
       class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-2xl dark:bg-[#ffffff1f] flex items-center px-5 justify-between"
     >
-    <Logo {show} {currentText}/>
-      <!-- Hamburger icon to toggle mobile sidebar -->
-      <img
-        src="/hamburger.svg"
-        alt="menu"
-        class="cursor-pointer w-7"
+      <Logo {show} {currentText}/>
+      <button
+        type="button"
+        class="cursor-pointer p-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        aria-label="Open menu"
+        aria-controls="mobile-sidebar-panel"
+        aria-expanded={showNavbarSmall}
         on:click={toggleMobileNav}
-      />
+      >
+        <img
+          src="/hamburger.svg"
+          alt=""
+          width="28"
+          height="28"
+          class="w-7 h-7"
+          aria-hidden="true"
+        />
+      </button>
     </div>
   </header>
 </section>
 
 {#if showNavbarSmall}
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <section id="MobileSidebar">
-    <!-- Background overlay layers with fly transitions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- Secondary gray layer -->
     <div
-      in:fly={{ duration: 200, x: "-100%" }}
-      out:fly={{ duration: 2000, x: "-400%", delay: 200 }}
+      in:fly={{ duration: 180, x: "-100%"}}
+      out:fly={{ duration: 2000, x: "-400%", delay: 200, easing: quintOut }}
       class="bg-primary-dark dark:bg-zinc-900 fixed h-[100vh] w-full z-[500] p-2 ease-in transform-cpu"
       style="will-change: transform;"
       on:click={toggleMobileNav}
-    ></div>
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
+      aria-hidden="true"
+    />
+    <!-- Primary red layer -->
     <div
-      in:fly={{ duration: 500, x: "-300%" }}
-      out:fly={{ duration: 1700, x: "-350%", delay: 45 }}
+      in:fly={{ duration: 480, x: "-300%",  delay: 10 }}
+      out:fly={{ duration: 1700, x: "-350%", delay: 40, easing: quintOut }}
       class="bg-primary fixed h-[100vh] w-[94vw] z-[600] p-2 ease-in transform-cpu"
       style="will-change: transform;"
       on:click={toggleMobileNav}
-    ></div>
+      aria-hidden="true"
+    />
+    <!-- Foreground white panel -->
     <div
-      in:fly={{ duration: 500, x: "-300%", delay: 100 }}
-      out:fly={{ duration: 1000, x: "-400%" }}
+      in:fly={{ duration: 500, x: "-300%", delay: 100}}
+      out:fly={{ duration: 1000, x: "-400%", easing: quintOut }}
       class="bg-white dark:bg-zinc-800 fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
       style="will-change: transform;"
       on:touchstart={handleTouchStart}
       on:touchend={handleTouchEnd}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      id="mobile-sidebar-panel"
+      tabindex="-1"
+      bind:this={sidebarEl}
     >
       <div
         class="h-[70px] rounded-3xl flex items-center px-5 justify-between pt-5"
       >
         <img
           src="/rohan-portfolio.svg"
-          alt="rohan nikumbh"
+          alt="Rohan Nikumbh"
           class="dark:invert dark:hue-rotate-180 dark:saturate-200"
         />
-        <button on:click={toggleMobileNav}>
-          <img src="/cross.svg" alt="close" class="w-7" />
+        <button type="button" on:click={toggleMobileNav} aria-label="Close menu" class="p-2 rounded-md focus-visible:ring-2 focus-visible:ring-primary">
+          <img src="/cross.svg" alt="" class="w-7 h-7" width="28" height="28" aria-hidden="true" />
         </button>
       </div>
       <div class="h-full my-auto pt-20">
@@ -201,6 +225,7 @@
             )
               ? '!text-primary'
               : 'text-[#342121b4] dark:text-stone-400'}"
+            aria-current={(pendingRoute ? pendingRoute === item.ref : $page.url.pathname === item.ref) ? 'page' : undefined}
           >
             {item.label}
           </a>
