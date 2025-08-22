@@ -6,7 +6,7 @@
 </script>
 
 <div class="container md:pt-7">
-  <HeroSection />
+    <HeroSection />
 </div>
 
 <GithubStats />

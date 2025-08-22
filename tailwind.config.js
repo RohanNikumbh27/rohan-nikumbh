@@ -11,6 +11,8 @@ module.exports = {
         "text-secondary": "#B3B3B3", // Light Gray for secondary text or icons
         "gradient-dark-start": "rgba(0, 0, 0, 0.8)", // Gradient start
         "gradient-dark-end": "rgba(0, 0, 0, 0)", // Gradient end
+        "gray-blur": "#2929298a",
+        "gray-dark": "#1F1F1F"
       },
     },
     screens: {

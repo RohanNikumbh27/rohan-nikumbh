@@ -78,7 +78,7 @@
 
 <div class=" p-4 transition-c">
   <center>
-    <h2 class=" primary-heading dark:text-white mb-2 mt-2 md:mt-10">
+    <h2 class=" primary-heading dark:text-white mb-2 mt-2 md:mt-6">
       Timeline
     </h2>
   </center>

@@ -107,7 +107,7 @@
     <DarkModeToggle {theme} {toggleTheme} />
   </div>
   <header
-    class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-[#ffffff1f] py-3 backdrop-blur-2xl md:top-6 md:rounded-3xl lg:max-w-[950px] xl:max-w-screen-lg 2xl:max-w-screen-xl"
+    class="fixed hidden md:inline-block inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-stone-200/60 dark:bg-gray-blur py-3 backdrop-blur-2xl md:top-6 md:rounded-3xl lg:max-w-[950px] xl:max-w-screen-lg 2xl:max-w-screen-xl"
   >
     <div class="px-0 xl:px-4">
       <div class="flex items-center justify-between">
@@ -142,7 +142,7 @@
     class="h-auto fixed top-0 w-full z-[40] rounded-3xl p-2 pt-2.5 bg-transparent"
   >
     <div
-      class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-2xl dark:bg-[#ffffff1f] flex items-center px-5 justify-between"
+      class="h-[60px] rounded-3xl bg-stone-300/60 backdrop-blur-2xl dark:bg-gray-blur flex items-center px-5 justify-between"
     >
       <Logo {show} {currentText}/>
       <button
@@ -190,7 +190,7 @@
     <div
       in:fly={{ duration: 500, x: "-300%", delay: 100}}
       out:fly={{ duration: 1000, x: "-400%", easing: quintOut }}
-      class="bg-white dark:bg-zinc-800 fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
+      class="bg-white dark:bg-gray-dark fixed h-[100vh] w-[88vw] z-[700] p-2 mr-10 ease-in transform-cpu"
       style="will-change: transform;"
       on:touchstart={handleTouchStart}
       on:touchend={handleTouchEnd}
