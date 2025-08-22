@@ -1,22 +1,11 @@
-name: CI & Deploy (placeholder – no secrets yet)
+name: CI PR build
 
 on:
   pull_request:
     branches: [main]
-  push:
-    branches: [main]
-  workflow_dispatch:
-    inputs:
-      target:
-        description: "Deployment target"
-        required: true
-        default: "production"
-        type: choice
-        options: [production]
 
 permissions:
   contents: read
-  deployments: write
 
 env:
   NODE_VERSION: 20
@@ -24,10 +13,9 @@ env:
   GOOGLE_EMAIL_PASSWORD: ${{ secrets.GOOGLE_EMAIL_PASSWORD }}
 
 jobs:
-  pr_build:
-    if: github.event_name == 'pull_request'
+  build:
     runs-on: ubuntu-latest
-    name: PR Build
+    name: CI PR deploy
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,19 +24,3 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-
-  preview_deploy_placeholder:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    name: Preview Deploy (placeholder)
-    steps:
-      - run: echo "Preview deploy skipped (no Vercel token configured)."
-      - run: echo "Add VERCEL_TOKEN etc. then implement deploy."
-
-  promote_production_placeholder:
-    if: github.event_name == 'workflow_dispatch' && inputs.target == 'production'
-    runs-on: ubuntu-latest
-    name: Production Deploy (placeholder)
-    steps:
-      - run: echo "Production deploy skipped (no Vercel token configured)."
-      - run: echo "Add secrets and deployment steps here."
