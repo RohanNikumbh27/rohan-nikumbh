@@ -351,7 +351,7 @@
           }}
           out:fade={{ duration: 300 }}
           use:perspectiveTilt={{ scale: 1.05 }}
-          class="justify-between flex flex-col bg-gradient-to-tl from-stone-100/95 via-zinc-200 to-primary/5 dark:from-stone-900 dark:via-zinc-800 dark:to-zinc-900 rounded-3xl overflow-hidden shadow-xl transform transition-all duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+          class="justify-between flex flex-col bg-gradient-to-tl from-stone-100 via-zinc-200 to-[#c7c7c7] dark:from-stone-900 dark:via-zinc-800 dark:to-zinc-900 rounded-3xl overflow-hidden shadow-xl transform transition-all duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl "
         >
           <div class="p-6 relative flex flex-col justify-center flex-grow">
             <div
@@ -411,7 +411,7 @@
           }}
           out:fade={{ duration: 300 }}
           use:perspectiveTilt={{ scale: 1.05 }}
-          class="justify-between flex flex-col glass-bg dark:bg-gradient-to-tr !border-none dark:bg-zinc-950 rounded-3xl overflow-hidden shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
+          class="justify-between flex flex-col glass-bg dark:bg-gradient-to-tr !border-none dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-xl transform transition duration-300 ease-in-out hover:scale-[1.05] sm:hover:scale-[1.05] md:hover:scale-[1.1] hover:shadow-2xl"
         >
           <div class="p-6 relative flex flex-col justify-center flex-grow">
             <div

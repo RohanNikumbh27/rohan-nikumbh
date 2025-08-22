@@ -131,20 +131,15 @@
   class="my-0 md:my-8 space-y-12 min-h-svh w-full mx-auto px-4 md:px-6 lg:px-[20%] transition-c"
 >
   <center>
-    <h2 class=" primary-heading dark:text-white mb-5 mt-8 md:mt-14">
+    <h2 class=" primary-heading dark:text-white mb-5 mt-8 md:mt-3">
       Skills
     </h2>
   </center>
   <div class=" min-h-svh !mt-0">
     {#each skills as section, i}
       <div
-        class="bg-stone-100 dark:bg-[#ffffff1f] min-h-[200px] my-3 rounded-3xl text-center relative z-[1] max-w-screen-2xl mx-auto"
+        class="bg-stone-100 dark:bg-gray-dark min-h-[200px] my-3 rounded-3xl text-center relative z-[1] max-w-screen-2xl mx-auto border border-gray-dark/10 "
       >
-        <img
-          src="/border-design.svg"
-          alt="border-design"
-          class="absolute h-[150px] right-0 bottom-0 -z-[10]"
-        />
         <h1
           class="pt-5 px-5 text-3xl bg-gradient-to-br from-primary to-primary bg-clip-text text-transparent transition-all"
         >

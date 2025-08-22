@@ -284,10 +284,10 @@ footer {
 
 .glass-bg {
   border-radius: 20px;
-  background: linear-gradient(140deg,
-      rgba(200, 200, 200, 0.15) 10%,
-      rgba(255, 255, 255, 0.45) 20%,
-      rgba(171, 171, 171, 0.35) 70%);
+  background: linear-gradient(120deg,
+      rgb(236, 236, 236) 10%,
+      rgba(255, 255, 255) 20%,
+      rgb(216, 216, 216) 70%);
 }
 
 .fade-in-view {

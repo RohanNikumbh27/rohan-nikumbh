@@ -84,7 +84,7 @@
     class="items-center flex h-full md:h-auto flex-col justify-evenly rounded-2xl md:w-[85%] xl:w-[70%] md:mx-auto pr-0 xl:pr-[74px] transition-c relative -bottom-4"
   >
     <div
-      class="hero-heading font-[500] text-center text-3xl leading-relaxed text-zinc-900 dark:text-white pb-2"
+      class="hero-heading font-bold text-center text-3xl leading-relaxed text-zinc-900 dark:text-white pb-2"
     >
       Transforming Ideas into Seamless Experiences 🚀 - Aspiring <span
         class=" bg-gradient-to-r from-[#e50914] via-[#acacac] to-[#ff6f00] bg-[200%_auto] animate-gradient-move text-transparent bg-clip-text"
@@ -95,10 +95,10 @@
       {/if}
     </div>
     <p
-      class="hero-subheading text-center text-xl leading-relaxed  text-stone-500 dark:text-zinc-400 font-[350]"
+      class="hero-subheading font-bold text-center text-xl leading-relaxed  text-stone-600 dark:text-zinc-400 font-[350] rounded-lg"
     >
       I am Rohan Nikumbh, your tech partner in Software development, weaving
-      together <span class="bluelink">Comprehensive Development</span> and proficiency
+      together <span class="bluelink hover:underline">Comprehensive Development</span> and proficiency
       for exceptional digital transformations of your project visions.
     </p>
     <div

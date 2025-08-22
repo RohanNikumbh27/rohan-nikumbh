@@ -12,7 +12,7 @@
 
 <div class="flex items-center justify-center" use:perspectiveTilt>
   <div
-    class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-[#ffffff1f] border-[0px] border-zinc-300 dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px] hover:border-primary/40"
+    class="relative m-4 p-6 rounded-2xl bg-stone-100 dark:bg-[#1F1F1F] dark:border-none transition-all duration-300 max-w-[500px] flex flex-col items-center text-center max-h-[370px]  scroll-smooth shadow-md "
   >
     <!-- Decorative Bar: same visuals, fewer nodes -->
     <div class="decor-bar mb-5" aria-hidden="true">
@@ -24,7 +24,7 @@
     >
       {obj.title}
     </h2>
-    <p class="text-stone-500 dark:text-gray-400 text-base mb-6 overflow-auto">
+    <p class="text-stone-500 dark:text-gray-300 text-base mb-6 overflow-auto">
       {obj.description}
     </p>
 

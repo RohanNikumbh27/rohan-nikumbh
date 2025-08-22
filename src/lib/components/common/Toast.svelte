@@ -20,7 +20,7 @@
   {#each $toasts as toast (toast.id)}
     <div
       class="font-serif w-full px-4 py-3 rounded-2xl flex items-center justify-between gap-1
-         backdrop-blur-md bg-[#a1a1a12f] text-zinc-700 dark:text-zinc-200 font-[400] border-b-[2px] ease-in
+         backdrop-blur-md dark:bg-gray-blur text-zinc-700 dark:text-zinc-200 font-[400] border-b-[2px] ease-in
         {toast.type === 'success' ? 'border-green-600' : ''}
         {toast.type === 'error' ? 'border-primary' : ''}
         {toast.type === 'info' ? 'border-violet-700' : ''}"

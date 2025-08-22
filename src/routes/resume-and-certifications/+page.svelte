@@ -30,7 +30,7 @@
 </div>
 
 <div class="my-10 flexc transition-c ">
-      <div class="w-[90vw] min-h-[230px] xs:w-[340px]  flexc z-11 bg-black p-[10px] ">
+      <div class="w-[90vw] min-h-[230px] xs:w-[340px]  flexc z-11 bg-black dark:bg-gray-dark p-[10px] shadow-black dark:shadow-lg">
           {#if saveState == "saved"}
             <span class="text-[#D9D9D9] text-[20px] text-wrap text-center">Thank you for giving feedback</span>
           {:else if saveState == "saving"}
@@ -70,14 +70,14 @@
               <textarea
                 bind:value={feedbackMsg}
                 name="feedbackMsg"
-                class="w-full smoothClick bg-zinc-900 text-white flexc placeholder text-center pt-[12px] px-10 rounded-[20px] min-h-[150px] max-h-[60vh]"
+                class="w-full smoothClick bg-zinc-800 dark:bg-black text-white flexc placeholder text-center pt-[12px] px-10 rounded-[20px] min-h-[150px] max-h-[60vh]"
                 placeholder="Give feedback on resume, portfolio..."
               ></textarea>
               <div class="w-full h-[50px] xs:h-[50px] flexc gap-[10px] flex-row">
                 <input
                   bind:value={name}
                   name="name"
-                  class="h-full w-full smoothClick text-white bg-zinc-900 rounded-[20px] px-4"
+                  class="h-full w-full smoothClick text-white bg-zinc-800 dark:bg-zinc-950 rounded-[20px] px-4"
                   placeholder="Enter Your name"
                 />
                 <button
