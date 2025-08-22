@@ -25,7 +25,7 @@
   Resume
 </h2>
 
-<div class="flex items-center mt-2">
+<div class="mt-2 mx-auto">
   <Button title="View Resume" href={resumeLink} target="_blank" />
 </div>
 
