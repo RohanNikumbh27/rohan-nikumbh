@@ -20,6 +20,8 @@ permissions:
 
 env:
   NODE_VERSION: 20
+  GOOGLE_EMAIL: ${{ secrets.GOOGLE_EMAIL }}
+  GOOGLE_EMAIL_PASSWORD: ${{ secrets.GOOGLE_EMAIL_PASSWORD }}
 
 jobs:
   pr_build:
