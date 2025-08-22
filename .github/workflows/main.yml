@@ -1,4 +1,4 @@
-name: CI/CD
+name: CI
 
 on:
   pull_request:
@@ -15,7 +15,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: CI PR deploy Preview
+    name: PR Build Preview
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
